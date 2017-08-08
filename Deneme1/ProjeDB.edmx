@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ProjeTakipSistModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Aksiyonlar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CBS_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Proje_Turu" Type="nvarchar" MaxLength="255" />
+          <Property Name="Proje_Adi" Type="nvarchar" MaxLength="255" />
+          <Property Name="Cizim_Adi" Type="nvarchar" MaxLength="255" />
+          <Property Name="Telekom_Mud" Type="nvarchar" MaxLength="255" />
+          <Property Name="Santral" Type="nvarchar" MaxLength="255" />
+          <Property Name="Altyapi_Maliyeti" Type="float" />
+          <Property Name="Acik_Kazi" Type="float" />
+          <Property Name="Fider" Type="nvarchar" MaxLength="255" />
+          <Property Name="Trencher" Type="nvarchar" MaxLength="255" />
+          <Property Name="Kazser" Type="nvarchar" MaxLength="255" />
+          <Property Name="Yeralti_Guzergahincan" Type="float" />
+          <Property Name="Yeni_Havi_Guzergahtan" Type="nvarchar" MaxLength="255" />
+          <Property Name="Mevcut_Havai_Guzergahtan" Type="nvarchar" MaxLength="255" />
+          <Property Name="Kazser_Guzergahtan" Type="nvarchar" MaxLength="255" />
+          <Property Name="FTTC_OFSD_OFTK" Type="nvarchar" MaxLength="255" />
+          <Property Name="FTTB_3_48U_Kabin" Type="float" />
+          <Property Name="Aktarma" Type="float" />
+          <Property Name="Bina_ici_Kablolama" Type="nvarchar" MaxLength="255" />
+          <Property Name="Islem" Type="nvarchar" MaxLength="255" />
+          <Property Name="Islem_Tarih" Type="datetime" />
+          <Property Name="Gerekce" Type="nvarchar" MaxLength="255" />
+          <Property Name="Kullanici" Type="nvarchar" MaxLength="255" />
+          <Property Name="Baslangic_Tarih" Type="datetime" />
+          <Property Name="Bitis_Tarih" Type="datetime" />
+          <Property Name="Proje_Sure" Type="float" />
+          <Property Name="Proje_Adet" Type="float" />
+          <Property Name="Proje_Sira" Type="float" />
+          <Property Name="Mukerrer" Type="float" />
+          <Property Name="Kalan_Sure" Type="float" />
+          <Property Name="Eski_Islem_Tarih" Type="nvarchar" MaxLength="255" />
+          <Property Name="Aktif_Islem" Type="nvarchar" MaxLength="255" />
+          <Property Name="Aktif_Sure" Type="float" />
+          <Property Name="Cezali_Gun_Sayisi" Type="float" />
+          <Property Name="Ceza_Tutari" Type="float" />
+          <Property Name="Tarih" Type="nvarchar" MaxLength="255" />
+          <Property Name="Proje_Genel_Durumu" Type="nvarchar" MaxLength="255" />
+          <Property Name="PROJE_REVIZE_BUTCE" Type="money" />
+          <Property Name="GERCEKLESEN_IMALAT_TUTARI" Type="money" />
+          <Property Name="Karsilastirma" Type="float" />
+        </EntityType>
+        <EntityType Name="Ilerleme">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="BOLGE_ADI" Type="nvarchar" MaxLength="255" />
+          <Property Name="IL_ADI" Type="nvarchar" MaxLength="255" />
+          <Property Name="SANTRAL_ADI" Type="nvarchar" MaxLength="255" />
+          <Property Name="PROJE_NO" Type="nvarchar" MaxLength="255" />
+          <Property Name="PROJE_ADI" Type="nvarchar" MaxLength="255" />
+          <Property Name="CIZIM_ADI" Type="nvarchar" MaxLength="255" />
+          <Property Name="CIZIM_ID" Type="float" />
+          <Property Name="PROJE_OZELLIGI" Type="nvarchar" MaxLength="255" />
+          <Property Name="CIZIM_ONAY_DURUMU" Type="nvarchar" MaxLength="255" />
+          <Property Name="RUHSAT" Type="float" />
+          <Property Name="MALZEME" Type="float" />
+          <Property Name="ALTYAPI" Type="float" />
+          <Property Name="FIBERNET_HP" Type="nvarchar" MaxLength="255" />
+          <Property Name="HIPERNET_HP" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID2" Type="float" />
+          <Property Name="OLT" Type="float" />
+          <Property Name="FTA" Type="float" />
+          <Property Name="OFTK" Type="float" />
+          <Property Name="T-1" Type="float" />
+          <Property Name="T-11A" Type="float" />
+          <Property Name="T-11B" Type="float" />
+          <Property Name="T-13" Type="float" />
+          <Property Name="T-15" Type="float" />
+          <Property Name="T-21" Type="float" />
+          <Property Name="T-3" Type="float" />
+          <Property Name="T-5" Type="float" />
+          <Property Name="T-6" Type="float" />
+          <Property Name="T-7" Type="float" />
+          <Property Name="T-9" Type="float" />
+          <Property Name="SPLITTER" Type="float" />
+          <Property Name="MDU" Type="float" />
+          <Property Name="KTA" Type="float" />
+          <Property Name="IFTK" Type="float" />
+          <Property Name="T-23" Type="float" />
+          <Property Name="T-17" Type="float" />
+          <Property Name="T-19" Type="float" />
+          <Property Name="FIBER_PLANLANAN" Type="float" />
+          <Property Name="BAKIR_PLANLAMA" Type="float" />
+          <Property Name="TRANSE_PLANLANAN" Type="float" />
+          <Property Name="GERCEKLESEN_ID" Type="float" />
+          <Property Name="GRC_OLT" Type="float" />
+          <Property Name="GRC_FTA" Type="float" />
+          <Property Name="GRC_OFTK" Type="float" />
+          <Property Name="GRC_T-1" Type="float" />
+          <Property Name="GRC_T-11A" Type="float" />
+          <Property Name="GRC_T-11B" Type="float" />
+          <Property Name="GRC_T-13" Type="float" />
+          <Property Name="GRC_T-15" Type="float" />
+          <Property Name="GRC_T-21" Type="float" />
+          <Property Name="GRC_T-3" Type="float" />
+          <Property Name="GRC_T-5" Type="float" />
+          <Property Name="GRC_T-6" Type="float" />
+          <Property Name="GRC_T-7" Type="float" />
+          <Property Name="GRC_T-9" Type="float" />
+          <Property Name="GRC_SPLITTER" Type="float" />
+          <Property Name="GRC_MDU" Type="float" />
+          <Property Name="GRC_KTA" Type="float" />
+          <Property Name="GRC_IFTK" Type="float" />
+          <Property Name="GRC_T-23" Type="float" />
+          <Property Name="GRC_T-17" Type="float" />
+          <Property Name="GRC_T-19" Type="float" />
+          <Property Name="TRANSE_ILERLEME" Type="float" />
+          <Property Name="FIBER_ILERLEME" Type="float" />
+          <Property Name="BAKIR_ILERLEME" Type="float" />
+          <Property Name="DEVAM_EDEN_PROJE_NO" Type="nvarchar" MaxLength="255" />
+          <Property Name="DEVAM_EDEN_PROJE_ADI" Type="nvarchar" MaxLength="255" />
+          <Property Name="BUTCE" Type="float" />
+          <Property Name="GERCEKLESEN_RUHSAT" Type="float" />
+          <Property Name="GERCEKLESEN_ALTYAPI" Type="float" />
+          <Property Name="GERCEKLESEN_MALZEME" Type="float" />
+          <Property Name="PYP_NO" Type="nvarchar" MaxLength="255" />
+          <Property Name="BASLANGIC_TARIH" Type="nvarchar" MaxLength="255" />
+          <Property Name="BITIS_TARIH" Type="nvarchar" MaxLength="255" />
+          <Property Name="TELEKOM_MUDURLUGU" Type="nvarchar" MaxLength="255" />
+          <Property Name="MAHALLE" Type="nvarchar" MaxLength="255" />
+          <Property Name="MAHALLE_UAVT" Type="float" />
+          <Property Name="PLANLANAN_KABIN_SAYISI" Type="float" />
+          <Property Name="FIILI_BASLANGIC" Type="nvarchar" MaxLength="255" />
+          <Property Name="FIILI_BITIS" Type="nvarchar" MaxLength="255" />
+          <Property Name="PROJE_DURUMU" Type="nvarchar" MaxLength="255" />
+          <Property Name="KURULU_KABIN" Type="float" />
+          <Property Name="SERVISE_ALINAN_KABIN" Type="float" />
+          <Property Name="PROJE_BUTCE" Type="float" />
+          <Property Name="PROJE_REVIZE_BUTCE" Type="float" />
+          <Property Name="GERCEKLESEN_IMALAT_TUTARI" Type="float" />
+          <Property Name="PSTN" Type="float" />
+          <Property Name="DSL" Type="float" />
+          <Property Name="IPTV" Type="float" />
+          <Property Name="TAMAMLANAN_HP" Type="float" />
+          <Property Name="TAMAMLANAN_HP_V2" Type="float" />
+          <Property Name="PROJE_YILI" Type="float" />
+        </EntityType>
+        <EntityContainer Name="ProjeTakipSistModelStoreContainer">
+          <EntitySet Name="Aksiyonlar" EntityType="Self.Aksiyonlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ilerleme" EntityType="Self.Ilerleme" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProjeTakipSistModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Aksiyonlar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CBS_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Proje_Turu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Proje_Adi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Cizim_Adi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Telekom_Mud" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Santral" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Altyapi_Maliyeti" Type="Double" />
+          <Property Name="Acik_Kazi" Type="Double" />
+          <Property Name="Fider" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Trencher" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Kazser" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Yeralti_Guzergahincan" Type="Double" />
+          <Property Name="Yeni_Havi_Guzergahtan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Mevcut_Havai_Guzergahtan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Kazser_Guzergahtan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FTTC_OFSD_OFTK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FTTB_3_48U_Kabin" Type="Double" />
+          <Property Name="Aktarma" Type="Double" />
+          <Property Name="Bina_ici_Kablolama" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Islem" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Islem_Tarih" Type="DateTime" Precision="3" />
+          <Property Name="Gerekce" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Kullanici" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Baslangic_Tarih" Type="DateTime" Precision="3" />
+          <Property Name="Bitis_Tarih" Type="DateTime" Precision="3" />
+          <Property Name="Proje_Sure" Type="Double" />
+          <Property Name="Proje_Adet" Type="Double" />
+          <Property Name="Proje_Sira" Type="Double" />
+          <Property Name="Mukerrer" Type="Double" />
+          <Property Name="Kalan_Sure" Type="Double" />
+          <Property Name="Eski_Islem_Tarih" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Aktif_Islem" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Aktif_Sure" Type="Double" />
+          <Property Name="Cezali_Gun_Sayisi" Type="Double" />
+          <Property Name="Ceza_Tutari" Type="Double" />
+          <Property Name="Tarih" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Proje_Genel_Durumu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PROJE_REVIZE_BUTCE" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="GERCEKLESEN_IMALAT_TUTARI" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Karsilastirma" Type="Double" />
+        </EntityType>
+        <EntityType Name="Ilerleme">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="BOLGE_ADI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IL_ADI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SANTRAL_ADI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PROJE_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PROJE_ADI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CIZIM_ADI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CIZIM_ID" Type="Double" />
+          <Property Name="PROJE_OZELLIGI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CIZIM_ONAY_DURUMU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RUHSAT" Type="Double" />
+          <Property Name="MALZEME" Type="Double" />
+          <Property Name="ALTYAPI" Type="Double" />
+          <Property Name="FIBERNET_HP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HIPERNET_HP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ID2" Type="Double" />
+          <Property Name="OLT" Type="Double" />
+          <Property Name="FTA" Type="Double" />
+          <Property Name="OFTK" Type="Double" />
+          <Property Name="T_1" Type="Double" />
+          <Property Name="T_11A" Type="Double" />
+          <Property Name="T_11B" Type="Double" />
+          <Property Name="T_13" Type="Double" />
+          <Property Name="T_15" Type="Double" />
+          <Property Name="T_21" Type="Double" />
+          <Property Name="T_3" Type="Double" />
+          <Property Name="T_5" Type="Double" />
+          <Property Name="T_6" Type="Double" />
+          <Property Name="T_7" Type="Double" />
+          <Property Name="T_9" Type="Double" />
+          <Property Name="SPLITTER" Type="Double" />
+          <Property Name="MDU" Type="Double" />
+          <Property Name="KTA" Type="Double" />
+          <Property Name="IFTK" Type="Double" />
+          <Property Name="T_23" Type="Double" />
+          <Property Name="T_17" Type="Double" />
+          <Property Name="T_19" Type="Double" />
+          <Property Name="FIBER_PLANLANAN" Type="Double" />
+          <Property Name="BAKIR_PLANLAMA" Type="Double" />
+          <Property Name="TRANSE_PLANLANAN" Type="Double" />
+          <Property Name="GERCEKLESEN_ID" Type="Double" />
+          <Property Name="GRC_OLT" Type="Double" />
+          <Property Name="GRC_FTA" Type="Double" />
+          <Property Name="GRC_OFTK" Type="Double" />
+          <Property Name="GRC_T_1" Type="Double" />
+          <Property Name="GRC_T_11A" Type="Double" />
+          <Property Name="GRC_T_11B" Type="Double" />
+          <Property Name="GRC_T_13" Type="Double" />
+          <Property Name="GRC_T_15" Type="Double" />
+          <Property Name="GRC_T_21" Type="Double" />
+          <Property Name="GRC_T_3" Type="Double" />
+          <Property Name="GRC_T_5" Type="Double" />
+          <Property Name="GRC_T_6" Type="Double" />
+          <Property Name="GRC_T_7" Type="Double" />
+          <Property Name="GRC_T_9" Type="Double" />
+          <Property Name="GRC_SPLITTER" Type="Double" />
+          <Property Name="GRC_MDU" Type="Double" />
+          <Property Name="GRC_KTA" Type="Double" />
+          <Property Name="GRC_IFTK" Type="Double" />
+          <Property Name="GRC_T_23" Type="Double" />
+          <Property Name="GRC_T_17" Type="Double" />
+          <Property Name="GRC_T_19" Type="Double" />
+          <Property Name="TRANSE_ILERLEME" Type="Double" />
+          <Property Name="FIBER_ILERLEME" Type="Double" />
+          <Property Name="BAKIR_ILERLEME" Type="Double" />
+          <Property Name="DEVAM_EDEN_PROJE_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DEVAM_EDEN_PROJE_ADI" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BUTCE" Type="Double" />
+          <Property Name="GERCEKLESEN_RUHSAT" Type="Double" />
+          <Property Name="GERCEKLESEN_ALTYAPI" Type="Double" />
+          <Property Name="GERCEKLESEN_MALZEME" Type="Double" />
+          <Property Name="PYP_NO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BASLANGIC_TARIH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BITIS_TARIH" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TELEKOM_MUDURLUGU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MAHALLE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MAHALLE_UAVT" Type="Double" />
+          <Property Name="PLANLANAN_KABIN_SAYISI" Type="Double" />
+          <Property Name="FIILI_BASLANGIC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FIILI_BITIS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PROJE_DURUMU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="KURULU_KABIN" Type="Double" />
+          <Property Name="SERVISE_ALINAN_KABIN" Type="Double" />
+          <Property Name="PROJE_BUTCE" Type="Double" />
+          <Property Name="PROJE_REVIZE_BUTCE" Type="Double" />
+          <Property Name="GERCEKLESEN_IMALAT_TUTARI" Type="Double" />
+          <Property Name="PSTN" Type="Double" />
+          <Property Name="DSL" Type="Double" />
+          <Property Name="IPTV" Type="Double" />
+          <Property Name="TAMAMLANAN_HP" Type="Double" />
+          <Property Name="TAMAMLANAN_HP_V2" Type="Double" />
+          <Property Name="PROJE_YILI" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="ProjeTakipSistEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Aksiyonlar" EntityType="Self.Aksiyonlar" />
+          <EntitySet Name="Ilerleme" EntityType="Self.Ilerleme" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProjeTakipSistModelStoreContainer" CdmEntityContainer="ProjeTakipSistEntities">
+          <EntitySetMapping Name="Aksiyonlar">
+            <EntityTypeMapping TypeName="ProjeTakipSistModel.Aksiyonlar">
+              <MappingFragment StoreEntitySet="Aksiyonlar">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CBS_ID" ColumnName="CBS_ID" />
+                <ScalarProperty Name="Proje_Turu" ColumnName="Proje_Turu" />
+                <ScalarProperty Name="Proje_Adi" ColumnName="Proje_Adi" />
+                <ScalarProperty Name="Cizim_Adi" ColumnName="Cizim_Adi" />
+                <ScalarProperty Name="Telekom_Mud" ColumnName="Telekom_Mud" />
+                <ScalarProperty Name="Santral" ColumnName="Santral" />
+                <ScalarProperty Name="Altyapi_Maliyeti" ColumnName="Altyapi_Maliyeti" />
+                <ScalarProperty Name="Acik_Kazi" ColumnName="Acik_Kazi" />
+                <ScalarProperty Name="Fider" ColumnName="Fider" />
+                <ScalarProperty Name="Trencher" ColumnName="Trencher" />
+                <ScalarProperty Name="Kazser" ColumnName="Kazser" />
+                <ScalarProperty Name="Yeralti_Guzergahincan" ColumnName="Yeralti_Guzergahincan" />
+                <ScalarProperty Name="Yeni_Havi_Guzergahtan" ColumnName="Yeni_Havi_Guzergahtan" />
+                <ScalarProperty Name="Mevcut_Havai_Guzergahtan" ColumnName="Mevcut_Havai_Guzergahtan" />
+                <ScalarProperty Name="Kazser_Guzergahtan" ColumnName="Kazser_Guzergahtan" />
+                <ScalarProperty Name="FTTC_OFSD_OFTK" ColumnName="FTTC_OFSD_OFTK" />
+                <ScalarProperty Name="FTTB_3_48U_Kabin" ColumnName="FTTB_3_48U_Kabin" />
+                <ScalarProperty Name="Aktarma" ColumnName="Aktarma" />
+                <ScalarProperty Name="Bina_ici_Kablolama" ColumnName="Bina_ici_Kablolama" />
+                <ScalarProperty Name="Islem" ColumnName="Islem" />
+                <ScalarProperty Name="Islem_Tarih" ColumnName="Islem_Tarih" />
+                <ScalarProperty Name="Gerekce" ColumnName="Gerekce" />
+                <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+                <ScalarProperty Name="Baslangic_Tarih" ColumnName="Baslangic_Tarih" />
+                <ScalarProperty Name="Bitis_Tarih" ColumnName="Bitis_Tarih" />
+                <ScalarProperty Name="Proje_Sure" ColumnName="Proje_Sure" />
+                <ScalarProperty Name="Proje_Adet" ColumnName="Proje_Adet" />
+                <ScalarProperty Name="Proje_Sira" ColumnName="Proje_Sira" />
+                <ScalarProperty Name="Mukerrer" ColumnName="Mukerrer" />
+                <ScalarProperty Name="Kalan_Sure" ColumnName="Kalan_Sure" />
+                <ScalarProperty Name="Eski_Islem_Tarih" ColumnName="Eski_Islem_Tarih" />
+                <ScalarProperty Name="Aktif_Islem" ColumnName="Aktif_Islem" />
+                <ScalarProperty Name="Aktif_Sure" ColumnName="Aktif_Sure" />
+                <ScalarProperty Name="Cezali_Gun_Sayisi" ColumnName="Cezali_Gun_Sayisi" />
+                <ScalarProperty Name="Ceza_Tutari" ColumnName="Ceza_Tutari" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Proje_Genel_Durumu" ColumnName="Proje_Genel_Durumu" />
+                <ScalarProperty Name="PROJE_REVIZE_BUTCE" ColumnName="PROJE_REVIZE_BUTCE" />
+                <ScalarProperty Name="GERCEKLESEN_IMALAT_TUTARI" ColumnName="GERCEKLESEN_IMALAT_TUTARI" />
+                <ScalarProperty Name="Karsilastirma" ColumnName="Karsilastirma" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ilerleme">
+            <EntityTypeMapping TypeName="ProjeTakipSistModel.Ilerleme">
+              <MappingFragment StoreEntitySet="Ilerleme">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="BOLGE_ADI" ColumnName="BOLGE_ADI" />
+                <ScalarProperty Name="IL_ADI" ColumnName="IL_ADI" />
+                <ScalarProperty Name="SANTRAL_ADI" ColumnName="SANTRAL_ADI" />
+                <ScalarProperty Name="PROJE_NO" ColumnName="PROJE_NO" />
+                <ScalarProperty Name="PROJE_ADI" ColumnName="PROJE_ADI" />
+                <ScalarProperty Name="CIZIM_ADI" ColumnName="CIZIM_ADI" />
+                <ScalarProperty Name="CIZIM_ID" ColumnName="CIZIM_ID" />
+                <ScalarProperty Name="PROJE_OZELLIGI" ColumnName="PROJE_OZELLIGI" />
+                <ScalarProperty Name="CIZIM_ONAY_DURUMU" ColumnName="CIZIM_ONAY_DURUMU" />
+                <ScalarProperty Name="RUHSAT" ColumnName="RUHSAT" />
+                <ScalarProperty Name="MALZEME" ColumnName="MALZEME" />
+                <ScalarProperty Name="ALTYAPI" ColumnName="ALTYAPI" />
+                <ScalarProperty Name="FIBERNET_HP" ColumnName="FIBERNET_HP" />
+                <ScalarProperty Name="HIPERNET_HP" ColumnName="HIPERNET_HP" />
+                <ScalarProperty Name="ID2" ColumnName="ID2" />
+                <ScalarProperty Name="OLT" ColumnName="OLT" />
+                <ScalarProperty Name="FTA" ColumnName="FTA" />
+                <ScalarProperty Name="OFTK" ColumnName="OFTK" />
+                <ScalarProperty Name="T_1" ColumnName="T-1" />
+                <ScalarProperty Name="T_11A" ColumnName="T-11A" />
+                <ScalarProperty Name="T_11B" ColumnName="T-11B" />
+                <ScalarProperty Name="T_13" ColumnName="T-13" />
+                <ScalarProperty Name="T_15" ColumnName="T-15" />
+                <ScalarProperty Name="T_21" ColumnName="T-21" />
+                <ScalarProperty Name="T_3" ColumnName="T-3" />
+                <ScalarProperty Name="T_5" ColumnName="T-5" />
+                <ScalarProperty Name="T_6" ColumnName="T-6" />
+                <ScalarProperty Name="T_7" ColumnName="T-7" />
+                <ScalarProperty Name="T_9" ColumnName="T-9" />
+                <ScalarProperty Name="SPLITTER" ColumnName="SPLITTER" />
+                <ScalarProperty Name="MDU" ColumnName="MDU" />
+                <ScalarProperty Name="KTA" ColumnName="KTA" />
+                <ScalarProperty Name="IFTK" ColumnName="IFTK" />
+                <ScalarProperty Name="T_23" ColumnName="T-23" />
+                <ScalarProperty Name="T_17" ColumnName="T-17" />
+                <ScalarProperty Name="T_19" ColumnName="T-19" />
+                <ScalarProperty Name="FIBER_PLANLANAN" ColumnName="FIBER_PLANLANAN" />
+                <ScalarProperty Name="BAKIR_PLANLAMA" ColumnName="BAKIR_PLANLAMA" />
+                <ScalarProperty Name="TRANSE_PLANLANAN" ColumnName="TRANSE_PLANLANAN" />
+                <ScalarProperty Name="GERCEKLESEN_ID" ColumnName="GERCEKLESEN_ID" />
+                <ScalarProperty Name="GRC_OLT" ColumnName="GRC_OLT" />
+                <ScalarProperty Name="GRC_FTA" ColumnName="GRC_FTA" />
+                <ScalarProperty Name="GRC_OFTK" ColumnName="GRC_OFTK" />
+                <ScalarProperty Name="GRC_T_1" ColumnName="GRC_T-1" />
+                <ScalarProperty Name="GRC_T_11A" ColumnName="GRC_T-11A" />
+                <ScalarProperty Name="GRC_T_11B" ColumnName="GRC_T-11B" />
+                <ScalarProperty Name="GRC_T_13" ColumnName="GRC_T-13" />
+                <ScalarProperty Name="GRC_T_15" ColumnName="GRC_T-15" />
+                <ScalarProperty Name="GRC_T_21" ColumnName="GRC_T-21" />
+                <ScalarProperty Name="GRC_T_3" ColumnName="GRC_T-3" />
+                <ScalarProperty Name="GRC_T_5" ColumnName="GRC_T-5" />
+                <ScalarProperty Name="GRC_T_6" ColumnName="GRC_T-6" />
+                <ScalarProperty Name="GRC_T_7" ColumnName="GRC_T-7" />
+                <ScalarProperty Name="GRC_T_9" ColumnName="GRC_T-9" />
+                <ScalarProperty Name="GRC_SPLITTER" ColumnName="GRC_SPLITTER" />
+                <ScalarProperty Name="GRC_MDU" ColumnName="GRC_MDU" />
+                <ScalarProperty Name="GRC_KTA" ColumnName="GRC_KTA" />
+                <ScalarProperty Name="GRC_IFTK" ColumnName="GRC_IFTK" />
+                <ScalarProperty Name="GRC_T_23" ColumnName="GRC_T-23" />
+                <ScalarProperty Name="GRC_T_17" ColumnName="GRC_T-17" />
+                <ScalarProperty Name="GRC_T_19" ColumnName="GRC_T-19" />
+                <ScalarProperty Name="TRANSE_ILERLEME" ColumnName="TRANSE_ILERLEME" />
+                <ScalarProperty Name="FIBER_ILERLEME" ColumnName="FIBER_ILERLEME" />
+                <ScalarProperty Name="BAKIR_ILERLEME" ColumnName="BAKIR_ILERLEME" />
+                <ScalarProperty Name="DEVAM_EDEN_PROJE_NO" ColumnName="DEVAM_EDEN_PROJE_NO" />
+                <ScalarProperty Name="DEVAM_EDEN_PROJE_ADI" ColumnName="DEVAM_EDEN_PROJE_ADI" />
+                <ScalarProperty Name="BUTCE" ColumnName="BUTCE" />
+                <ScalarProperty Name="GERCEKLESEN_RUHSAT" ColumnName="GERCEKLESEN_RUHSAT" />
+                <ScalarProperty Name="GERCEKLESEN_ALTYAPI" ColumnName="GERCEKLESEN_ALTYAPI" />
+                <ScalarProperty Name="GERCEKLESEN_MALZEME" ColumnName="GERCEKLESEN_MALZEME" />
+                <ScalarProperty Name="PYP_NO" ColumnName="PYP_NO" />
+                <ScalarProperty Name="BASLANGIC_TARIH" ColumnName="BASLANGIC_TARIH" />
+                <ScalarProperty Name="BITIS_TARIH" ColumnName="BITIS_TARIH" />
+                <ScalarProperty Name="TELEKOM_MUDURLUGU" ColumnName="TELEKOM_MUDURLUGU" />
+                <ScalarProperty Name="MAHALLE" ColumnName="MAHALLE" />
+                <ScalarProperty Name="MAHALLE_UAVT" ColumnName="MAHALLE_UAVT" />
+                <ScalarProperty Name="PLANLANAN_KABIN_SAYISI" ColumnName="PLANLANAN_KABIN_SAYISI" />
+                <ScalarProperty Name="FIILI_BASLANGIC" ColumnName="FIILI_BASLANGIC" />
+                <ScalarProperty Name="FIILI_BITIS" ColumnName="FIILI_BITIS" />
+                <ScalarProperty Name="PROJE_DURUMU" ColumnName="PROJE_DURUMU" />
+                <ScalarProperty Name="KURULU_KABIN" ColumnName="KURULU_KABIN" />
+                <ScalarProperty Name="SERVISE_ALINAN_KABIN" ColumnName="SERVISE_ALINAN_KABIN" />
+                <ScalarProperty Name="PROJE_BUTCE" ColumnName="PROJE_BUTCE" />
+                <ScalarProperty Name="PROJE_REVIZE_BUTCE" ColumnName="PROJE_REVIZE_BUTCE" />
+                <ScalarProperty Name="GERCEKLESEN_IMALAT_TUTARI" ColumnName="GERCEKLESEN_IMALAT_TUTARI" />
+                <ScalarProperty Name="PSTN" ColumnName="PSTN" />
+                <ScalarProperty Name="DSL" ColumnName="DSL" />
+                <ScalarProperty Name="IPTV" ColumnName="IPTV" />
+                <ScalarProperty Name="TAMAMLANAN_HP" ColumnName="TAMAMLANAN_HP" />
+                <ScalarProperty Name="TAMAMLANAN_HP_V2" ColumnName="TAMAMLANAN_HP_V2" />
+                <ScalarProperty Name="PROJE_YILI" ColumnName="PROJE_YILI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

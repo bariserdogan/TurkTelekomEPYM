@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjeTakipSistModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Aksiyonlar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CBS_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Proje_Turu" Type="nvarchar" MaxLength="255" />
+    <Property Name="Proje_Adi" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cizim_Adi" Type="nvarchar" MaxLength="255" />
+    <Property Name="Telekom_Mud" Type="nvarchar" MaxLength="255" />
+    <Property Name="Santral" Type="nvarchar" MaxLength="255" />
+    <Property Name="Altyapi_Maliyeti" Type="float" />
+    <Property Name="Acik_Kazi" Type="float" />
+    <Property Name="Fider" Type="nvarchar" MaxLength="255" />
+    <Property Name="Trencher" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kazser" Type="nvarchar" MaxLength="255" />
+    <Property Name="Yeralti_Guzergahincan" Type="float" />
+    <Property Name="Yeni_Havi_Guzergahtan" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mevcut_Havai_Guzergahtan" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kazser_Guzergahtan" Type="nvarchar" MaxLength="255" />
+    <Property Name="FTTC_OFSD_OFTK" Type="nvarchar" MaxLength="255" />
+    <Property Name="FTTB_3_48U_Kabin" Type="float" />
+    <Property Name="Aktarma" Type="float" />
+    <Property Name="Bina_ici_Kablolama" Type="nvarchar" MaxLength="255" />
+    <Property Name="Islem" Type="nvarchar" MaxLength="255" />
+    <Property Name="Islem_Tarih" Type="datetime" />
+    <Property Name="Gerekce" Type="nvarchar" MaxLength="255" />
+    <Property Name="Kullanici" Type="nvarchar" MaxLength="255" />
+    <Property Name="Baslangic_Tarih" Type="datetime" />
+    <Property Name="Bitis_Tarih" Type="datetime" />
+    <Property Name="Proje_Sure" Type="float" />
+    <Property Name="Proje_Adet" Type="float" />
+    <Property Name="Proje_Sira" Type="float" />
+    <Property Name="Mukerrer" Type="float" />
+    <Property Name="Kalan_Sure" Type="float" />
+    <Property Name="Eski_Islem_Tarih" Type="nvarchar" MaxLength="255" />
+    <Property Name="Aktif_Islem" Type="nvarchar" MaxLength="255" />
+    <Property Name="Aktif_Sure" Type="float" />
+    <Property Name="Cezali_Gun_Sayisi" Type="float" />
+    <Property Name="Ceza_Tutari" Type="float" />
+    <Property Name="Tarih" Type="nvarchar" MaxLength="255" />
+    <Property Name="Proje_Genel_Durumu" Type="nvarchar" MaxLength="255" />
+    <Property Name="PROJE_REVIZE_BUTCE" Type="money" />
+    <Property Name="GERCEKLESEN_IMALAT_TUTARI" Type="money" />
+    <Property Name="Karsilastirma" Type="float" />
+  </EntityType>
+  <EntityType Name="Ilerleme">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="BOLGE_ADI" Type="nvarchar" MaxLength="255" />
+    <Property Name="IL_ADI" Type="nvarchar" MaxLength="255" />
+    <Property Name="SANTRAL_ADI" Type="nvarchar" MaxLength="255" />
+    <Property Name="PROJE_NO" Type="nvarchar" MaxLength="255" />
+    <Property Name="PROJE_ADI" Type="nvarchar" MaxLength="255" />
+    <Property Name="CIZIM_ADI" Type="nvarchar" MaxLength="255" />
+    <Property Name="CIZIM_ID" Type="float" />
+    <Property Name="PROJE_OZELLIGI" Type="nvarchar" MaxLength="255" />
+    <Property Name="CIZIM_ONAY_DURUMU" Type="nvarchar" MaxLength="255" />
+    <Property Name="RUHSAT" Type="float" />
+    <Property Name="MALZEME" Type="float" />
+    <Property Name="ALTYAPI" Type="float" />
+    <Property Name="FIBERNET_HP" Type="nvarchar" MaxLength="255" />
+    <Property Name="HIPERNET_HP" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID2" Type="float" />
+    <Property Name="OLT" Type="float" />
+    <Property Name="FTA" Type="float" />
+    <Property Name="OFTK" Type="float" />
+    <Property Name="T-1" Type="float" />
+    <Property Name="T-11A" Type="float" />
+    <Property Name="T-11B" Type="float" />
+    <Property Name="T-13" Type="float" />
+    <Property Name="T-15" Type="float" />
+    <Property Name="T-21" Type="float" />
+    <Property Name="T-3" Type="float" />
+    <Property Name="T-5" Type="float" />
+    <Property Name="T-6" Type="float" />
+    <Property Name="T-7" Type="float" />
+    <Property Name="T-9" Type="float" />
+    <Property Name="SPLITTER" Type="float" />
+    <Property Name="MDU" Type="float" />
+    <Property Name="KTA" Type="float" />
+    <Property Name="IFTK" Type="float" />
+    <Property Name="T-23" Type="float" />
+    <Property Name="T-17" Type="float" />
+    <Property Name="T-19" Type="float" />
+    <Property Name="FIBER_PLANLANAN" Type="float" />
+    <Property Name="BAKIR_PLANLAMA" Type="float" />
+    <Property Name="TRANSE_PLANLANAN" Type="float" />
+    <Property Name="GERCEKLESEN_ID" Type="float" />
+    <Property Name="GRC_OLT" Type="float" />
+    <Property Name="GRC_FTA" Type="float" />
+    <Property Name="GRC_OFTK" Type="float" />
+    <Property Name="GRC_T-1" Type="float" />
+    <Property Name="GRC_T-11A" Type="float" />
+    <Property Name="GRC_T-11B" Type="float" />
+    <Property Name="GRC_T-13" Type="float" />
+    <Property Name="GRC_T-15" Type="float" />
+    <Property Name="GRC_T-21" Type="float" />
+    <Property Name="GRC_T-3" Type="float" />
+    <Property Name="GRC_T-5" Type="float" />
+    <Property Name="GRC_T-6" Type="float" />
+    <Property Name="GRC_T-7" Type="float" />
+    <Property Name="GRC_T-9" Type="float" />
+    <Property Name="GRC_SPLITTER" Type="float" />
+    <Property Name="GRC_MDU" Type="float" />
+    <Property Name="GRC_KTA" Type="float" />
+    <Property Name="GRC_IFTK" Type="float" />
+    <Property Name="GRC_T-23" Type="float" />
+    <Property Name="GRC_T-17" Type="float" />
+    <Property Name="GRC_T-19" Type="float" />
+    <Property Name="TRANSE_ILERLEME" Type="float" />
+    <Property Name="FIBER_ILERLEME" Type="float" />
+    <Property Name="BAKIR_ILERLEME" Type="float" />
+    <Property Name="DEVAM_EDEN_PROJE_NO" Type="nvarchar" MaxLength="255" />
+    <Property Name="DEVAM_EDEN_PROJE_ADI" Type="nvarchar" MaxLength="255" />
+    <Property Name="BUTCE" Type="float" />
+    <Property Name="GERCEKLESEN_RUHSAT" Type="float" />
+    <Property Name="GERCEKLESEN_ALTYAPI" Type="float" />
+    <Property Name="GERCEKLESEN_MALZEME" Type="float" />
+    <Property Name="PYP_NO" Type="nvarchar" MaxLength="255" />
+    <Property Name="BASLANGIC_TARIH" Type="nvarchar" MaxLength="255" />
+    <Property Name="BITIS_TARIH" Type="nvarchar" MaxLength="255" />
+    <Property Name="TELEKOM_MUDURLUGU" Type="nvarchar" MaxLength="255" />
+    <Property Name="MAHALLE" Type="nvarchar" MaxLength="255" />
+    <Property Name="MAHALLE_UAVT" Type="float" />
+    <Property Name="PLANLANAN_KABIN_SAYISI" Type="float" />
+    <Property Name="FIILI_BASLANGIC" Type="nvarchar" MaxLength="255" />
+    <Property Name="FIILI_BITIS" Type="nvarchar" MaxLength="255" />
+    <Property Name="PROJE_DURUMU" Type="nvarchar" MaxLength="255" />
+    <Property Name="KURULU_KABIN" Type="float" />
+    <Property Name="SERVISE_ALINAN_KABIN" Type="float" />
+    <Property Name="PROJE_BUTCE" Type="float" />
+    <Property Name="PROJE_REVIZE_BUTCE" Type="float" />
+    <Property Name="GERCEKLESEN_IMALAT_TUTARI" Type="float" />
+    <Property Name="PSTN" Type="float" />
+    <Property Name="DSL" Type="float" />
+    <Property Name="IPTV" Type="float" />
+    <Property Name="TAMAMLANAN_HP" Type="float" />
+    <Property Name="TAMAMLANAN_HP_V2" Type="float" />
+    <Property Name="PROJE_YILI" Type="float" />
+  </EntityType>
+  <EntityContainer Name="ProjeTakipSistModelStoreContainer">
+    <EntitySet Name="Aksiyonlar" EntityType="Self.Aksiyonlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ilerleme" EntityType="Self.Ilerleme" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
