@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_Arama = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_ProjeKapama = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.btn_ProjeKaydet = new System.Windows.Forms.Button();
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBoxSantral_Adi = new System.Windows.Forms.TextBox();
             this.textBoxTelekom_Mudurlugu = new System.Windows.Forms.TextBox();
             this.textBoxProjeAdi = new System.Windows.Forms.TextBox();
@@ -62,24 +64,24 @@
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txt_binaici = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.txt_aktarma = new System.Windows.Forms.TextBox();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.txt_indoor_kabin = new System.Windows.Forms.TextBox();
+            this.txt_outdoorkabin = new System.Windows.Forms.TextBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textbox_kazser2 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txt_mevcuthavai = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txt_yenihavai = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txt_yeralti = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
-            this.txt_KAZSER = new System.Windows.Forms.TextBox();
+            this.txt_KAZSER1 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.txt_Trencher = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -99,35 +101,34 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox56 = new System.Windows.Forms.TextBox();
+            this.txt_ceza = new System.Windows.Forms.TextBox();
             this.textBox55 = new System.Windows.Forms.TextBox();
             this.textBox54 = new System.Windows.Forms.TextBox();
-            this.textBox53 = new System.Windows.Forms.TextBox();
-            this.textBox52 = new System.Windows.Forms.TextBox();
+            this.txt_yuklenici = new System.Windows.Forms.TextBox();
+            this.txt_kontrol_teskilati = new System.Windows.Forms.TextBox();
             this.textBox51 = new System.Windows.Forms.TextBox();
             this.textBox50 = new System.Windows.Forms.TextBox();
             this.textBox49 = new System.Windows.Forms.TextBox();
-            this.textBox47 = new System.Windows.Forms.TextBox();
-            this.textBox48 = new System.Windows.Forms.TextBox();
+            this.txt_kalan_sure = new System.Windows.Forms.TextBox();
+            this.txt_bitis_tarihi = new System.Windows.Forms.TextBox();
             this.textBox45 = new System.Windows.Forms.TextBox();
             this.textBox46 = new System.Windows.Forms.TextBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.textBox44 = new System.Windows.Forms.TextBox();
+            this.txt_calisilan_sure = new System.Windows.Forms.TextBox();
+            this.txt_baslangic_tarihi = new System.Windows.Forms.TextBox();
             this.textBox42 = new System.Windows.Forms.TextBox();
             this.textBox43 = new System.Windows.Forms.TextBox();
             this.textBox38 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.textBox40 = new System.Windows.Forms.TextBox();
+            this.tamamlama_santral_adi = new System.Windows.Forms.TextBox();
+            this.tamamlama_telekom = new System.Windows.Forms.TextBox();
             this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.tamamlama_proje_adi = new System.Windows.Forms.TextBox();
+            this.tamamlama_cizim_adi = new System.Windows.Forms.TextBox();
             this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.tamamlama_proje_ozelligi = new System.Windows.Forms.TextBox();
+            this.tamamlama_cbs_id = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btn_Arama = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btn_Hesapla = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -147,7 +148,7 @@
             this.tabControl1.Location = new System.Drawing.Point(1, -1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(851, 818);
+            this.tabControl1.Size = new System.Drawing.Size(875, 818);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Tag = "";
             // 
@@ -162,23 +163,34 @@
             this.tabPage1.Controls.Add(this.btn_Sure_Durdurma);
             this.tabPage1.Controls.Add(this.btn_sure_baslatma);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.btn_ProjeKaydet);
             this.tabPage1.Controls.Add(this.textBox_ID);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(847, 792);
+            this.tabPage1.Size = new System.Drawing.Size(867, 792);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ana Menü";
+            // 
+            // btn_Arama
+            // 
+            this.btn_Arama.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btn_Arama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Arama.Location = new System.Drawing.Point(189, 62);
+            this.btn_Arama.Name = "btn_Arama";
+            this.btn_Arama.Size = new System.Drawing.Size(109, 38);
+            this.btn_Arama.TabIndex = 12;
+            this.btn_Arama.Text = "Ara";
+            this.btn_Arama.UseVisualStyleBackColor = false;
+            this.btn_Arama.Click += new System.EventHandler(this.btn_Arama_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.btn_ProjeKapama);
             this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Location = new System.Drawing.Point(421, 190);
+            this.groupBox2.Location = new System.Drawing.Point(421, 228);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(250, 227);
+            this.groupBox2.Size = new System.Drawing.Size(263, 246);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Proje Tamamlama İşlemleri";
@@ -188,19 +200,19 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label6.Location = new System.Drawing.Point(48, 28);
+            this.label6.Location = new System.Drawing.Point(45, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 17);
+            this.label6.Size = new System.Drawing.Size(182, 17);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Proje Başlatma Tutanağı";
+            this.label6.Text = "Proje Tamamlama Tutanağı";
             // 
             // btn_ProjeKapama
             // 
             this.btn_ProjeKapama.BackColor = System.Drawing.Color.Aqua;
             this.btn_ProjeKapama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_ProjeKapama.Location = new System.Drawing.Point(48, 65);
+            this.btn_ProjeKapama.Location = new System.Drawing.Point(48, 67);
             this.btn_ProjeKapama.Name = "btn_ProjeKapama";
-            this.btn_ProjeKapama.Size = new System.Drawing.Size(163, 47);
+            this.btn_ProjeKapama.Size = new System.Drawing.Size(179, 47);
             this.btn_ProjeKapama.TabIndex = 5;
             this.btn_ProjeKapama.Text = "Proje Kapama";
             this.btn_ProjeKapama.UseVisualStyleBackColor = false;
@@ -209,9 +221,9 @@
             // 
             this.button6.BackColor = System.Drawing.Color.Aqua;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.Location = new System.Drawing.Point(48, 147);
+            this.button6.Location = new System.Drawing.Point(48, 132);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(163, 47);
+            this.button6.Size = new System.Drawing.Size(179, 47);
             this.button6.TabIndex = 4;
             this.button6.Text = "Tamamlama Tutanağı Yazdır";
             this.button6.UseVisualStyleBackColor = false;
@@ -227,13 +239,14 @@
             "TT malzeme temin problemi...",
             "TT per şeması bekleniyor...",
             "TT sistem servise alınması bekleniyor..."});
-            this.comboBox2.Location = new System.Drawing.Point(421, 142);
+            this.comboBox2.Location = new System.Drawing.Point(421, 170);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(319, 21);
             this.comboBox2.TabIndex = 10;
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Binada İzin Alındı.",
@@ -241,17 +254,18 @@
             "Kazı Ruhsatı Alındı.",
             "Sistem Temini Yapıldı.Depodan alınabilir. ",
             "Per şeması Alındı."});
-            this.comboBox1.Location = new System.Drawing.Point(421, 99);
+            this.comboBox1.Location = new System.Drawing.Point(421, 127);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(319, 21);
+            this.comboBox1.Size = new System.Drawing.Size(319, 24);
             this.comboBox1.TabIndex = 9;
             // 
             // btn_Sure_Durdurma
             // 
             this.btn_Sure_Durdurma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_Sure_Durdurma.Location = new System.Drawing.Point(612, 37);
+            this.btn_Sure_Durdurma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Sure_Durdurma.Location = new System.Drawing.Point(612, 62);
             this.btn_Sure_Durdurma.Name = "btn_Sure_Durdurma";
-            this.btn_Sure_Durdurma.Size = new System.Drawing.Size(128, 32);
+            this.btn_Sure_Durdurma.Size = new System.Drawing.Size(128, 38);
             this.btn_Sure_Durdurma.TabIndex = 8;
             this.btn_Sure_Durdurma.Text = "Süre Durdurma";
             this.btn_Sure_Durdurma.UseVisualStyleBackColor = false;
@@ -259,9 +273,10 @@
             // btn_sure_baslatma
             // 
             this.btn_sure_baslatma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_sure_baslatma.Location = new System.Drawing.Point(421, 37);
+            this.btn_sure_baslatma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_sure_baslatma.Location = new System.Drawing.Point(421, 62);
             this.btn_sure_baslatma.Name = "btn_sure_baslatma";
-            this.btn_sure_baslatma.Size = new System.Drawing.Size(128, 32);
+            this.btn_sure_baslatma.Size = new System.Drawing.Size(128, 38);
             this.btn_sure_baslatma.TabIndex = 7;
             this.btn_sure_baslatma.Text = "Süre Başlatma";
             this.btn_sure_baslatma.UseVisualStyleBackColor = false;
@@ -271,9 +286,10 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_ProjeTeslim);
             this.groupBox1.Controls.Add(this.btn_baslatma_print);
-            this.groupBox1.Location = new System.Drawing.Point(48, 190);
+            this.groupBox1.Controls.Add(this.btn_ProjeKaydet);
+            this.groupBox1.Location = new System.Drawing.Point(48, 142);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(250, 227);
+            this.groupBox1.Size = new System.Drawing.Size(250, 332);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proje Başlatma İşlemleri";
@@ -283,7 +299,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(48, 28);
+            this.label1.Location = new System.Drawing.Point(48, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(163, 17);
             this.label1.TabIndex = 3;
@@ -293,7 +309,7 @@
             // 
             this.btn_ProjeTeslim.BackColor = System.Drawing.Color.Aqua;
             this.btn_ProjeTeslim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_ProjeTeslim.Location = new System.Drawing.Point(48, 65);
+            this.btn_ProjeTeslim.Location = new System.Drawing.Point(51, 169);
             this.btn_ProjeTeslim.Name = "btn_ProjeTeslim";
             this.btn_ProjeTeslim.Size = new System.Drawing.Size(163, 47);
             this.btn_ProjeTeslim.TabIndex = 5;
@@ -304,7 +320,7 @@
             // 
             this.btn_baslatma_print.BackColor = System.Drawing.Color.Aqua;
             this.btn_baslatma_print.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_baslatma_print.Location = new System.Drawing.Point(48, 147);
+            this.btn_baslatma_print.Location = new System.Drawing.Point(51, 248);
             this.btn_baslatma_print.Name = "btn_baslatma_print";
             this.btn_baslatma_print.Size = new System.Drawing.Size(163, 47);
             this.btn_baslatma_print.TabIndex = 4;
@@ -316,9 +332,9 @@
             this.btn_ProjeKaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn_ProjeKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_ProjeKaydet.ForeColor = System.Drawing.Color.Black;
-            this.btn_ProjeKaydet.Location = new System.Drawing.Point(189, 62);
+            this.btn_ProjeKaydet.Location = new System.Drawing.Point(51, 90);
             this.btn_ProjeKaydet.Name = "btn_ProjeKaydet";
-            this.btn_ProjeKaydet.Size = new System.Drawing.Size(109, 32);
+            this.btn_ProjeKaydet.Size = new System.Drawing.Size(163, 41);
             this.btn_ProjeKaydet.TabIndex = 1;
             this.btn_ProjeKaydet.Text = "Proje Kaydet";
             this.btn_ProjeKaydet.UseVisualStyleBackColor = false;
@@ -337,6 +353,7 @@
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage2.Controls.Add(this.btn_Hesapla);
             this.tabPage2.Controls.Add(this.comboBox3);
             this.tabPage2.Controls.Add(this.textBoxSantral_Adi);
             this.tabPage2.Controls.Add(this.textBoxTelekom_Mudurlugu);
@@ -355,24 +372,24 @@
             this.tabPage2.Controls.Add(this.textBox23);
             this.tabPage2.Controls.Add(this.textBox27);
             this.tabPage2.Controls.Add(this.textBox26);
-            this.tabPage2.Controls.Add(this.textBox17);
+            this.tabPage2.Controls.Add(this.txt_binaici);
             this.tabPage2.Controls.Add(this.textBox18);
-            this.tabPage2.Controls.Add(this.textBox19);
+            this.tabPage2.Controls.Add(this.txt_aktarma);
             this.tabPage2.Controls.Add(this.textBox20);
             this.tabPage2.Controls.Add(this.textBox21);
-            this.tabPage2.Controls.Add(this.textBox22);
-            this.tabPage2.Controls.Add(this.textBox24);
+            this.tabPage2.Controls.Add(this.txt_indoor_kabin);
+            this.tabPage2.Controls.Add(this.txt_outdoorkabin);
             this.tabPage2.Controls.Add(this.textBox25);
-            this.tabPage2.Controls.Add(this.textBox4);
+            this.tabPage2.Controls.Add(this.textbox_kazser2);
             this.tabPage2.Controls.Add(this.textBox8);
-            this.tabPage2.Controls.Add(this.textBox10);
+            this.tabPage2.Controls.Add(this.txt_mevcuthavai);
             this.tabPage2.Controls.Add(this.textBox11);
             this.tabPage2.Controls.Add(this.textBox12);
-            this.tabPage2.Controls.Add(this.textBox13);
+            this.tabPage2.Controls.Add(this.txt_yenihavai);
             this.tabPage2.Controls.Add(this.textBox14);
-            this.tabPage2.Controls.Add(this.textBox15);
+            this.tabPage2.Controls.Add(this.txt_yeralti);
             this.tabPage2.Controls.Add(this.textBox16);
-            this.tabPage2.Controls.Add(this.txt_KAZSER);
+            this.tabPage2.Controls.Add(this.txt_KAZSER1);
             this.tabPage2.Controls.Add(this.textBox9);
             this.tabPage2.Controls.Add(this.txt_Trencher);
             this.tabPage2.Controls.Add(this.textBox6);
@@ -392,11 +409,22 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(843, 792);
+            this.tabPage2.Size = new System.Drawing.Size(867, 792);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Proje Başlatma Tutanağı";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Var",
+            "Yok"});
+            this.comboBox3.Location = new System.Drawing.Point(536, 205);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(242, 21);
+            this.comboBox3.TabIndex = 56;
             // 
             // textBoxSantral_Adi
             // 
@@ -570,16 +598,16 @@
             this.textBox26.Text = "OFSD,OFTK,FTTC v.b.";
             this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox17
+            // txt_binaici
             // 
-            this.textBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox17.Location = new System.Drawing.Point(599, 576);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(175, 41);
-            this.textBox17.TabIndex = 37;
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_binaici.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_binaici.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_binaici.Location = new System.Drawing.Point(599, 576);
+            this.txt_binaici.Multiline = true;
+            this.txt_binaici.Name = "txt_binaici";
+            this.txt_binaici.Size = new System.Drawing.Size(175, 41);
+            this.txt_binaici.TabIndex = 37;
+            this.txt_binaici.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox18
             // 
@@ -593,16 +621,16 @@
             this.textBox18.Text = "Bina İçi Kablolama(Daire Adı)";
             this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox19
+            // txt_aktarma
             // 
-            this.textBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox19.Location = new System.Drawing.Point(415, 576);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(178, 41);
-            this.textBox19.TabIndex = 35;
-            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_aktarma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_aktarma.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_aktarma.Location = new System.Drawing.Point(415, 576);
+            this.txt_aktarma.Multiline = true;
+            this.txt_aktarma.Name = "txt_aktarma";
+            this.txt_aktarma.Size = new System.Drawing.Size(178, 41);
+            this.txt_aktarma.TabIndex = 35;
+            this.txt_aktarma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox20
             // 
@@ -628,27 +656,27 @@
             this.textBox21.Text = "Kabin&Bina&Aktarma";
             this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox22
+            // txt_indoor_kabin
             // 
-            this.textBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox22.Location = new System.Drawing.Point(230, 567);
-            this.textBox22.Multiline = true;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(179, 50);
-            this.textBox22.TabIndex = 32;
-            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_indoor_kabin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_indoor_kabin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_indoor_kabin.Location = new System.Drawing.Point(230, 567);
+            this.txt_indoor_kabin.Multiline = true;
+            this.txt_indoor_kabin.Name = "txt_indoor_kabin";
+            this.txt_indoor_kabin.Size = new System.Drawing.Size(179, 50);
+            this.txt_indoor_kabin.TabIndex = 32;
+            this.txt_indoor_kabin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox24
+            // txt_outdoorkabin
             // 
-            this.textBox24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox24.Location = new System.Drawing.Point(77, 567);
-            this.textBox24.Multiline = true;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(147, 50);
-            this.textBox24.TabIndex = 30;
-            this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_outdoorkabin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_outdoorkabin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_outdoorkabin.Location = new System.Drawing.Point(77, 567);
+            this.txt_outdoorkabin.Multiline = true;
+            this.txt_outdoorkabin.Name = "txt_outdoorkabin";
+            this.txt_outdoorkabin.Size = new System.Drawing.Size(147, 50);
+            this.txt_outdoorkabin.TabIndex = 30;
+            this.txt_outdoorkabin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox25
             // 
@@ -662,16 +690,16 @@
             this.textBox25.Text = "OUTDOOR KABİN(Adet)";
             this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
+            // textbox_kazser2
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.Location = new System.Drawing.Point(606, 448);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(172, 50);
-            this.textBox4.TabIndex = 28;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textbox_kazser2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textbox_kazser2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textbox_kazser2.Location = new System.Drawing.Point(606, 448);
+            this.textbox_kazser2.Multiline = true;
+            this.textbox_kazser2.Name = "textbox_kazser2";
+            this.textbox_kazser2.Size = new System.Drawing.Size(172, 50);
+            this.textbox_kazser2.TabIndex = 28;
+            this.textbox_kazser2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox8
             // 
@@ -685,16 +713,16 @@
             this.textBox8.Text = "KAZSER(Göz Mt.)";
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox10
+            // txt_mevcuthavai
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox10.Location = new System.Drawing.Point(405, 448);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(203, 50);
-            this.textBox10.TabIndex = 26;
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_mevcuthavai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_mevcuthavai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_mevcuthavai.Location = new System.Drawing.Point(405, 448);
+            this.txt_mevcuthavai.Multiline = true;
+            this.txt_mevcuthavai.Name = "txt_mevcuthavai";
+            this.txt_mevcuthavai.Size = new System.Drawing.Size(203, 50);
+            this.txt_mevcuthavai.TabIndex = 26;
+            this.txt_mevcuthavai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox11
             // 
@@ -720,16 +748,16 @@
             this.textBox12.Text = "Kablo Tesisi";
             this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox13
+            // txt_yenihavai
             // 
-            this.textBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox13.Location = new System.Drawing.Point(230, 448);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(179, 50);
-            this.textBox13.TabIndex = 23;
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_yenihavai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_yenihavai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_yenihavai.Location = new System.Drawing.Point(230, 448);
+            this.txt_yenihavai.Multiline = true;
+            this.txt_yenihavai.Name = "txt_yenihavai";
+            this.txt_yenihavai.Size = new System.Drawing.Size(179, 50);
+            this.txt_yenihavai.TabIndex = 23;
+            this.txt_yenihavai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox14
             // 
@@ -743,16 +771,16 @@
             this.textBox14.Text = "YENİ HAVAİ GÜZERGAHTAN(Mt.)";
             this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox15
+            // txt_yeralti
             // 
-            this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox15.Location = new System.Drawing.Point(77, 448);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(147, 50);
-            this.textBox15.TabIndex = 21;
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_yeralti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_yeralti.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_yeralti.Location = new System.Drawing.Point(77, 448);
+            this.txt_yeralti.Multiline = true;
+            this.txt_yeralti.Name = "txt_yeralti";
+            this.txt_yeralti.Size = new System.Drawing.Size(147, 50);
+            this.txt_yeralti.TabIndex = 21;
+            this.txt_yeralti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox16
             // 
@@ -766,16 +794,16 @@
             this.textBox16.Text = "YerAltından(Mt.)";
             this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txt_KAZSER
+            // txt_KAZSER1
             // 
-            this.txt_KAZSER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txt_KAZSER.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_KAZSER.Location = new System.Drawing.Point(591, 329);
-            this.txt_KAZSER.Multiline = true;
-            this.txt_KAZSER.Name = "txt_KAZSER";
-            this.txt_KAZSER.Size = new System.Drawing.Size(187, 50);
-            this.txt_KAZSER.TabIndex = 18;
-            this.txt_KAZSER.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_KAZSER1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txt_KAZSER1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_KAZSER1.Location = new System.Drawing.Point(591, 329);
+            this.txt_KAZSER1.Multiline = true;
+            this.txt_KAZSER1.Name = "txt_KAZSER1";
+            this.txt_KAZSER1.Size = new System.Drawing.Size(187, 50);
+            this.txt_KAZSER1.TabIndex = 18;
+            this.txt_KAZSER1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox9
             // 
@@ -968,7 +996,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(843, 792);
+            this.tabPage3.Size = new System.Drawing.Size(867, 792);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Proje Tamamlama Tutanağı";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -977,31 +1005,31 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.textBox56);
+            this.panel1.Controls.Add(this.txt_ceza);
             this.panel1.Controls.Add(this.textBox55);
             this.panel1.Controls.Add(this.textBox54);
-            this.panel1.Controls.Add(this.textBox53);
-            this.panel1.Controls.Add(this.textBox52);
+            this.panel1.Controls.Add(this.txt_yuklenici);
+            this.panel1.Controls.Add(this.txt_kontrol_teskilati);
             this.panel1.Controls.Add(this.textBox51);
             this.panel1.Controls.Add(this.textBox50);
             this.panel1.Controls.Add(this.textBox49);
-            this.panel1.Controls.Add(this.textBox47);
-            this.panel1.Controls.Add(this.textBox48);
+            this.panel1.Controls.Add(this.txt_kalan_sure);
+            this.panel1.Controls.Add(this.txt_bitis_tarihi);
             this.panel1.Controls.Add(this.textBox45);
             this.panel1.Controls.Add(this.textBox46);
-            this.panel1.Controls.Add(this.textBox41);
-            this.panel1.Controls.Add(this.textBox44);
+            this.panel1.Controls.Add(this.txt_calisilan_sure);
+            this.panel1.Controls.Add(this.txt_baslangic_tarihi);
             this.panel1.Controls.Add(this.textBox42);
             this.panel1.Controls.Add(this.textBox43);
             this.panel1.Controls.Add(this.textBox38);
-            this.panel1.Controls.Add(this.textBox39);
-            this.panel1.Controls.Add(this.textBox40);
+            this.panel1.Controls.Add(this.tamamlama_santral_adi);
+            this.panel1.Controls.Add(this.tamamlama_telekom);
             this.panel1.Controls.Add(this.textBox35);
-            this.panel1.Controls.Add(this.textBox36);
-            this.panel1.Controls.Add(this.textBox37);
+            this.panel1.Controls.Add(this.tamamlama_proje_adi);
+            this.panel1.Controls.Add(this.tamamlama_cizim_adi);
             this.panel1.Controls.Add(this.textBox34);
-            this.panel1.Controls.Add(this.textBox33);
-            this.panel1.Controls.Add(this.textBox32);
+            this.panel1.Controls.Add(this.tamamlama_proje_ozelligi);
+            this.panel1.Controls.Add(this.tamamlama_cbs_id);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(16, 12);
             this.panel1.Name = "panel1";
@@ -1016,13 +1044,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(701, 320);
             this.dataGridView1.TabIndex = 31;
             // 
-            // textBox56
+            // txt_ceza
             // 
-            this.textBox56.Location = new System.Drawing.Point(571, 363);
-            this.textBox56.Multiline = true;
-            this.textBox56.Name = "textBox56";
-            this.textBox56.Size = new System.Drawing.Size(182, 55);
-            this.textBox56.TabIndex = 30;
+            this.txt_ceza.Location = new System.Drawing.Point(571, 363);
+            this.txt_ceza.Multiline = true;
+            this.txt_ceza.Name = "txt_ceza";
+            this.txt_ceza.Size = new System.Drawing.Size(182, 55);
+            this.txt_ceza.TabIndex = 30;
             // 
             // textBox55
             // 
@@ -1043,21 +1071,21 @@
             this.textBox54.Size = new System.Drawing.Size(182, 44);
             this.textBox54.TabIndex = 28;
             // 
-            // textBox53
+            // txt_yuklenici
             // 
-            this.textBox53.Location = new System.Drawing.Point(365, 297);
-            this.textBox53.Multiline = true;
-            this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new System.Drawing.Size(200, 121);
-            this.textBox53.TabIndex = 27;
+            this.txt_yuklenici.Location = new System.Drawing.Point(365, 297);
+            this.txt_yuklenici.Multiline = true;
+            this.txt_yuklenici.Name = "txt_yuklenici";
+            this.txt_yuklenici.Size = new System.Drawing.Size(200, 121);
+            this.txt_yuklenici.TabIndex = 27;
             // 
-            // textBox52
+            // txt_kontrol_teskilati
             // 
-            this.textBox52.Location = new System.Drawing.Point(52, 297);
-            this.textBox52.Multiline = true;
-            this.textBox52.Name = "textBox52";
-            this.textBox52.Size = new System.Drawing.Size(307, 121);
-            this.textBox52.TabIndex = 26;
+            this.txt_kontrol_teskilati.Location = new System.Drawing.Point(52, 297);
+            this.txt_kontrol_teskilati.Multiline = true;
+            this.txt_kontrol_teskilati.Name = "txt_kontrol_teskilati";
+            this.txt_kontrol_teskilati.Size = new System.Drawing.Size(307, 121);
+            this.txt_kontrol_teskilati.TabIndex = 26;
             // 
             // textBox51
             // 
@@ -1091,21 +1119,21 @@
             this.textBox49.Text = "Kontrol Teşkilatı";
             this.textBox49.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox47
+            // txt_kalan_sure
             // 
-            this.textBox47.Location = new System.Drawing.Point(581, 225);
-            this.textBox47.Multiline = true;
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(172, 40);
-            this.textBox47.TabIndex = 22;
+            this.txt_kalan_sure.Location = new System.Drawing.Point(581, 225);
+            this.txt_kalan_sure.Multiline = true;
+            this.txt_kalan_sure.Name = "txt_kalan_sure";
+            this.txt_kalan_sure.Size = new System.Drawing.Size(172, 40);
+            this.txt_kalan_sure.TabIndex = 22;
             // 
-            // textBox48
+            // txt_bitis_tarihi
             // 
-            this.textBox48.Location = new System.Drawing.Point(581, 179);
-            this.textBox48.Multiline = true;
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(172, 40);
-            this.textBox48.TabIndex = 21;
+            this.txt_bitis_tarihi.Location = new System.Drawing.Point(581, 179);
+            this.txt_bitis_tarihi.Multiline = true;
+            this.txt_bitis_tarihi.Name = "txt_bitis_tarihi";
+            this.txt_bitis_tarihi.Size = new System.Drawing.Size(172, 40);
+            this.txt_bitis_tarihi.TabIndex = 21;
             // 
             // textBox45
             // 
@@ -1129,21 +1157,21 @@
             this.textBox46.Text = "Proje Bitiş Tarihi:";
             this.textBox46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox41
+            // txt_calisilan_sure
             // 
-            this.textBox41.Location = new System.Drawing.Point(223, 225);
-            this.textBox41.Multiline = true;
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(173, 40);
-            this.textBox41.TabIndex = 18;
+            this.txt_calisilan_sure.Location = new System.Drawing.Point(223, 225);
+            this.txt_calisilan_sure.Multiline = true;
+            this.txt_calisilan_sure.Name = "txt_calisilan_sure";
+            this.txt_calisilan_sure.Size = new System.Drawing.Size(173, 40);
+            this.txt_calisilan_sure.TabIndex = 18;
             // 
-            // textBox44
+            // txt_baslangic_tarihi
             // 
-            this.textBox44.Location = new System.Drawing.Point(223, 179);
-            this.textBox44.Multiline = true;
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(173, 40);
-            this.textBox44.TabIndex = 17;
+            this.txt_baslangic_tarihi.Location = new System.Drawing.Point(223, 179);
+            this.txt_baslangic_tarihi.Multiline = true;
+            this.txt_baslangic_tarihi.Name = "txt_baslangic_tarihi";
+            this.txt_baslangic_tarihi.Size = new System.Drawing.Size(173, 40);
+            this.txt_baslangic_tarihi.TabIndex = 17;
             // 
             // textBox42
             // 
@@ -1175,21 +1203,21 @@
             this.textBox38.Size = new System.Drawing.Size(178, 40);
             this.textBox38.TabIndex = 14;
             // 
-            // textBox39
+            // tamamlama_santral_adi
             // 
-            this.textBox39.Location = new System.Drawing.Point(575, 78);
-            this.textBox39.Multiline = true;
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(178, 40);
-            this.textBox39.TabIndex = 13;
+            this.tamamlama_santral_adi.Location = new System.Drawing.Point(575, 78);
+            this.tamamlama_santral_adi.Multiline = true;
+            this.tamamlama_santral_adi.Name = "tamamlama_santral_adi";
+            this.tamamlama_santral_adi.Size = new System.Drawing.Size(178, 40);
+            this.tamamlama_santral_adi.TabIndex = 13;
             // 
-            // textBox40
+            // tamamlama_telekom
             // 
-            this.textBox40.Location = new System.Drawing.Point(575, 32);
-            this.textBox40.Multiline = true;
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(178, 40);
-            this.textBox40.TabIndex = 12;
+            this.tamamlama_telekom.Location = new System.Drawing.Point(575, 32);
+            this.tamamlama_telekom.Multiline = true;
+            this.tamamlama_telekom.Name = "tamamlama_telekom";
+            this.tamamlama_telekom.Size = new System.Drawing.Size(178, 40);
+            this.tamamlama_telekom.TabIndex = 12;
             // 
             // textBox35
             // 
@@ -1199,21 +1227,21 @@
             this.textBox35.Size = new System.Drawing.Size(333, 40);
             this.textBox35.TabIndex = 11;
             // 
-            // textBox36
+            // tamamlama_proje_adi
             // 
-            this.textBox36.Location = new System.Drawing.Point(236, 78);
-            this.textBox36.Multiline = true;
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(333, 40);
-            this.textBox36.TabIndex = 10;
+            this.tamamlama_proje_adi.Location = new System.Drawing.Point(236, 78);
+            this.tamamlama_proje_adi.Multiline = true;
+            this.tamamlama_proje_adi.Name = "tamamlama_proje_adi";
+            this.tamamlama_proje_adi.Size = new System.Drawing.Size(333, 40);
+            this.tamamlama_proje_adi.TabIndex = 10;
             // 
-            // textBox37
+            // tamamlama_cizim_adi
             // 
-            this.textBox37.Location = new System.Drawing.Point(236, 32);
-            this.textBox37.Multiline = true;
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(333, 40);
-            this.textBox37.TabIndex = 9;
+            this.tamamlama_cizim_adi.Location = new System.Drawing.Point(236, 32);
+            this.tamamlama_cizim_adi.Multiline = true;
+            this.tamamlama_cizim_adi.Name = "tamamlama_cizim_adi";
+            this.tamamlama_cizim_adi.Size = new System.Drawing.Size(333, 40);
+            this.tamamlama_cizim_adi.TabIndex = 9;
             // 
             // textBox34
             // 
@@ -1223,21 +1251,21 @@
             this.textBox34.Size = new System.Drawing.Size(178, 40);
             this.textBox34.TabIndex = 8;
             // 
-            // textBox33
+            // tamamlama_proje_ozelligi
             // 
-            this.textBox33.Location = new System.Drawing.Point(52, 78);
-            this.textBox33.Multiline = true;
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(178, 40);
-            this.textBox33.TabIndex = 7;
+            this.tamamlama_proje_ozelligi.Location = new System.Drawing.Point(52, 78);
+            this.tamamlama_proje_ozelligi.Multiline = true;
+            this.tamamlama_proje_ozelligi.Name = "tamamlama_proje_ozelligi";
+            this.tamamlama_proje_ozelligi.Size = new System.Drawing.Size(178, 40);
+            this.tamamlama_proje_ozelligi.TabIndex = 7;
             // 
-            // textBox32
+            // tamamlama_cbs_id
             // 
-            this.textBox32.Location = new System.Drawing.Point(52, 32);
-            this.textBox32.Multiline = true;
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(178, 40);
-            this.textBox32.TabIndex = 6;
+            this.tamamlama_cbs_id.Location = new System.Drawing.Point(52, 32);
+            this.tamamlama_cbs_id.Multiline = true;
+            this.tamamlama_cbs_id.Name = "tamamlama_cbs_id";
+            this.tamamlama_cbs_id.Size = new System.Drawing.Size(178, 40);
+            this.tamamlama_cbs_id.TabIndex = 6;
             // 
             // label7
             // 
@@ -1255,42 +1283,33 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(847, 792);
+            this.tabPage4.Size = new System.Drawing.Size(867, 792);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "İlerleme Raporu";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // btn_Arama
+            // btn_Hesapla
             // 
-            this.btn_Arama.Location = new System.Drawing.Point(48, 114);
-            this.btn_Arama.Name = "btn_Arama";
-            this.btn_Arama.Size = new System.Drawing.Size(109, 38);
-            this.btn_Arama.TabIndex = 12;
-            this.btn_Arama.Text = "Ara";
-            this.btn_Arama.UseVisualStyleBackColor = true;
-            this.btn_Arama.Click += new System.EventHandler(this.btn_Arama_Click);
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Var",
-            "Yok"});
-            this.comboBox3.Location = new System.Drawing.Point(536, 205);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(242, 21);
-            this.comboBox3.TabIndex = 56;
+            this.btn_Hesapla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Hesapla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Hesapla.Location = new System.Drawing.Point(6, 152);
+            this.btn_Hesapla.Name = "btn_Hesapla";
+            this.btn_Hesapla.Size = new System.Drawing.Size(46, 137);
+            this.btn_Hesapla.TabIndex = 57;
+            this.btn_Hesapla.Text = "Hesapla";
+            this.btn_Hesapla.UseVisualStyleBackColor = false;
             // 
             // ProjeIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(894, 634);
+            this.ClientSize = new System.Drawing.Size(894, 733);
             this.Controls.Add(this.tabControl1);
             this.Name = "ProjeIslemleri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProjeIslemleri";
+            this.Load += new System.EventHandler(this.ProjeIslemleri_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1327,7 +1346,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txt3;
-        private System.Windows.Forms.TextBox txt_KAZSER;
+        private System.Windows.Forms.TextBox txt_KAZSER1;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox txt_Trencher;
         private System.Windows.Forms.TextBox textBox6;
@@ -1336,14 +1355,14 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox txt_AcikKazi;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textbox_kazser2;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txt_mevcuthavai;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txt_yenihavai;
         private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txt_yeralti;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label_bitis_tarih;
         private System.Windows.Forms.Label label_bas_tarih;
@@ -1352,13 +1371,13 @@
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.TextBox textBox27;
         private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox txt_binaici;
         private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox txt_aktarma;
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox txt_indoor_kabin;
+        private System.Windows.Forms.TextBox txt_outdoorkabin;
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.TextBox textBox28;
         private System.Windows.Forms.TextBox textBox31;
@@ -1377,29 +1396,29 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox50;
         private System.Windows.Forms.TextBox textBox49;
-        private System.Windows.Forms.TextBox textBox47;
-        private System.Windows.Forms.TextBox textBox48;
+        private System.Windows.Forms.TextBox txt_kalan_sure;
+        private System.Windows.Forms.TextBox txt_bitis_tarihi;
         private System.Windows.Forms.TextBox textBox45;
         private System.Windows.Forms.TextBox textBox46;
-        private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.TextBox textBox44;
+        private System.Windows.Forms.TextBox txt_calisilan_sure;
+        private System.Windows.Forms.TextBox txt_baslangic_tarihi;
         private System.Windows.Forms.TextBox textBox42;
         private System.Windows.Forms.TextBox textBox43;
         private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.TextBox textBox40;
+        private System.Windows.Forms.TextBox tamamlama_santral_adi;
+        private System.Windows.Forms.TextBox tamamlama_telekom;
         private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.TextBox textBox37;
+        private System.Windows.Forms.TextBox tamamlama_proje_adi;
+        private System.Windows.Forms.TextBox tamamlama_cizim_adi;
         private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.TextBox textBox32;
+        private System.Windows.Forms.TextBox tamamlama_proje_ozelligi;
+        private System.Windows.Forms.TextBox tamamlama_cbs_id;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox56;
+        private System.Windows.Forms.TextBox txt_ceza;
         private System.Windows.Forms.TextBox textBox55;
         private System.Windows.Forms.TextBox textBox54;
-        private System.Windows.Forms.TextBox textBox53;
-        private System.Windows.Forms.TextBox textBox52;
+        private System.Windows.Forms.TextBox txt_yuklenici;
+        private System.Windows.Forms.TextBox txt_kontrol_teskilati;
         private System.Windows.Forms.TextBox textBox51;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBoxSantral_Adi;
@@ -1410,5 +1429,6 @@
         private System.Windows.Forms.TextBox textBoxCBS_ID;
         private System.Windows.Forms.Button btn_Arama;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button btn_Hesapla;
     }
 }
