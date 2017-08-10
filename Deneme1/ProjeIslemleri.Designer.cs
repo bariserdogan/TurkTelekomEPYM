@@ -46,6 +46,7 @@
             this.btn_ProjeKaydet = new System.Windows.Forms.Button();
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn_Hesapla = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBoxSantral_Adi = new System.Windows.Forms.TextBox();
             this.textBoxTelekom_Mudurlugu = new System.Windows.Forms.TextBox();
@@ -128,7 +129,6 @@
             this.tamamlama_cbs_id = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btn_Hesapla = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -414,6 +414,18 @@
             this.tabPage2.Text = "Proje Başlatma Tutanağı";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // btn_Hesapla
+            // 
+            this.btn_Hesapla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Hesapla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Hesapla.Location = new System.Drawing.Point(6, 152);
+            this.btn_Hesapla.Name = "btn_Hesapla";
+            this.btn_Hesapla.Size = new System.Drawing.Size(46, 137);
+            this.btn_Hesapla.TabIndex = 57;
+            this.btn_Hesapla.Text = "Hesapla";
+            this.btn_Hesapla.UseVisualStyleBackColor = false;
+            this.btn_Hesapla.Click += new System.EventHandler(this.btn_Hesapla_Click);
             // 
             // comboBox3
             // 
@@ -1288,23 +1300,12 @@
             this.tabPage4.Text = "İlerleme Raporu";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // btn_Hesapla
-            // 
-            this.btn_Hesapla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_Hesapla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_Hesapla.Location = new System.Drawing.Point(6, 152);
-            this.btn_Hesapla.Name = "btn_Hesapla";
-            this.btn_Hesapla.Size = new System.Drawing.Size(46, 137);
-            this.btn_Hesapla.TabIndex = 57;
-            this.btn_Hesapla.Text = "Hesapla";
-            this.btn_Hesapla.UseVisualStyleBackColor = false;
-            // 
             // ProjeIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(894, 733);
+            this.ClientSize = new System.Drawing.Size(911, 733);
             this.Controls.Add(this.tabControl1);
             this.Name = "ProjeIslemleri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

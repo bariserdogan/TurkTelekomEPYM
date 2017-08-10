@@ -18,6 +18,8 @@ namespace Deneme1
             InitializeComponent();
         }
         int pretime;
+        double jobtime;
+        double acikkazi, fider, trencher, kazser, yeralti, yenihavai, mevcuthavai, kazser2, outdoor, indoor, aktarma, binaici;
         private void ProjeIslemleri_Load(object sender, EventArgs e)
         {
             btn_Hesapla.Text = "H" + "\n" + "E" + "\n" + "S" + "\n" + "A" + "\n" + "P" + "\n" + "L" + "\n" + "A";
@@ -41,8 +43,8 @@ namespace Deneme1
             var cbs = db.Ilerleme.Where(x => x.ID == girilen).FirstOrDefault();
             if (cbs != null)
             {
-                writeDatatoTamamlama(cbs);                         
-                var gelen = db.Aksiyonlar.Where(x => x.CBS_ID == girilen2).FirstOrDefault();             
+                writeDatatoTamamlama(cbs);
+                var gelen = db.Aksiyonlar.Where(x => x.CBS_ID == girilen2).FirstOrDefault();
                 if (gelen != null)
                 {
                     txt_baslangic_tarihi.Text = gelen.Baslangic_Tarih.ToString();
@@ -62,7 +64,7 @@ namespace Deneme1
                                 };
 
                     dataGridView1.DataSource = query.ToList();
-                    
+
                     //TamamlamaTutanak tamamlama = new TamamlamaTutanak();
                     //tamamlama.ShowDialog();
                 }
@@ -98,26 +100,50 @@ namespace Deneme1
             textBoxProjeAdi.Text = model.PROJE_ADI.ToString();
             textBoxSantral_Adi.Text = model.SANTRAL_ADI.ToString();
         }
-        public void sureHesapla()
+        public double sureHesapla()
+        {
+            
+            acikkazi = Convert.ToDouble(txt_AcikKazi.Text);
+            fider = Convert.ToDouble(txt_Fider.Text);
+            trencher = Convert.ToDouble(txt_Trencher.Text);
+            kazser = Convert.ToDouble(txt_KAZSER1.Text);
+            yeralti = Convert.ToDouble(txt_yeralti.Text);
+            yenihavai = Convert.ToDouble(txt_yenihavai.Text);
+            mevcuthavai = Convert.ToDouble(txt_mevcuthavai.Text);
+            kazser2 = Convert.ToDouble(textbox_kazser2.Text);
+            outdoor = Convert.ToDouble(txt_outdoorkabin.Text);
+            indoor = Convert.ToDouble(txt_indoor_kabin.Text);
+            aktarma = Convert.ToDouble(txt_aktarma.Text);
+            binaici = Convert.ToDouble(txt_binaici.Text);
+
+            jobtime = Math.Ceiling(((acikkazi / 250) * 1) + ((fider / 100) * 1) + ((trencher / 900) * 1) + ((kazser / 300) * 1) + ((yeralti / 1000) * 4) + ((yenihavai / 1000) * 4) + ((mevcuthavai / 1000) * 2) + ((kazser2 / 1000) * 2) + (outdoor * 3) + (indoor * 1) + ((aktarma / 5) * 1) + ((binaici / 30) * 1));
+            return jobtime;
+        }
+
+        private void btn_Hesapla_Click(object sender, EventArgs e)
         {
             DateTime aybasi = new DateTime(2017, 8, 1);
-            pretime = Convert.ToInt32(aybasi - DateTime.Now);
-            double acikkazi = Convert.ToDouble(txt_AcikKazi.Text);
-            double fider = Convert.ToDouble(txt_Fider.Text);
-            double trencher = Convert.ToDouble(txt_Trencher.Text);
-            double kazser = Convert.ToDouble(txt_KAZSER1.Text);
-            double yeralti = Convert.ToDouble(txt_yeralti.Text);
-            double yenihavai = Convert.ToDouble(txt_yenihavai.Text);
-            double mevcuthavai = Convert.ToDouble(txt_mevcuthavai.Text);
-            double kazser2 = Convert.ToDouble(textbox_kazser2.Text);
-            double outdoor = Convert.ToDouble(txt_outdoorkabin.Text);
-            double indoor = Convert.ToDouble(txt_indoor_kabin.Text);
-            double aktarma = Convert.ToDouble(txt_aktarma.Text);
-            double binaici = Convert.ToDouble(txt_binaici.Text);
-            
-
+            DateTime dt = DateTime.Now;
+            TimeSpan tspan = dt.Subtract(aybasi);
+            pretime = tspan.Days;
+            int uygunmu = Convert.ToInt32(sureHesapla());
+            if (uygunmu > pretime)
+            {
+                if (uygunmu < 7)
+                {
+                    jobtime = 7;
+                    MessageBox.Show("Uygunluk sağlanmıştır");
+                    txt_Sure.Text = jobtime.ToString();
+                }
+                else
+                {
+                    jobtime = jobtime + 7;
+                    MessageBox.Show("Uygunluk sağlanmıştır");
+                    txt_Sure.Text = jobtime.ToString();
+                }
+            }
+            else
+                MessageBox.Show("SÜreç uygun değil", "Bilgi", MessageBoxButtons.OK);
         }
-        
-        
     }
 }
