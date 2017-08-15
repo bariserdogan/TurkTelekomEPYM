@@ -45,6 +45,7 @@
             this.btn_baslatma_print = new System.Windows.Forms.Button();
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn_ProjeKaydet = new System.Windows.Forms.Button();
             this.btn_Hesapla = new System.Windows.Forms.Button();
             this.comboBox_varyok = new System.Windows.Forms.ComboBox();
             this.textBoxSantral_Adi = new System.Windows.Forms.TextBox();
@@ -128,7 +129,6 @@
             this.tamamlama_cbs_id = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btn_ProjeKaydet = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -403,6 +403,19 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // btn_ProjeKaydet
+            // 
+            this.btn_ProjeKaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_ProjeKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_ProjeKaydet.ForeColor = System.Drawing.Color.Black;
+            this.btn_ProjeKaydet.Location = new System.Drawing.Point(6, 295);
+            this.btn_ProjeKaydet.Name = "btn_ProjeKaydet";
+            this.btn_ProjeKaydet.Size = new System.Drawing.Size(46, 200);
+            this.btn_ProjeKaydet.TabIndex = 58;
+            this.btn_ProjeKaydet.Text = "Proje Kaydet";
+            this.btn_ProjeKaydet.UseVisualStyleBackColor = false;
+            this.btn_ProjeKaydet.Click += new System.EventHandler(this.btn_ProjeKaydet_Click_1);
+            // 
             // btn_Hesapla
             // 
             this.btn_Hesapla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -421,9 +434,9 @@
             this.comboBox_varyok.Items.AddRange(new object[] {
             "Var",
             "Yok"});
-            this.comboBox_varyok.Location = new System.Drawing.Point(536, 205);
+            this.comboBox_varyok.Location = new System.Drawing.Point(614, 205);
             this.comboBox_varyok.Name = "comboBox_varyok";
-            this.comboBox_varyok.Size = new System.Drawing.Size(242, 21);
+            this.comboBox_varyok.Size = new System.Drawing.Size(168, 21);
             this.comboBox_varyok.TabIndex = 56;
             // 
             // textBoxSantral_Adi
@@ -483,7 +496,7 @@
             // textBox28
             // 
             this.textBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox28.Location = new System.Drawing.Point(405, 712);
+            this.textBox28.Location = new System.Drawing.Point(408, 676);
             this.textBox28.Multiline = true;
             this.textBox28.Name = "textBox28";
             this.textBox28.Size = new System.Drawing.Size(369, 72);
@@ -494,7 +507,7 @@
             // 
             this.textBox31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox31.Location = new System.Drawing.Point(405, 689);
+            this.textBox31.Location = new System.Drawing.Point(408, 653);
             this.textBox31.Multiline = true;
             this.textBox31.Name = "textBox31";
             this.textBox31.Size = new System.Drawing.Size(369, 28);
@@ -505,7 +518,7 @@
             // textBox29
             // 
             this.textBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox29.Location = new System.Drawing.Point(77, 712);
+            this.textBox29.Location = new System.Drawing.Point(80, 676);
             this.textBox29.Multiline = true;
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new System.Drawing.Size(332, 72);
@@ -516,7 +529,7 @@
             // 
             this.textBox30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox30.Location = new System.Drawing.Point(77, 689);
+            this.textBox30.Location = new System.Drawing.Point(80, 653);
             this.textBox30.Multiline = true;
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new System.Drawing.Size(332, 28);
@@ -527,7 +540,7 @@
             // label_bitis_tarih
             // 
             this.label_bitis_tarih.AutoSize = true;
-            this.label_bitis_tarih.Location = new System.Drawing.Point(669, 652);
+            this.label_bitis_tarih.Location = new System.Drawing.Point(677, 626);
             this.label_bitis_tarih.Name = "label_bitis_tarih";
             this.label_bitis_tarih.Size = new System.Drawing.Size(35, 13);
             this.label_bitis_tarih.TabIndex = 44;
@@ -536,7 +549,7 @@
             // label_bas_tarih
             // 
             this.label_bas_tarih.AutoSize = true;
-            this.label_bas_tarih.Location = new System.Drawing.Point(77, 653);
+            this.label_bas_tarih.Location = new System.Drawing.Point(77, 627);
             this.label_bas_tarih.Name = "label_bas_tarih";
             this.label_bas_tarih.Size = new System.Drawing.Size(35, 13);
             this.label_bas_tarih.TabIndex = 43;
@@ -546,7 +559,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(666, 635);
+            this.label5.Location = new System.Drawing.Point(674, 609);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 14);
             this.label5.TabIndex = 42;
@@ -556,7 +569,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(74, 635);
+            this.label4.Location = new System.Drawing.Point(74, 609);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(132, 14);
             this.label4.TabIndex = 41;
@@ -566,10 +579,10 @@
             // 
             this.textBox23.BackColor = System.Drawing.Color.PaleTurquoise;
             this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox23.Location = new System.Drawing.Point(230, 552);
+            this.textBox23.Location = new System.Drawing.Point(230, 540);
             this.textBox23.Multiline = true;
             this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(179, 22);
+            this.textBox23.Size = new System.Drawing.Size(179, 18);
             this.textBox23.TabIndex = 40;
             this.textBox23.Text = "3U,6U,12U,24U,48U,FTTB, v.b.";
             this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -578,10 +591,10 @@
             // 
             this.textBox27.BackColor = System.Drawing.Color.PaleTurquoise;
             this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox27.Location = new System.Drawing.Point(230, 533);
+            this.textBox27.Location = new System.Drawing.Point(230, 521);
             this.textBox27.Multiline = true;
             this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(179, 28);
+            this.textBox27.Size = new System.Drawing.Size(179, 24);
             this.textBox27.TabIndex = 39;
             this.textBox27.Text = "INDOOR KABİN(Adet)";
             this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -590,10 +603,10 @@
             // 
             this.textBox26.BackColor = System.Drawing.Color.PaleTurquoise;
             this.textBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox26.Location = new System.Drawing.Point(77, 552);
+            this.textBox26.Location = new System.Drawing.Point(77, 540);
             this.textBox26.Multiline = true;
             this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(147, 22);
+            this.textBox26.Size = new System.Drawing.Size(147, 18);
             this.textBox26.TabIndex = 38;
             this.textBox26.Text = "OFSD,OFTK,FTTC v.b.";
             this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -602,10 +615,10 @@
             // 
             this.txt_binaici.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txt_binaici.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_binaici.Location = new System.Drawing.Point(599, 576);
+            this.txt_binaici.Location = new System.Drawing.Point(599, 555);
             this.txt_binaici.Multiline = true;
             this.txt_binaici.Name = "txt_binaici";
-            this.txt_binaici.Size = new System.Drawing.Size(175, 41);
+            this.txt_binaici.Size = new System.Drawing.Size(175, 33);
             this.txt_binaici.TabIndex = 37;
             this.txt_binaici.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -613,10 +626,10 @@
             // 
             this.textBox18.BackColor = System.Drawing.Color.PaleTurquoise;
             this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox18.Location = new System.Drawing.Point(599, 533);
+            this.textBox18.Location = new System.Drawing.Point(599, 521);
             this.textBox18.Multiline = true;
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(175, 41);
+            this.textBox18.Size = new System.Drawing.Size(175, 37);
             this.textBox18.TabIndex = 36;
             this.textBox18.Text = "Bina İçi Kablolama(Daire Adı)";
             this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -625,10 +638,10 @@
             // 
             this.txt_aktarma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txt_aktarma.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_aktarma.Location = new System.Drawing.Point(415, 576);
+            this.txt_aktarma.Location = new System.Drawing.Point(415, 555);
             this.txt_aktarma.Multiline = true;
             this.txt_aktarma.Name = "txt_aktarma";
-            this.txt_aktarma.Size = new System.Drawing.Size(178, 41);
+            this.txt_aktarma.Size = new System.Drawing.Size(178, 33);
             this.txt_aktarma.TabIndex = 35;
             this.txt_aktarma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -636,10 +649,10 @@
             // 
             this.textBox20.BackColor = System.Drawing.Color.PaleTurquoise;
             this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox20.Location = new System.Drawing.Point(415, 533);
+            this.textBox20.Location = new System.Drawing.Point(415, 521);
             this.textBox20.Multiline = true;
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(178, 41);
+            this.textBox20.Size = new System.Drawing.Size(178, 37);
             this.textBox20.TabIndex = 34;
             this.textBox20.Text = "AKTARMA (Devre Adı)";
             this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -648,7 +661,7 @@
             // 
             this.textBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox21.Location = new System.Drawing.Point(77, 504);
+            this.textBox21.Location = new System.Drawing.Point(77, 492);
             this.textBox21.Multiline = true;
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(147, 23);
@@ -660,10 +673,10 @@
             // 
             this.txt_indoor_kabin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txt_indoor_kabin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_indoor_kabin.Location = new System.Drawing.Point(230, 567);
+            this.txt_indoor_kabin.Location = new System.Drawing.Point(230, 555);
             this.txt_indoor_kabin.Multiline = true;
             this.txt_indoor_kabin.Name = "txt_indoor_kabin";
-            this.txt_indoor_kabin.Size = new System.Drawing.Size(179, 50);
+            this.txt_indoor_kabin.Size = new System.Drawing.Size(179, 33);
             this.txt_indoor_kabin.TabIndex = 32;
             this.txt_indoor_kabin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -671,10 +684,10 @@
             // 
             this.txt_outdoorkabin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txt_outdoorkabin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_outdoorkabin.Location = new System.Drawing.Point(77, 567);
+            this.txt_outdoorkabin.Location = new System.Drawing.Point(77, 555);
             this.txt_outdoorkabin.Multiline = true;
             this.txt_outdoorkabin.Name = "txt_outdoorkabin";
-            this.txt_outdoorkabin.Size = new System.Drawing.Size(147, 50);
+            this.txt_outdoorkabin.Size = new System.Drawing.Size(147, 33);
             this.txt_outdoorkabin.TabIndex = 30;
             this.txt_outdoorkabin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -682,10 +695,10 @@
             // 
             this.textBox25.BackColor = System.Drawing.Color.PaleTurquoise;
             this.textBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox25.Location = new System.Drawing.Point(77, 533);
+            this.textBox25.Location = new System.Drawing.Point(77, 521);
             this.textBox25.Multiline = true;
             this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(147, 28);
+            this.textBox25.Size = new System.Drawing.Size(147, 24);
             this.textBox25.TabIndex = 29;
             this.textBox25.Text = "OUTDOOR KABİN(Adet)";
             this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -694,10 +707,10 @@
             // 
             this.textbox_kazser2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textbox_kazser2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textbox_kazser2.Location = new System.Drawing.Point(606, 448);
+            this.textbox_kazser2.Location = new System.Drawing.Point(606, 437);
             this.textbox_kazser2.Multiline = true;
             this.textbox_kazser2.Name = "textbox_kazser2";
-            this.textbox_kazser2.Size = new System.Drawing.Size(172, 50);
+            this.textbox_kazser2.Size = new System.Drawing.Size(172, 39);
             this.textbox_kazser2.TabIndex = 28;
             this.textbox_kazser2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -705,10 +718,10 @@
             // 
             this.textBox8.BackColor = System.Drawing.Color.PaleTurquoise;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox8.Location = new System.Drawing.Point(606, 414);
+            this.textBox8.Location = new System.Drawing.Point(606, 403);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(172, 41);
+            this.textBox8.Size = new System.Drawing.Size(172, 30);
             this.textBox8.TabIndex = 27;
             this.textBox8.Text = "KAZSER(Göz Mt.)";
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -717,10 +730,10 @@
             // 
             this.txt_mevcuthavai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txt_mevcuthavai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_mevcuthavai.Location = new System.Drawing.Point(405, 448);
+            this.txt_mevcuthavai.Location = new System.Drawing.Point(405, 437);
             this.txt_mevcuthavai.Multiline = true;
             this.txt_mevcuthavai.Name = "txt_mevcuthavai";
-            this.txt_mevcuthavai.Size = new System.Drawing.Size(203, 50);
+            this.txt_mevcuthavai.Size = new System.Drawing.Size(203, 39);
             this.txt_mevcuthavai.TabIndex = 26;
             this.txt_mevcuthavai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -728,10 +741,10 @@
             // 
             this.textBox11.BackColor = System.Drawing.Color.PaleTurquoise;
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox11.Location = new System.Drawing.Point(405, 414);
+            this.textBox11.Location = new System.Drawing.Point(405, 403);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(203, 41);
+            this.textBox11.Size = new System.Drawing.Size(203, 30);
             this.textBox11.TabIndex = 25;
             this.textBox11.Text = "MEVCUT HAVAİ GÜZERGAHTAN(Mt.)";
             this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -740,7 +753,7 @@
             // 
             this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox12.Location = new System.Drawing.Point(77, 385);
+            this.textBox12.Location = new System.Drawing.Point(77, 374);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(147, 23);
@@ -752,10 +765,10 @@
             // 
             this.txt_yenihavai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txt_yenihavai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_yenihavai.Location = new System.Drawing.Point(230, 448);
+            this.txt_yenihavai.Location = new System.Drawing.Point(230, 437);
             this.txt_yenihavai.Multiline = true;
             this.txt_yenihavai.Name = "txt_yenihavai";
-            this.txt_yenihavai.Size = new System.Drawing.Size(179, 50);
+            this.txt_yenihavai.Size = new System.Drawing.Size(179, 39);
             this.txt_yenihavai.TabIndex = 23;
             this.txt_yenihavai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -763,10 +776,10 @@
             // 
             this.textBox14.BackColor = System.Drawing.Color.PaleTurquoise;
             this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox14.Location = new System.Drawing.Point(230, 414);
+            this.textBox14.Location = new System.Drawing.Point(230, 403);
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(179, 41);
+            this.textBox14.Size = new System.Drawing.Size(179, 30);
             this.textBox14.TabIndex = 22;
             this.textBox14.Text = "YENİ HAVAİ GÜZERGAHTAN(Mt.)";
             this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -775,10 +788,10 @@
             // 
             this.txt_yeralti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txt_yeralti.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_yeralti.Location = new System.Drawing.Point(77, 448);
+            this.txt_yeralti.Location = new System.Drawing.Point(77, 437);
             this.txt_yeralti.Multiline = true;
             this.txt_yeralti.Name = "txt_yeralti";
-            this.txt_yeralti.Size = new System.Drawing.Size(147, 50);
+            this.txt_yeralti.Size = new System.Drawing.Size(147, 39);
             this.txt_yeralti.TabIndex = 21;
             this.txt_yeralti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -786,10 +799,10 @@
             // 
             this.textBox16.BackColor = System.Drawing.Color.PaleTurquoise;
             this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox16.Location = new System.Drawing.Point(77, 414);
+            this.textBox16.Location = new System.Drawing.Point(77, 403);
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(147, 41);
+            this.textBox16.Size = new System.Drawing.Size(147, 30);
             this.textBox16.TabIndex = 20;
             this.textBox16.Text = "YerAltından(Mt.)";
             this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -801,7 +814,7 @@
             this.txt_KAZSER1.Location = new System.Drawing.Point(591, 329);
             this.txt_KAZSER1.Multiline = true;
             this.txt_KAZSER1.Name = "txt_KAZSER1";
-            this.txt_KAZSER1.Size = new System.Drawing.Size(187, 50);
+            this.txt_KAZSER1.Size = new System.Drawing.Size(187, 39);
             this.txt_KAZSER1.TabIndex = 18;
             this.txt_KAZSER1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -812,7 +825,7 @@
             this.textBox9.Location = new System.Drawing.Point(591, 295);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(187, 41);
+            this.textBox9.Size = new System.Drawing.Size(187, 30);
             this.textBox9.TabIndex = 17;
             this.textBox9.Text = "KAZSER(Göz Mt.)";
             this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -824,7 +837,7 @@
             this.txt_Trencher.Location = new System.Drawing.Point(424, 329);
             this.txt_Trencher.Multiline = true;
             this.txt_Trencher.Name = "txt_Trencher";
-            this.txt_Trencher.Size = new System.Drawing.Size(176, 50);
+            this.txt_Trencher.Size = new System.Drawing.Size(176, 39);
             this.txt_Trencher.TabIndex = 16;
             this.txt_Trencher.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -835,7 +848,7 @@
             this.textBox6.Location = new System.Drawing.Point(424, 295);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(176, 41);
+            this.textBox6.Size = new System.Drawing.Size(176, 30);
             this.textBox6.TabIndex = 15;
             this.textBox6.Text = "TRENCHER(Göz Mt.)";
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -859,7 +872,7 @@
             this.txt_Fider.Location = new System.Drawing.Point(249, 329);
             this.txt_Fider.Multiline = true;
             this.txt_Fider.Name = "txt_Fider";
-            this.txt_Fider.Size = new System.Drawing.Size(179, 50);
+            this.txt_Fider.Size = new System.Drawing.Size(179, 39);
             this.txt_Fider.TabIndex = 13;
             this.txt_Fider.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -870,7 +883,7 @@
             this.textBox5.Location = new System.Drawing.Point(249, 295);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(179, 41);
+            this.textBox5.Size = new System.Drawing.Size(179, 30);
             this.textBox5.TabIndex = 12;
             this.textBox5.Text = "Fider(Göz Mt.)";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -882,7 +895,7 @@
             this.txt_AcikKazi.Location = new System.Drawing.Point(77, 329);
             this.txt_AcikKazi.Multiline = true;
             this.txt_AcikKazi.Name = "txt_AcikKazi";
-            this.txt_AcikKazi.Size = new System.Drawing.Size(169, 50);
+            this.txt_AcikKazi.Size = new System.Drawing.Size(169, 39);
             this.txt_AcikKazi.TabIndex = 11;
             this.txt_AcikKazi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -893,7 +906,7 @@
             this.textBox7.Location = new System.Drawing.Point(77, 295);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(169, 41);
+            this.textBox7.Size = new System.Drawing.Size(169, 30);
             this.textBox7.TabIndex = 10;
             this.textBox7.Text = "AÇIK KAZI(Göz Mt.)";
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -915,10 +928,10 @@
             // 
             this.txt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt3.Location = new System.Drawing.Point(536, 152);
+            this.txt3.Location = new System.Drawing.Point(614, 152);
             this.txt3.Multiline = true;
             this.txt3.Name = "txt3";
-            this.txt3.Size = new System.Drawing.Size(242, 56);
+            this.txt3.Size = new System.Drawing.Size(168, 56);
             this.txt3.TabIndex = 7;
             this.txt3.Text = "Yeraltısız Yapılabilecek Maliyet Var Mı?(Var/Yok)";
             this.txt3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -927,10 +940,10 @@
             // 
             this.txt_AltyapiMaliyeti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txt_AltyapiMaliyeti.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_AltyapiMaliyeti.Location = new System.Drawing.Point(323, 177);
+            this.txt_AltyapiMaliyeti.Location = new System.Drawing.Point(441, 177);
             this.txt_AltyapiMaliyeti.Multiline = true;
             this.txt_AltyapiMaliyeti.Name = "txt_AltyapiMaliyeti";
-            this.txt_AltyapiMaliyeti.Size = new System.Drawing.Size(218, 49);
+            this.txt_AltyapiMaliyeti.Size = new System.Drawing.Size(178, 49);
             this.txt_AltyapiMaliyeti.TabIndex = 6;
             this.txt_AltyapiMaliyeti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_AltyapiMaliyeti.TextChanged += new System.EventHandler(this.txt_AltyapiMaliyeti_TextChanged);
@@ -939,10 +952,10 @@
             // 
             this.textBoxAltyapi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxAltyapi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBoxAltyapi.Location = new System.Drawing.Point(323, 152);
+            this.textBoxAltyapi.Location = new System.Drawing.Point(441, 152);
             this.textBoxAltyapi.Multiline = true;
             this.textBoxAltyapi.Name = "textBoxAltyapi";
-            this.textBoxAltyapi.Size = new System.Drawing.Size(218, 28);
+            this.textBoxAltyapi.Size = new System.Drawing.Size(178, 28);
             this.textBoxAltyapi.TabIndex = 5;
             this.textBoxAltyapi.Text = "Altyapı Maliyeti";
             this.textBoxAltyapi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1288,25 +1301,12 @@
             this.tabPage4.Text = "İlerleme Raporu";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // btn_ProjeKaydet
-            // 
-            this.btn_ProjeKaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btn_ProjeKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_ProjeKaydet.ForeColor = System.Drawing.Color.Black;
-            this.btn_ProjeKaydet.Location = new System.Drawing.Point(323, 239);
-            this.btn_ProjeKaydet.Name = "btn_ProjeKaydet";
-            this.btn_ProjeKaydet.Size = new System.Drawing.Size(163, 41);
-            this.btn_ProjeKaydet.TabIndex = 58;
-            this.btn_ProjeKaydet.Text = "Proje Kaydet";
-            this.btn_ProjeKaydet.UseVisualStyleBackColor = false;
-            this.btn_ProjeKaydet.Click += new System.EventHandler(this.btn_ProjeKaydet_Click_1);
-            // 
             // ProjeIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(905, 733);
+            this.ClientSize = new System.Drawing.Size(905, 741);
             this.Controls.Add(this.tabControl1);
             this.Name = "ProjeIslemleri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

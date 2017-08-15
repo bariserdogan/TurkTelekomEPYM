@@ -26,7 +26,9 @@ namespace Deneme1
         private void ProjeIslemleri_Load(object sender, EventArgs e)
         {
             btn_Hesapla.Text = "H" + "\n" + "E" + "\n" + "S" + "\n" + "A" + "\n" + "P" + "\n" + "L" + "\n" + "A";
+            btn_ProjeKaydet.Text = "P" + "\n" + "R" + "\n" + "O" + "\n" + "J" + "\n" + "E" + "\n" + "K" + "\n" + "A" + "\n" + "Y" + "\n" + "D" + "\n" + "E" + "\n" + "T";
             btn_Hesapla.ForeColor = Color.White;
+            btn_ProjeKaydet.ForeColor = Color.Red;
         }
         ProjeTakipSistEntities entity;
         ProjeTakipSistEntities db
