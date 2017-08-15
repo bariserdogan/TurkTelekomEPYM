@@ -43,11 +43,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_ProjeTeslim = new System.Windows.Forms.Button();
             this.btn_baslatma_print = new System.Windows.Forms.Button();
-            this.btn_ProjeKaydet = new System.Windows.Forms.Button();
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btn_Hesapla = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox_varyok = new System.Windows.Forms.ComboBox();
             this.textBoxSantral_Adi = new System.Windows.Forms.TextBox();
             this.textBoxTelekom_Mudurlugu = new System.Windows.Forms.TextBox();
             this.textBoxProjeAdi = new System.Windows.Forms.TextBox();
@@ -129,6 +128,7 @@
             this.tamamlama_cbs_id = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btn_ProjeKaydet = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -286,10 +286,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_ProjeTeslim);
             this.groupBox1.Controls.Add(this.btn_baslatma_print);
-            this.groupBox1.Controls.Add(this.btn_ProjeKaydet);
-            this.groupBox1.Location = new System.Drawing.Point(48, 142);
+            this.groupBox1.Location = new System.Drawing.Point(48, 208);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(250, 332);
+            this.groupBox1.Size = new System.Drawing.Size(250, 266);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proje Başlatma İşlemleri";
@@ -309,7 +308,7 @@
             // 
             this.btn_ProjeTeslim.BackColor = System.Drawing.Color.Aqua;
             this.btn_ProjeTeslim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_ProjeTeslim.Location = new System.Drawing.Point(51, 169);
+            this.btn_ProjeTeslim.Location = new System.Drawing.Point(48, 87);
             this.btn_ProjeTeslim.Name = "btn_ProjeTeslim";
             this.btn_ProjeTeslim.Size = new System.Drawing.Size(163, 47);
             this.btn_ProjeTeslim.TabIndex = 5;
@@ -320,24 +319,12 @@
             // 
             this.btn_baslatma_print.BackColor = System.Drawing.Color.Aqua;
             this.btn_baslatma_print.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_baslatma_print.Location = new System.Drawing.Point(51, 248);
+            this.btn_baslatma_print.Location = new System.Drawing.Point(48, 162);
             this.btn_baslatma_print.Name = "btn_baslatma_print";
             this.btn_baslatma_print.Size = new System.Drawing.Size(163, 47);
             this.btn_baslatma_print.TabIndex = 4;
             this.btn_baslatma_print.Text = "Başlatma Tutanağı Yazdır";
             this.btn_baslatma_print.UseVisualStyleBackColor = false;
-            // 
-            // btn_ProjeKaydet
-            // 
-            this.btn_ProjeKaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btn_ProjeKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_ProjeKaydet.ForeColor = System.Drawing.Color.Black;
-            this.btn_ProjeKaydet.Location = new System.Drawing.Point(51, 90);
-            this.btn_ProjeKaydet.Name = "btn_ProjeKaydet";
-            this.btn_ProjeKaydet.Size = new System.Drawing.Size(163, 41);
-            this.btn_ProjeKaydet.TabIndex = 1;
-            this.btn_ProjeKaydet.Text = "Proje Kaydet";
-            this.btn_ProjeKaydet.UseVisualStyleBackColor = false;
             // 
             // textBox_ID
             // 
@@ -353,8 +340,9 @@
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage2.Controls.Add(this.btn_ProjeKaydet);
             this.tabPage2.Controls.Add(this.btn_Hesapla);
-            this.tabPage2.Controls.Add(this.comboBox3);
+            this.tabPage2.Controls.Add(this.comboBox_varyok);
             this.tabPage2.Controls.Add(this.textBoxSantral_Adi);
             this.tabPage2.Controls.Add(this.textBoxTelekom_Mudurlugu);
             this.tabPage2.Controls.Add(this.textBoxProjeAdi);
@@ -427,16 +415,16 @@
             this.btn_Hesapla.UseVisualStyleBackColor = false;
             this.btn_Hesapla.Click += new System.EventHandler(this.btn_Hesapla_Click);
             // 
-            // comboBox3
+            // comboBox_varyok
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.comboBox_varyok.FormattingEnabled = true;
+            this.comboBox_varyok.Items.AddRange(new object[] {
             "Var",
             "Yok"});
-            this.comboBox3.Location = new System.Drawing.Point(536, 205);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(242, 21);
-            this.comboBox3.TabIndex = 56;
+            this.comboBox_varyok.Location = new System.Drawing.Point(536, 205);
+            this.comboBox_varyok.Name = "comboBox_varyok";
+            this.comboBox_varyok.Size = new System.Drawing.Size(242, 21);
+            this.comboBox_varyok.TabIndex = 56;
             // 
             // textBoxSantral_Adi
             // 
@@ -1300,12 +1288,25 @@
             this.tabPage4.Text = "İlerleme Raporu";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // btn_ProjeKaydet
+            // 
+            this.btn_ProjeKaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_ProjeKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_ProjeKaydet.ForeColor = System.Drawing.Color.Black;
+            this.btn_ProjeKaydet.Location = new System.Drawing.Point(323, 239);
+            this.btn_ProjeKaydet.Name = "btn_ProjeKaydet";
+            this.btn_ProjeKaydet.Size = new System.Drawing.Size(163, 41);
+            this.btn_ProjeKaydet.TabIndex = 58;
+            this.btn_ProjeKaydet.Text = "Proje Kaydet";
+            this.btn_ProjeKaydet.UseVisualStyleBackColor = false;
+            this.btn_ProjeKaydet.Click += new System.EventHandler(this.btn_ProjeKaydet_Click_1);
+            // 
             // ProjeIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(911, 733);
+            this.ClientSize = new System.Drawing.Size(905, 733);
             this.Controls.Add(this.tabControl1);
             this.Name = "ProjeIslemleri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1334,7 +1335,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox textBox_ID;
-        private System.Windows.Forms.Button btn_ProjeKaydet;
         private System.Windows.Forms.Button btn_baslatma_print;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_ProjeTeslim;
@@ -1429,7 +1429,8 @@
         private System.Windows.Forms.TextBox textBoxpProjeOzelligi;
         private System.Windows.Forms.TextBox textBoxCBS_ID;
         private System.Windows.Forms.Button btn_Arama;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox_varyok;
         private System.Windows.Forms.Button btn_Hesapla;
+        private System.Windows.Forms.Button btn_ProjeKaydet;
     }
 }
