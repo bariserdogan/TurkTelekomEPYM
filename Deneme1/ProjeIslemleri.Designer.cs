@@ -35,10 +35,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btn_ProjeKapama = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btn_Sure_Durdurma = new System.Windows.Forms.Button();
-            this.btn_sure_baslatma = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_ProjeTeslim = new System.Windows.Forms.Button();
@@ -100,7 +96,15 @@
             this.txt_IsSure = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_tamamlama_ = new System.Windows.Forms.Button();
+            this.btn_tamamlama_print = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btn_Sure_Durdurma = new System.Windows.Forms.Button();
+            this.btn_sure_baslatma = new System.Windows.Forms.Button();
+            this.tamamlamapanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txt_ceza = new System.Windows.Forms.TextBox();
             this.textBox55 = new System.Windows.Forms.TextBox();
@@ -129,13 +133,15 @@
             this.tamamlama_cbs_id = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dateTimePickerBaslangic = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.tamamlamapanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,10 +164,6 @@
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.btn_Arama);
             this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.comboBox2);
-            this.tabPage1.Controls.Add(this.comboBox1);
-            this.tabPage1.Controls.Add(this.btn_Sure_Durdurma);
-            this.tabPage1.Controls.Add(this.btn_sure_baslatma);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.textBox_ID);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -228,59 +230,6 @@
             this.button6.Text = "Tamamlama Tutanağı Yazdır";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Binada imalat yapılamıyor....",
-            "Enerji bağlantısı bekleniyor(Başvuru yapıldı)...",
-            "Kazı izin  problemi...",
-            "TT sistem tahsis problemi...",
-            "TT malzeme temin problemi...",
-            "TT per şeması bekleniyor...",
-            "TT sistem servise alınması bekleniyor..."});
-            this.comboBox2.Location = new System.Drawing.Point(421, 170);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(319, 21);
-            this.comboBox2.TabIndex = 10;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Binada İzin Alındı.",
-            "Enerji Ruhsatı Alındı.",
-            "Kazı Ruhsatı Alındı.",
-            "Sistem Temini Yapıldı.Depodan alınabilir. ",
-            "Per şeması Alındı."});
-            this.comboBox1.Location = new System.Drawing.Point(421, 127);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(319, 24);
-            this.comboBox1.TabIndex = 9;
-            // 
-            // btn_Sure_Durdurma
-            // 
-            this.btn_Sure_Durdurma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_Sure_Durdurma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_Sure_Durdurma.Location = new System.Drawing.Point(612, 62);
-            this.btn_Sure_Durdurma.Name = "btn_Sure_Durdurma";
-            this.btn_Sure_Durdurma.Size = new System.Drawing.Size(128, 38);
-            this.btn_Sure_Durdurma.TabIndex = 8;
-            this.btn_Sure_Durdurma.Text = "Süre Durdurma";
-            this.btn_Sure_Durdurma.UseVisualStyleBackColor = false;
-            // 
-            // btn_sure_baslatma
-            // 
-            this.btn_sure_baslatma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_sure_baslatma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_sure_baslatma.Location = new System.Drawing.Point(421, 62);
-            this.btn_sure_baslatma.Name = "btn_sure_baslatma";
-            this.btn_sure_baslatma.Size = new System.Drawing.Size(128, 38);
-            this.btn_sure_baslatma.TabIndex = 7;
-            this.btn_sure_baslatma.Text = "Süre Başlatma";
-            this.btn_sure_baslatma.UseVisualStyleBackColor = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
@@ -340,6 +289,8 @@
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.dateTimePickerBaslangic);
             this.tabPage2.Controls.Add(this.btn_ProjeKaydet);
             this.tabPage2.Controls.Add(this.btn_Hesapla);
             this.tabPage2.Controls.Add(this.comboBox_varyok);
@@ -410,7 +361,7 @@
             this.btn_ProjeKaydet.ForeColor = System.Drawing.Color.Black;
             this.btn_ProjeKaydet.Location = new System.Drawing.Point(6, 295);
             this.btn_ProjeKaydet.Name = "btn_ProjeKaydet";
-            this.btn_ProjeKaydet.Size = new System.Drawing.Size(46, 200);
+            this.btn_ProjeKaydet.Size = new System.Drawing.Size(46, 220);
             this.btn_ProjeKaydet.TabIndex = 58;
             this.btn_ProjeKaydet.Text = "Proje Kaydet";
             this.btn_ProjeKaydet.UseVisualStyleBackColor = false;
@@ -434,7 +385,7 @@
             this.comboBox_varyok.Items.AddRange(new object[] {
             "Var",
             "Yok"});
-            this.comboBox_varyok.Location = new System.Drawing.Point(614, 205);
+            this.comboBox_varyok.Location = new System.Drawing.Point(615, 233);
             this.comboBox_varyok.Name = "comboBox_varyok";
             this.comboBox_varyok.Size = new System.Drawing.Size(168, 21);
             this.comboBox_varyok.TabIndex = 56;
@@ -442,25 +393,25 @@
             // textBoxSantral_Adi
             // 
             this.textBoxSantral_Adi.ForeColor = System.Drawing.Color.Red;
-            this.textBoxSantral_Adi.Location = new System.Drawing.Point(544, 92);
+            this.textBoxSantral_Adi.Location = new System.Drawing.Point(544, 135);
             this.textBoxSantral_Adi.Multiline = true;
             this.textBoxSantral_Adi.Name = "textBoxSantral_Adi";
-            this.textBoxSantral_Adi.Size = new System.Drawing.Size(234, 39);
+            this.textBoxSantral_Adi.Size = new System.Drawing.Size(239, 39);
             this.textBoxSantral_Adi.TabIndex = 55;
             // 
             // textBoxTelekom_Mudurlugu
             // 
             this.textBoxTelekom_Mudurlugu.ForeColor = System.Drawing.Color.Red;
-            this.textBoxTelekom_Mudurlugu.Location = new System.Drawing.Point(544, 53);
+            this.textBoxTelekom_Mudurlugu.Location = new System.Drawing.Point(544, 96);
             this.textBoxTelekom_Mudurlugu.Multiline = true;
             this.textBoxTelekom_Mudurlugu.Name = "textBoxTelekom_Mudurlugu";
-            this.textBoxTelekom_Mudurlugu.Size = new System.Drawing.Size(234, 40);
+            this.textBoxTelekom_Mudurlugu.Size = new System.Drawing.Size(239, 40);
             this.textBoxTelekom_Mudurlugu.TabIndex = 54;
             // 
             // textBoxProjeAdi
             // 
             this.textBoxProjeAdi.ForeColor = System.Drawing.Color.Red;
-            this.textBoxProjeAdi.Location = new System.Drawing.Point(308, 92);
+            this.textBoxProjeAdi.Location = new System.Drawing.Point(308, 135);
             this.textBoxProjeAdi.Multiline = true;
             this.textBoxProjeAdi.Name = "textBoxProjeAdi";
             this.textBoxProjeAdi.Size = new System.Drawing.Size(240, 39);
@@ -469,7 +420,7 @@
             // textBoxCIZIM_ADI
             // 
             this.textBoxCIZIM_ADI.ForeColor = System.Drawing.Color.Red;
-            this.textBoxCIZIM_ADI.Location = new System.Drawing.Point(308, 53);
+            this.textBoxCIZIM_ADI.Location = new System.Drawing.Point(308, 96);
             this.textBoxCIZIM_ADI.Multiline = true;
             this.textBoxCIZIM_ADI.Name = "textBoxCIZIM_ADI";
             this.textBoxCIZIM_ADI.Size = new System.Drawing.Size(240, 40);
@@ -478,19 +429,19 @@
             // textBoxpProjeOzelligi
             // 
             this.textBoxpProjeOzelligi.ForeColor = System.Drawing.Color.Red;
-            this.textBoxpProjeOzelligi.Location = new System.Drawing.Point(77, 92);
+            this.textBoxpProjeOzelligi.Location = new System.Drawing.Point(80, 135);
             this.textBoxpProjeOzelligi.Multiline = true;
             this.textBoxpProjeOzelligi.Name = "textBoxpProjeOzelligi";
-            this.textBoxpProjeOzelligi.Size = new System.Drawing.Size(231, 39);
+            this.textBoxpProjeOzelligi.Size = new System.Drawing.Size(228, 39);
             this.textBoxpProjeOzelligi.TabIndex = 51;
             // 
             // textBoxCBS_ID
             // 
             this.textBoxCBS_ID.ForeColor = System.Drawing.Color.Red;
-            this.textBoxCBS_ID.Location = new System.Drawing.Point(77, 53);
+            this.textBoxCBS_ID.Location = new System.Drawing.Point(80, 96);
             this.textBoxCBS_ID.Multiline = true;
             this.textBoxCBS_ID.Name = "textBoxCBS_ID";
-            this.textBoxCBS_ID.Size = new System.Drawing.Size(231, 40);
+            this.textBoxCBS_ID.Size = new System.Drawing.Size(228, 40);
             this.textBoxCBS_ID.TabIndex = 50;
             // 
             // textBox28
@@ -915,7 +866,7 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.Location = new System.Drawing.Point(536, 242);
+            this.textBox2.Location = new System.Drawing.Point(539, 254);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(242, 38);
@@ -928,7 +879,7 @@
             // 
             this.txt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt3.Location = new System.Drawing.Point(614, 152);
+            this.txt3.Location = new System.Drawing.Point(615, 180);
             this.txt3.Multiline = true;
             this.txt3.Name = "txt3";
             this.txt3.Size = new System.Drawing.Size(168, 56);
@@ -940,7 +891,7 @@
             // 
             this.txt_AltyapiMaliyeti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txt_AltyapiMaliyeti.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_AltyapiMaliyeti.Location = new System.Drawing.Point(441, 177);
+            this.txt_AltyapiMaliyeti.Location = new System.Drawing.Point(442, 205);
             this.txt_AltyapiMaliyeti.Multiline = true;
             this.txt_AltyapiMaliyeti.Name = "txt_AltyapiMaliyeti";
             this.txt_AltyapiMaliyeti.Size = new System.Drawing.Size(178, 49);
@@ -952,7 +903,7 @@
             // 
             this.textBoxAltyapi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBoxAltyapi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBoxAltyapi.Location = new System.Drawing.Point(441, 152);
+            this.textBoxAltyapi.Location = new System.Drawing.Point(442, 180);
             this.textBoxAltyapi.Multiline = true;
             this.textBoxAltyapi.Name = "textBoxAltyapi";
             this.textBoxAltyapi.Size = new System.Drawing.Size(178, 28);
@@ -963,7 +914,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(230, 213);
+            this.label3.Location = new System.Drawing.Point(233, 241);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 4;
@@ -972,7 +923,7 @@
             // txt_Sure
             // 
             this.txt_Sure.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_Sure.Location = new System.Drawing.Point(77, 177);
+            this.txt_Sure.Location = new System.Drawing.Point(80, 205);
             this.txt_Sure.Multiline = true;
             this.txt_Sure.Name = "txt_Sure";
             this.txt_Sure.Size = new System.Drawing.Size(147, 48);
@@ -983,7 +934,7 @@
             // 
             this.txt_IsSure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txt_IsSure.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_IsSure.Location = new System.Drawing.Point(77, 152);
+            this.txt_IsSure.Location = new System.Drawing.Point(80, 180);
             this.txt_IsSure.Multiline = true;
             this.txt_IsSure.Name = "txt_IsSure";
             this.txt_IsSure.Size = new System.Drawing.Size(147, 28);
@@ -995,7 +946,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(311, 19);
+            this.label2.Location = new System.Drawing.Point(324, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(208, 18);
             this.label2.TabIndex = 0;
@@ -1005,7 +956,15 @@
             // tabPage3
             // 
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage3.Controls.Add(this.panel1);
+            this.tabPage3.Controls.Add(this.btn_tamamlama_);
+            this.tabPage3.Controls.Add(this.btn_tamamlama_print);
+            this.tabPage3.Controls.Add(this.dateTimePicker2);
+            this.tabPage3.Controls.Add(this.dateTimePicker1);
+            this.tabPage3.Controls.Add(this.comboBox2);
+            this.tabPage3.Controls.Add(this.comboBox1);
+            this.tabPage3.Controls.Add(this.btn_Sure_Durdurma);
+            this.tabPage3.Controls.Add(this.btn_sure_baslatma);
+            this.tabPage3.Controls.Add(this.tamamlamapanel);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -1014,52 +973,142 @@
             this.tabPage3.Text = "Proje Tamamlama Tutanağı";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // btn_tamamlama_
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.txt_ceza);
-            this.panel1.Controls.Add(this.textBox55);
-            this.panel1.Controls.Add(this.textBox54);
-            this.panel1.Controls.Add(this.txt_yuklenici);
-            this.panel1.Controls.Add(this.txt_kontrol_teskilati);
-            this.panel1.Controls.Add(this.textBox51);
-            this.panel1.Controls.Add(this.textBox50);
-            this.panel1.Controls.Add(this.textBox49);
-            this.panel1.Controls.Add(this.txt_kalan_sure);
-            this.panel1.Controls.Add(this.txt_bitis_tarihi);
-            this.panel1.Controls.Add(this.textBox45);
-            this.panel1.Controls.Add(this.textBox46);
-            this.panel1.Controls.Add(this.txt_calisilan_sure);
-            this.panel1.Controls.Add(this.txt_baslangic_tarihi);
-            this.panel1.Controls.Add(this.textBox42);
-            this.panel1.Controls.Add(this.textBox43);
-            this.panel1.Controls.Add(this.textBox38);
-            this.panel1.Controls.Add(this.tamamlama_santral_adi);
-            this.panel1.Controls.Add(this.tamamlama_telekom);
-            this.panel1.Controls.Add(this.textBox35);
-            this.panel1.Controls.Add(this.tamamlama_proje_adi);
-            this.panel1.Controls.Add(this.tamamlama_cizim_adi);
-            this.panel1.Controls.Add(this.textBox34);
-            this.panel1.Controls.Add(this.tamamlama_proje_ozelligi);
-            this.panel1.Controls.Add(this.tamamlama_cbs_id);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(16, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(812, 776);
-            this.panel1.TabIndex = 5;
+            this.btn_tamamlama_.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_tamamlama_.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_tamamlama_.Location = new System.Drawing.Point(720, 24);
+            this.btn_tamamlama_.Name = "btn_tamamlama_";
+            this.btn_tamamlama_.Size = new System.Drawing.Size(125, 38);
+            this.btn_tamamlama_.TabIndex = 16;
+            this.btn_tamamlama_.Text = "Önizleme";
+            this.btn_tamamlama_.UseVisualStyleBackColor = false;
+            // 
+            // btn_tamamlama_print
+            // 
+            this.btn_tamamlama_print.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_tamamlama_print.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_tamamlama_print.Location = new System.Drawing.Point(720, 74);
+            this.btn_tamamlama_print.Name = "btn_tamamlama_print";
+            this.btn_tamamlama_print.Size = new System.Drawing.Size(125, 38);
+            this.btn_tamamlama_print.TabIndex = 15;
+            this.btn_tamamlama_print.Text = "Tutanak Yazdır";
+            this.btn_tamamlama_print.UseVisualStyleBackColor = false;
+            this.btn_tamamlama_print.Click += new System.EventHandler(this.btn_tamamlama_print_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(16, 81);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 14;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(16, 24);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 13;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Binada imalat yapılamıyor....",
+            "Enerji bağlantısı bekleniyor(Başvuru yapıldı)...",
+            "Kazı izin  problemi...",
+            "TT sistem tahsis problemi...",
+            "TT malzeme temin problemi...",
+            "TT per şeması bekleniyor...",
+            "TT sistem servise alınması bekleniyor..."});
+            this.comboBox2.Location = new System.Drawing.Point(390, 84);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(286, 21);
+            this.comboBox2.TabIndex = 12;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Binada İzin Alındı.",
+            "Enerji Ruhsatı Alındı.",
+            "Kazı Ruhsatı Alındı.",
+            "Sistem Temini Yapıldı.Depodan alınabilir. ",
+            "Per şeması Alındı."});
+            this.comboBox1.Location = new System.Drawing.Point(390, 25);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(286, 24);
+            this.comboBox1.TabIndex = 11;
+            // 
+            // btn_Sure_Durdurma
+            // 
+            this.btn_Sure_Durdurma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_Sure_Durdurma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Sure_Durdurma.Location = new System.Drawing.Point(237, 74);
+            this.btn_Sure_Durdurma.Name = "btn_Sure_Durdurma";
+            this.btn_Sure_Durdurma.Size = new System.Drawing.Size(128, 38);
+            this.btn_Sure_Durdurma.TabIndex = 10;
+            this.btn_Sure_Durdurma.Text = "Süre Durdurma";
+            this.btn_Sure_Durdurma.UseVisualStyleBackColor = false;
+            // 
+            // btn_sure_baslatma
+            // 
+            this.btn_sure_baslatma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_sure_baslatma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_sure_baslatma.Location = new System.Drawing.Point(237, 17);
+            this.btn_sure_baslatma.Name = "btn_sure_baslatma";
+            this.btn_sure_baslatma.Size = new System.Drawing.Size(128, 38);
+            this.btn_sure_baslatma.TabIndex = 9;
+            this.btn_sure_baslatma.Text = "Süre Başlatma";
+            this.btn_sure_baslatma.UseVisualStyleBackColor = false;
+            // 
+            // tamamlamapanel
+            // 
+            this.tamamlamapanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tamamlamapanel.Controls.Add(this.dataGridView1);
+            this.tamamlamapanel.Controls.Add(this.txt_ceza);
+            this.tamamlamapanel.Controls.Add(this.textBox55);
+            this.tamamlamapanel.Controls.Add(this.textBox54);
+            this.tamamlamapanel.Controls.Add(this.txt_yuklenici);
+            this.tamamlamapanel.Controls.Add(this.txt_kontrol_teskilati);
+            this.tamamlamapanel.Controls.Add(this.textBox51);
+            this.tamamlamapanel.Controls.Add(this.textBox50);
+            this.tamamlamapanel.Controls.Add(this.textBox49);
+            this.tamamlamapanel.Controls.Add(this.txt_kalan_sure);
+            this.tamamlamapanel.Controls.Add(this.txt_bitis_tarihi);
+            this.tamamlamapanel.Controls.Add(this.textBox45);
+            this.tamamlamapanel.Controls.Add(this.textBox46);
+            this.tamamlamapanel.Controls.Add(this.txt_calisilan_sure);
+            this.tamamlamapanel.Controls.Add(this.txt_baslangic_tarihi);
+            this.tamamlamapanel.Controls.Add(this.textBox42);
+            this.tamamlamapanel.Controls.Add(this.textBox43);
+            this.tamamlamapanel.Controls.Add(this.textBox38);
+            this.tamamlamapanel.Controls.Add(this.tamamlama_santral_adi);
+            this.tamamlamapanel.Controls.Add(this.tamamlama_telekom);
+            this.tamamlamapanel.Controls.Add(this.textBox35);
+            this.tamamlamapanel.Controls.Add(this.tamamlama_proje_adi);
+            this.tamamlamapanel.Controls.Add(this.tamamlama_cizim_adi);
+            this.tamamlamapanel.Controls.Add(this.textBox34);
+            this.tamamlamapanel.Controls.Add(this.tamamlama_proje_ozelligi);
+            this.tamamlamapanel.Controls.Add(this.tamamlama_cbs_id);
+            this.tamamlamapanel.Controls.Add(this.label7);
+            this.tamamlamapanel.Location = new System.Drawing.Point(16, 142);
+            this.tamamlamapanel.Name = "tamamlamapanel";
+            this.tamamlamapanel.Size = new System.Drawing.Size(829, 646);
+            this.tamamlamapanel.TabIndex = 5;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(52, 435);
+            this.dataGridView1.Location = new System.Drawing.Point(65, 449);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(701, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(701, 175);
             this.dataGridView1.TabIndex = 31;
             // 
             // txt_ceza
             // 
-            this.txt_ceza.Location = new System.Drawing.Point(571, 363);
+            this.txt_ceza.Location = new System.Drawing.Point(584, 364);
             this.txt_ceza.Multiline = true;
             this.txt_ceza.Name = "txt_ceza";
             this.txt_ceza.Size = new System.Drawing.Size(182, 55);
@@ -1068,7 +1117,7 @@
             // textBox55
             // 
             this.textBox55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox55.Location = new System.Drawing.Point(571, 340);
+            this.textBox55.Location = new System.Drawing.Point(584, 341);
             this.textBox55.Multiline = true;
             this.textBox55.Name = "textBox55";
             this.textBox55.Size = new System.Drawing.Size(182, 26);
@@ -1078,7 +1127,7 @@
             // 
             // textBox54
             // 
-            this.textBox54.Location = new System.Drawing.Point(571, 297);
+            this.textBox54.Location = new System.Drawing.Point(584, 298);
             this.textBox54.Multiline = true;
             this.textBox54.Name = "textBox54";
             this.textBox54.Size = new System.Drawing.Size(182, 44);
@@ -1086,7 +1135,7 @@
             // 
             // txt_yuklenici
             // 
-            this.txt_yuklenici.Location = new System.Drawing.Point(365, 297);
+            this.txt_yuklenici.Location = new System.Drawing.Point(378, 298);
             this.txt_yuklenici.Multiline = true;
             this.txt_yuklenici.Name = "txt_yuklenici";
             this.txt_yuklenici.Size = new System.Drawing.Size(200, 121);
@@ -1094,7 +1143,7 @@
             // 
             // txt_kontrol_teskilati
             // 
-            this.txt_kontrol_teskilati.Location = new System.Drawing.Point(52, 297);
+            this.txt_kontrol_teskilati.Location = new System.Drawing.Point(65, 298);
             this.txt_kontrol_teskilati.Multiline = true;
             this.txt_kontrol_teskilati.Name = "txt_kontrol_teskilati";
             this.txt_kontrol_teskilati.Size = new System.Drawing.Size(307, 121);
@@ -1103,7 +1152,7 @@
             // textBox51
             // 
             this.textBox51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox51.Location = new System.Drawing.Point(571, 271);
+            this.textBox51.Location = new System.Drawing.Point(584, 272);
             this.textBox51.Multiline = true;
             this.textBox51.Name = "textBox51";
             this.textBox51.Size = new System.Drawing.Size(182, 28);
@@ -1113,7 +1162,7 @@
             // textBox50
             // 
             this.textBox50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox50.Location = new System.Drawing.Point(365, 271);
+            this.textBox50.Location = new System.Drawing.Point(378, 272);
             this.textBox50.Multiline = true;
             this.textBox50.Name = "textBox50";
             this.textBox50.Size = new System.Drawing.Size(200, 28);
@@ -1124,7 +1173,7 @@
             // textBox49
             // 
             this.textBox49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox49.Location = new System.Drawing.Point(52, 271);
+            this.textBox49.Location = new System.Drawing.Point(65, 272);
             this.textBox49.Multiline = true;
             this.textBox49.Name = "textBox49";
             this.textBox49.Size = new System.Drawing.Size(307, 28);
@@ -1134,7 +1183,7 @@
             // 
             // txt_kalan_sure
             // 
-            this.txt_kalan_sure.Location = new System.Drawing.Point(581, 225);
+            this.txt_kalan_sure.Location = new System.Drawing.Point(594, 221);
             this.txt_kalan_sure.Multiline = true;
             this.txt_kalan_sure.Name = "txt_kalan_sure";
             this.txt_kalan_sure.Size = new System.Drawing.Size(172, 40);
@@ -1142,7 +1191,7 @@
             // 
             // txt_bitis_tarihi
             // 
-            this.txt_bitis_tarihi.Location = new System.Drawing.Point(581, 179);
+            this.txt_bitis_tarihi.Location = new System.Drawing.Point(594, 175);
             this.txt_bitis_tarihi.Multiline = true;
             this.txt_bitis_tarihi.Name = "txt_bitis_tarihi";
             this.txt_bitis_tarihi.Size = new System.Drawing.Size(172, 40);
@@ -1151,7 +1200,7 @@
             // textBox45
             // 
             this.textBox45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox45.Location = new System.Drawing.Point(402, 225);
+            this.textBox45.Location = new System.Drawing.Point(415, 221);
             this.textBox45.Multiline = true;
             this.textBox45.Name = "textBox45";
             this.textBox45.Size = new System.Drawing.Size(173, 40);
@@ -1162,7 +1211,7 @@
             // textBox46
             // 
             this.textBox46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox46.Location = new System.Drawing.Point(402, 179);
+            this.textBox46.Location = new System.Drawing.Point(415, 175);
             this.textBox46.Multiline = true;
             this.textBox46.Name = "textBox46";
             this.textBox46.Size = new System.Drawing.Size(173, 40);
@@ -1172,7 +1221,7 @@
             // 
             // txt_calisilan_sure
             // 
-            this.txt_calisilan_sure.Location = new System.Drawing.Point(223, 225);
+            this.txt_calisilan_sure.Location = new System.Drawing.Point(236, 221);
             this.txt_calisilan_sure.Multiline = true;
             this.txt_calisilan_sure.Name = "txt_calisilan_sure";
             this.txt_calisilan_sure.Size = new System.Drawing.Size(173, 40);
@@ -1180,7 +1229,7 @@
             // 
             // txt_baslangic_tarihi
             // 
-            this.txt_baslangic_tarihi.Location = new System.Drawing.Point(223, 179);
+            this.txt_baslangic_tarihi.Location = new System.Drawing.Point(236, 175);
             this.txt_baslangic_tarihi.Multiline = true;
             this.txt_baslangic_tarihi.Name = "txt_baslangic_tarihi";
             this.txt_baslangic_tarihi.Size = new System.Drawing.Size(173, 40);
@@ -1189,7 +1238,7 @@
             // textBox42
             // 
             this.textBox42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox42.Location = new System.Drawing.Point(52, 225);
+            this.textBox42.Location = new System.Drawing.Point(65, 221);
             this.textBox42.Multiline = true;
             this.textBox42.Name = "textBox42";
             this.textBox42.Size = new System.Drawing.Size(163, 40);
@@ -1200,7 +1249,7 @@
             // textBox43
             // 
             this.textBox43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textBox43.Location = new System.Drawing.Point(52, 179);
+            this.textBox43.Location = new System.Drawing.Point(65, 175);
             this.textBox43.Multiline = true;
             this.textBox43.Name = "textBox43";
             this.textBox43.Size = new System.Drawing.Size(163, 40);
@@ -1210,7 +1259,7 @@
             // 
             // textBox38
             // 
-            this.textBox38.Location = new System.Drawing.Point(575, 124);
+            this.textBox38.Location = new System.Drawing.Point(588, 129);
             this.textBox38.Multiline = true;
             this.textBox38.Name = "textBox38";
             this.textBox38.Size = new System.Drawing.Size(178, 40);
@@ -1218,7 +1267,7 @@
             // 
             // tamamlama_santral_adi
             // 
-            this.tamamlama_santral_adi.Location = new System.Drawing.Point(575, 78);
+            this.tamamlama_santral_adi.Location = new System.Drawing.Point(588, 83);
             this.tamamlama_santral_adi.Multiline = true;
             this.tamamlama_santral_adi.Name = "tamamlama_santral_adi";
             this.tamamlama_santral_adi.Size = new System.Drawing.Size(178, 40);
@@ -1226,7 +1275,7 @@
             // 
             // tamamlama_telekom
             // 
-            this.tamamlama_telekom.Location = new System.Drawing.Point(575, 32);
+            this.tamamlama_telekom.Location = new System.Drawing.Point(588, 37);
             this.tamamlama_telekom.Multiline = true;
             this.tamamlama_telekom.Name = "tamamlama_telekom";
             this.tamamlama_telekom.Size = new System.Drawing.Size(178, 40);
@@ -1234,7 +1283,7 @@
             // 
             // textBox35
             // 
-            this.textBox35.Location = new System.Drawing.Point(236, 124);
+            this.textBox35.Location = new System.Drawing.Point(249, 129);
             this.textBox35.Multiline = true;
             this.textBox35.Name = "textBox35";
             this.textBox35.Size = new System.Drawing.Size(333, 40);
@@ -1242,7 +1291,7 @@
             // 
             // tamamlama_proje_adi
             // 
-            this.tamamlama_proje_adi.Location = new System.Drawing.Point(236, 78);
+            this.tamamlama_proje_adi.Location = new System.Drawing.Point(249, 83);
             this.tamamlama_proje_adi.Multiline = true;
             this.tamamlama_proje_adi.Name = "tamamlama_proje_adi";
             this.tamamlama_proje_adi.Size = new System.Drawing.Size(333, 40);
@@ -1250,7 +1299,7 @@
             // 
             // tamamlama_cizim_adi
             // 
-            this.tamamlama_cizim_adi.Location = new System.Drawing.Point(236, 32);
+            this.tamamlama_cizim_adi.Location = new System.Drawing.Point(249, 37);
             this.tamamlama_cizim_adi.Multiline = true;
             this.tamamlama_cizim_adi.Name = "tamamlama_cizim_adi";
             this.tamamlama_cizim_adi.Size = new System.Drawing.Size(333, 40);
@@ -1258,7 +1307,7 @@
             // 
             // textBox34
             // 
-            this.textBox34.Location = new System.Drawing.Point(52, 124);
+            this.textBox34.Location = new System.Drawing.Point(65, 129);
             this.textBox34.Multiline = true;
             this.textBox34.Name = "textBox34";
             this.textBox34.Size = new System.Drawing.Size(178, 40);
@@ -1266,7 +1315,7 @@
             // 
             // tamamlama_proje_ozelligi
             // 
-            this.tamamlama_proje_ozelligi.Location = new System.Drawing.Point(52, 78);
+            this.tamamlama_proje_ozelligi.Location = new System.Drawing.Point(65, 83);
             this.tamamlama_proje_ozelligi.Multiline = true;
             this.tamamlama_proje_ozelligi.Name = "tamamlama_proje_ozelligi";
             this.tamamlama_proje_ozelligi.Size = new System.Drawing.Size(178, 40);
@@ -1274,7 +1323,7 @@
             // 
             // tamamlama_cbs_id
             // 
-            this.tamamlama_cbs_id.Location = new System.Drawing.Point(52, 32);
+            this.tamamlama_cbs_id.Location = new System.Drawing.Point(65, 37);
             this.tamamlama_cbs_id.Multiline = true;
             this.tamamlama_cbs_id.Name = "tamamlama_cbs_id";
             this.tamamlama_cbs_id.Size = new System.Drawing.Size(178, 40);
@@ -1284,7 +1333,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Lucida Sans Unicode", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(281, 9);
+            this.label7.Location = new System.Drawing.Point(295, 13);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(233, 18);
             this.label7.TabIndex = 5;
@@ -1300,6 +1349,23 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "İlerleme Raporu";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePickerBaslangic
+            // 
+            this.dateTimePickerBaslangic.Location = new System.Drawing.Point(230, 17);
+            this.dateTimePickerBaslangic.Name = "dateTimePickerBaslangic";
+            this.dateTimePickerBaslangic.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerBaslangic.TabIndex = 59;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(74, 17);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(146, 17);
+            this.label8.TabIndex = 60;
+            this.label8.Text = "Proje Başlangıç Tarihi";
             // 
             // ProjeIslemleri
             // 
@@ -1322,8 +1388,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.tamamlamapanel.ResumeLayout(false);
+            this.tamamlamapanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -1388,13 +1454,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_ProjeKapama;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btn_Sure_Durdurma;
-        private System.Windows.Forms.Button btn_sure_baslatma;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel tamamlamapanel;
         private System.Windows.Forms.TextBox textBox50;
         private System.Windows.Forms.TextBox textBox49;
         private System.Windows.Forms.TextBox txt_kalan_sure;
@@ -1432,5 +1494,15 @@
         private System.Windows.Forms.ComboBox comboBox_varyok;
         private System.Windows.Forms.Button btn_Hesapla;
         private System.Windows.Forms.Button btn_ProjeKaydet;
+        private System.Windows.Forms.Button btn_tamamlama_;
+        private System.Windows.Forms.Button btn_tamamlama_print;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btn_Sure_Durdurma;
+        private System.Windows.Forms.Button btn_sure_baslatma;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker dateTimePickerBaslangic;
     }
 }

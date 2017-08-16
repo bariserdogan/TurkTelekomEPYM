@@ -16,13 +16,16 @@ namespace Deneme1
         public ProjeIslemleri()
         {
             InitializeComponent();
+            if (this.txt_Sure == null)
+                btn_ProjeKaydet.Enabled = false;
+            else
+                btn_ProjeKaydet = true;
         }
         int pretime;
         double jobtime;
         double acikkazi, fider, trencher, kazser, yeralti, yenihavai, mevcuthavai, kazser2, outdoor, indoor, aktarma, binaici;
         int girilen;
         string varMi = "Var";
-
         private void ProjeIslemleri_Load(object sender, EventArgs e)
         {
             btn_Hesapla.Text = "H" + "\n" + "E" + "\n" + "S" + "\n" + "A" + "\n" + "P" + "\n" + "L" + "\n" + "A";
@@ -39,17 +42,7 @@ namespace Deneme1
                     entity = new ProjeTakipSistEntities();
                 return entity;
             }
-        }
-        private void txt_AltyapiMaliyeti_TextChanged(object sender, EventArgs e)
-        {
-        }
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox_ID_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        }
+        }    
         private void btn_Arama_Click(object sender, EventArgs e)
         {
             girilen = int.Parse(textBox_ID.Text);
@@ -124,50 +117,53 @@ namespace Deneme1
             }
                 
         }
-        private void btn_ProjeKaydet_Click(object sender, EventArgs e)
-        {
-            
-           
-        }
+        
         private void btn_ProjeKaydet_Click_1(object sender, EventArgs e)
         {
-            var cbs = db.Ilerleme.Where(x => x.ID == girilen).FirstOrDefault();
+           
+            var cbs = db.Ilerleme.Where(x => x.ID == girilen).FirstOrDefault();            
             if (comboBox_varyok.Text == varMi)
             {
-                Aksiyonlar aksiyon = new Aksiyonlar
+                if (dateTimePickerBaslangic.Value != null)
                 {
-                    CBS_ID = girilen.ToString(),
-                    Cizim_Adi = textBoxCIZIM_ADI.Text.ToString(),
-                    Altyapi_Maliyeti = float.Parse(txt_AltyapiMaliyeti.Text),
-                    Telekom_Mud = textBoxTelekom_Mudurlugu.Text.ToString(),
-                    Proje_Turu = textBoxpProjeOzelligi.Text.ToString(),
-                    Proje_Adi = textBoxProjeAdi.Text.ToString(),
-                    Santral = textBoxSantral_Adi.Text.ToString(),
-                    Acik_Kazi = float.Parse(txt_AcikKazi.Text),
-                    Fider = txt_Fider.Text.ToString(),
-                    Trencher = txt_Trencher.Text.ToString(),
-                    Kazser = txt_KAZSER1.Text.ToString(),
-                    Yeralti_Guzergahincan = float.Parse(txt_yeralti.Text),
-                    Yeni_Havi_Guzergahtan = txt_yenihavai.Text.ToString(),
-                    Mevcut_Havai_Guzergahtan = txt_mevcuthavai.Text.ToString(),
-                    Kazser_Guzergahtan = textbox_kazser2.Text.ToString(),
-                    FTTC_OFSD_OFTK = txt_outdoorkabin.Text.ToString(),
-                    FTTB_3_48U_Kabin = float.Parse(txt_indoor_kabin.Text),
-                    Aktarma = float.Parse(txt_aktarma.Text),
-                    Bina_ici_Kablolama = txt_binaici.Text.ToString(),
-                    Islem = "Yeni Kayıt",
-                    Islem_Tarih = DateTime.Now,
-                    Gerekce = "Yeni Kayıt",
-                    Proje_Sure = float.Parse(jobtime.ToString()),
-                };
-                db.Aksiyonlar.Add(aksiyon);
-                db.SaveChanges();
-                MessageBox.Show("Yeni bir kayıt aksiyonlar tablosuna eklendi", "Bilgi", MessageBoxButtons.OKCancel);
+                    Aksiyonlar aksiyon = new Aksiyonlar
+                    {
+                        CBS_ID = girilen.ToString(),
+                        Cizim_Adi = textBoxCIZIM_ADI.Text.ToString(),
+                        Altyapi_Maliyeti = float.Parse(txt_AltyapiMaliyeti.Text),
+                        Telekom_Mud = textBoxTelekom_Mudurlugu.Text.ToString(),
+                        Proje_Turu = textBoxpProjeOzelligi.Text.ToString(),
+                        Proje_Adi = textBoxProjeAdi.Text.ToString(),
+                        Santral = textBoxSantral_Adi.Text.ToString(),
+                        Acik_Kazi = float.Parse(txt_AcikKazi.Text),
+                        Fider = txt_Fider.Text.ToString(),
+                        Trencher = txt_Trencher.Text.ToString(),
+                        Kazser = txt_KAZSER1.Text.ToString(),
+                        Yeralti_Guzergahincan = float.Parse(txt_yeralti.Text),
+                        Yeni_Havi_Guzergahtan = txt_yenihavai.Text.ToString(),
+                        Mevcut_Havai_Guzergahtan = txt_mevcuthavai.Text.ToString(),
+                        Kazser_Guzergahtan = textbox_kazser2.Text.ToString(),
+                        FTTC_OFSD_OFTK = txt_outdoorkabin.Text.ToString(),
+                        FTTB_3_48U_Kabin = float.Parse(txt_indoor_kabin.Text),
+                        Aktarma = float.Parse(txt_aktarma.Text),
+                        Bina_ici_Kablolama = txt_binaici.Text.ToString(),
+                        Islem = "Yeni Kayıt",
+                        Islem_Tarih = DateTime.Now,
+                        Gerekce = "Yeni Kayıt",
+                        Baslangic_Tarih = dateTimePickerBaslangic.Value,
+                        Bitis_Tarih = dateTimePickerBaslangic.Value.AddDays(Convert.ToInt32(jobtime)),
+                        Proje_Sure = float.Parse(jobtime.ToString()),
+                    };
+                    db.Aksiyonlar.Add(aksiyon);
+                    db.SaveChanges();
+                    MessageBox.Show("Yeni bir kayıt aksiyonlar tablosuna eklendi", "Bilgi", MessageBoxButtons.OKCancel);
+                }
+                else
+                    MessageBox.Show("Tarih seçimi yapınız");               
             }
             else
-            {
                 MessageBox.Show("Kayıt yapabilmek için yeraltısız imalat var mı seçeneğini 'Var' yapmanız gerekir.");
-            }
+
         }
         public void writeDatatoTamamlama(Ilerleme model)
         {
@@ -251,5 +247,28 @@ namespace Deneme1
             return jobtime;
         }
 
+        private void btn_tamamlama_print_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+        private void txt_AltyapiMaliyeti_TextChanged(object sender, EventArgs e)
+        {
+        }
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+        }
+        private void textBox_ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+        private void btn_ProjeKaydet_Click(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }
