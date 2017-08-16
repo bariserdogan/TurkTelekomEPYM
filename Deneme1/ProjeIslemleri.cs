@@ -20,6 +20,7 @@ namespace Deneme1
                 btn_ProjeKaydet.Enabled = false;
             else
                 btn_ProjeKaydet.Enabled = true;
+            btn_ProjeTeslim.Enabled = false;
         }
         int pretime;
         double jobtime;
@@ -42,7 +43,32 @@ namespace Deneme1
                     entity = new ProjeTakipSistEntities();
                 return entity;
             }
-        }    
+        }
+
+        private void btn_ProjeTeslim_Click(object sender, EventArgs e)
+        {
+            string girilen2 = textBox_ID.Text;
+            var gelen = (from a in db.Aksiyonlar
+                         where a.CBS_ID == girilen2
+                         select a).First();
+            var teslim = gelen;
+            if (teslim != null)
+            {
+                teslim.Bitis_Tarih = dateTimePickerBaslangic.Value.AddDays((Convert.ToInt32(jobtime) + 7));
+                // Bitiş tarihine  7 gün avans eklendi.
+                teslim.Islem = "Proje Teslim"; 
+                teslim.Gerekce = "Proje Teslim";
+                Aksiyonlar aksiyon = new Aksiyonlar(); 
+                aksiyon = teslim; 
+                db.Aksiyonlar.Add(aksiyon); 
+                db.SaveChanges();
+                btn_ProjeTeslim.Enabled = false;
+                MessageBox.Show("Yeni bir aksiyon eklendi : Proje müteahhite teslim edilmiştir", "Info", MessageBoxButtons.OK);
+            }
+            else
+                MessageBox.Show("Beklenmedik bir hata meydana geldi");
+        }
+
         private void btn_Arama_Click(object sender, EventArgs e)
         {
             girilen = int.Parse(textBox_ID.Text);
@@ -156,6 +182,7 @@ namespace Deneme1
                     };
                     db.Aksiyonlar.Add(aksiyon);
                     db.SaveChanges();
+                    btn_ProjeTeslim.Enabled = true;
                     MessageBox.Show("Yeni bir kayıt aksiyonlar tablosuna eklendi", "Bilgi", MessageBoxButtons.OKCancel);
                     writeDatatoTamamlama(cbs);
                     txt_baslangic_tarihi.Text = String.Format("{0:dd/MM/yyyy}", aksiyon.Baslangic_Tarih);// proje başlangıç tarihi
@@ -167,7 +194,6 @@ namespace Deneme1
             }
             else
                 MessageBox.Show("Kayıt yapabilmek için yeraltısız imalat var mı seçeneğini 'Var' yapmanız gerekir.");
-
         }
         public void writeDatatoTamamlama(Ilerleme model)
         {
@@ -251,11 +277,13 @@ namespace Deneme1
             return jobtime;
         }
 
+
+
+
         private void btn_tamamlama_print_Click(object sender, EventArgs e)
         {
 
         }
-
         private void txt_AltyapiMaliyeti_TextChanged(object sender, EventArgs e)
         {
         }

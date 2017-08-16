@@ -34,10 +34,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_ProjeKapama = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_ProjeTeslim = new System.Windows.Forms.Button();
             this.btn_baslatma_print = new System.Windows.Forms.Button();
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -135,6 +133,7 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dateTimePickerBaslangic = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
+            this.btn_ProjeTeslim = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -189,10 +188,9 @@
             // 
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.btn_ProjeKapama);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Location = new System.Drawing.Point(421, 228);
+            this.groupBox2.Location = new System.Drawing.Point(422, 155);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(263, 246);
+            this.groupBox2.Size = new System.Drawing.Size(263, 199);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Proje Tamamlama İşlemleri";
@@ -202,7 +200,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label6.Location = new System.Drawing.Point(45, 28);
+            this.label6.Location = new System.Drawing.Point(45, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(182, 17);
             this.label6.TabIndex = 3;
@@ -212,32 +210,20 @@
             // 
             this.btn_ProjeKapama.BackColor = System.Drawing.Color.Aqua;
             this.btn_ProjeKapama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_ProjeKapama.Location = new System.Drawing.Point(48, 67);
+            this.btn_ProjeKapama.Location = new System.Drawing.Point(48, 87);
             this.btn_ProjeKapama.Name = "btn_ProjeKapama";
             this.btn_ProjeKapama.Size = new System.Drawing.Size(179, 47);
             this.btn_ProjeKapama.TabIndex = 5;
             this.btn_ProjeKapama.Text = "Proje Kapama";
             this.btn_ProjeKapama.UseVisualStyleBackColor = false;
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Aqua;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.Location = new System.Drawing.Point(48, 132);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(179, 47);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Tamamlama Tutanağı Yazdır";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btn_ProjeTeslim);
             this.groupBox1.Controls.Add(this.btn_baslatma_print);
-            this.groupBox1.Location = new System.Drawing.Point(48, 208);
+            this.groupBox1.Location = new System.Drawing.Point(48, 155);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(250, 266);
+            this.groupBox1.Size = new System.Drawing.Size(250, 199);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proje Başlatma İşlemleri";
@@ -247,28 +233,17 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(48, 44);
+            this.label1.Location = new System.Drawing.Point(48, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(163, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Proje Başlatma Tutanağı";
             // 
-            // btn_ProjeTeslim
-            // 
-            this.btn_ProjeTeslim.BackColor = System.Drawing.Color.Aqua;
-            this.btn_ProjeTeslim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_ProjeTeslim.Location = new System.Drawing.Point(48, 87);
-            this.btn_ProjeTeslim.Name = "btn_ProjeTeslim";
-            this.btn_ProjeTeslim.Size = new System.Drawing.Size(163, 47);
-            this.btn_ProjeTeslim.TabIndex = 5;
-            this.btn_ProjeTeslim.Text = "Proje Teslim";
-            this.btn_ProjeTeslim.UseVisualStyleBackColor = false;
-            // 
             // btn_baslatma_print
             // 
             this.btn_baslatma_print.BackColor = System.Drawing.Color.Aqua;
             this.btn_baslatma_print.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_baslatma_print.Location = new System.Drawing.Point(48, 162);
+            this.btn_baslatma_print.Location = new System.Drawing.Point(48, 87);
             this.btn_baslatma_print.Name = "btn_baslatma_print";
             this.btn_baslatma_print.Size = new System.Drawing.Size(163, 47);
             this.btn_baslatma_print.TabIndex = 4;
@@ -289,6 +264,7 @@
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage2.Controls.Add(this.btn_ProjeTeslim);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.dateTimePickerBaslangic);
             this.tabPage2.Controls.Add(this.btn_ProjeKaydet);
@@ -1353,7 +1329,7 @@
             // dateTimePickerBaslangic
             // 
             this.dateTimePickerBaslangic.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerBaslangic.Location = new System.Drawing.Point(230, 17);
+            this.dateTimePickerBaslangic.Location = new System.Drawing.Point(77, 23);
             this.dateTimePickerBaslangic.Name = "dateTimePickerBaslangic";
             this.dateTimePickerBaslangic.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerBaslangic.TabIndex = 59;
@@ -1362,11 +1338,23 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(74, 17);
+            this.label8.Location = new System.Drawing.Point(74, 3);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(146, 17);
             this.label8.TabIndex = 60;
             this.label8.Text = "Proje Başlangıç Tarihi";
+            // 
+            // btn_ProjeTeslim
+            // 
+            this.btn_ProjeTeslim.BackColor = System.Drawing.Color.Aqua;
+            this.btn_ProjeTeslim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_ProjeTeslim.Location = new System.Drawing.Point(620, 2);
+            this.btn_ProjeTeslim.Name = "btn_ProjeTeslim";
+            this.btn_ProjeTeslim.Size = new System.Drawing.Size(163, 47);
+            this.btn_ProjeTeslim.TabIndex = 61;
+            this.btn_ProjeTeslim.Text = "Projeyi Teslim Et";
+            this.btn_ProjeTeslim.UseVisualStyleBackColor = false;
+            this.btn_ProjeTeslim.Click += new System.EventHandler(this.btn_ProjeTeslim_Click);
             // 
             // ProjeIslemleri
             // 
@@ -1404,7 +1392,6 @@
         private System.Windows.Forms.TextBox textBox_ID;
         private System.Windows.Forms.Button btn_baslatma_print;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_ProjeTeslim;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_IsSure;
@@ -1454,7 +1441,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_ProjeKapama;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Panel tamamlamapanel;
@@ -1505,5 +1491,6 @@
         private System.Windows.Forms.Button btn_sure_baslatma;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePickerBaslangic;
+        private System.Windows.Forms.Button btn_ProjeTeslim;
     }
 }
