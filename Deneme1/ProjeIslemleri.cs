@@ -16,10 +16,10 @@ namespace Deneme1
         public ProjeIslemleri()
         {
             InitializeComponent();
-            if (this.txt_Sure == null)
+            if (string.IsNullOrEmpty(this.txt_Sure.Text))
                 btn_ProjeKaydet.Enabled = false;
             else
-                btn_ProjeKaydet = true;
+                btn_ProjeKaydet.Enabled = true;
         }
         int pretime;
         double jobtime;
@@ -31,7 +31,7 @@ namespace Deneme1
             btn_Hesapla.Text = "H" + "\n" + "E" + "\n" + "S" + "\n" + "A" + "\n" + "P" + "\n" + "L" + "\n" + "A";
             btn_ProjeKaydet.Text = "P" + "\n" + "R" + "\n" + "O" + "\n" + "J" + "\n" + "E" + "\n" + "K" + "\n" + "A" + "\n" + "Y" + "\n" + "D" + "\n" + "E" + "\n" + "T";
             btn_Hesapla.ForeColor = Color.White;
-            btn_ProjeKaydet.ForeColor = Color.Red;
+            btn_ProjeKaydet.ForeColor = Color.Red;          
         }
         ProjeTakipSistEntities entity;
         ProjeTakipSistEntities db
@@ -157,6 +157,10 @@ namespace Deneme1
                     db.Aksiyonlar.Add(aksiyon);
                     db.SaveChanges();
                     MessageBox.Show("Yeni bir kayıt aksiyonlar tablosuna eklendi", "Bilgi", MessageBoxButtons.OKCancel);
+                    writeDatatoTamamlama(cbs);
+                    txt_baslangic_tarihi.Text = String.Format("{0:dd/MM/yyyy}", aksiyon.Baslangic_Tarih);// proje başlangıç tarihi
+                    txt_bitis_tarihi.Text = String.Format("{0:dd/MM/yyyy}", aksiyon.Bitis_Tarih); // proje bitiş tarihi
+                    tabControl1.SelectedTab = tabPage3;
                 }
                 else
                     MessageBox.Show("Tarih seçimi yapınız");               
@@ -199,10 +203,10 @@ namespace Deneme1
             //liste.Add(txt_aktarma.Text);
             //liste.Add(txt_binaici.Text);
 
-            //for (int i = 1;  i < liste.Count(); i++)
+            //for (int i = 1; i < liste.Count(); i++)
             //{
             //    if (string.IsNullOrEmpty(liste[i]))
-            //        liste[i] = "0";
+            //        liste[i]= "0";
             //}
 
             if (String.IsNullOrEmpty(txt_AcikKazi.Text))
@@ -251,10 +255,6 @@ namespace Deneme1
         {
 
         }
-
-
-
-
 
         private void txt_AltyapiMaliyeti_TextChanged(object sender, EventArgs e)
         {

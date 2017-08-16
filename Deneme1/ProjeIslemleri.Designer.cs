@@ -1352,6 +1352,7 @@
             // 
             // dateTimePickerBaslangic
             // 
+            this.dateTimePickerBaslangic.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerBaslangic.Location = new System.Drawing.Point(230, 17);
             this.dateTimePickerBaslangic.Name = "dateTimePickerBaslangic";
             this.dateTimePickerBaslangic.Size = new System.Drawing.Size(200, 20);
