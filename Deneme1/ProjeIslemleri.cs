@@ -20,7 +20,7 @@ namespace Deneme1
                 btn_ProjeKaydet.Enabled = false;
             else
                 btn_ProjeKaydet.Enabled = true;
-            btn_ProjeTeslim.Enabled = false;
+            //btn_ProjeTeslim.Enabled = false;
         }
         int pretime;
         double jobtime;
@@ -44,31 +44,36 @@ namespace Deneme1
                 return entity;
             }
         }
-
         private void btn_ProjeTeslim_Click(object sender, EventArgs e)
-        {
-            string girilen2 = textBox_ID.Text;
-            var gelen = (from a in db.Aksiyonlar
-                         where a.CBS_ID == girilen2
-                         select a).First();
-            var teslim = gelen;
+        {         
+            string girilen2 = textBox_ID.Text;           
+            List<Aksiyonlar> gelenler = db.Aksiyonlar.Where(x => x.CBS_ID == girilen2).ToList();
+            int sayı = gelenler.Count();
+            var teslim = gelenler.First();
+            DateTime tbt = DateTime.Parse(teslim.Baslangic_Tarih.ToString());
             if (teslim != null)
             {
-                teslim.Bitis_Tarih = dateTimePickerBaslangic.Value.AddDays((Convert.ToInt32(jobtime) + 7));
+                teslim.Baslangic_Tarih = tbt.AddDays(7);   //dateTimePickerBaslangic.Value.AddDays((Convert.ToInt32(gelen.Proje_Sure) + 7));
                 // Bitiş tarihine  7 gün avans eklendi.
-                teslim.Islem = "Proje Teslim"; 
+                teslim.Islem = "Proje Teslim";
                 teslim.Gerekce = "Proje Teslim";
+                teslim.Islem_Tarih = DateTime.Now;
                 Aksiyonlar aksiyon = new Aksiyonlar(); 
                 aksiyon = teslim; 
                 db.Aksiyonlar.Add(aksiyon); 
                 db.SaveChanges();
+                List<Aksiyonlar> actions = db.Aksiyonlar.Where(x => x.CBS_ID == girilen2).ToList();
+                foreach (Aksiyonlar item in actions)
+                {
+                    item.Baslangic_Tarih = tbt.AddDays(7);
+                    db.SaveChanges();
+                }
                 btn_ProjeTeslim.Enabled = false;
                 MessageBox.Show("Yeni bir aksiyon eklendi : Proje müteahhite teslim edilmiştir", "Info", MessageBoxButtons.OK);
             }
             else
                 MessageBox.Show("Beklenmedik bir hata meydana geldi");
         }
-
         private void btn_Arama_Click(object sender, EventArgs e)
         {
             girilen = int.Parse(textBox_ID.Text);
@@ -100,7 +105,7 @@ namespace Deneme1
                 else
                 {
                     MessageBox.Show("Belirtilen ID ile ilgili işlem geçmişi bulunamadı", "Info", MessageBoxButtons.OK);
-                    writeDatatoBaslatma(cbs);
+                    writeDatatoBaslatma(gelen);                  
                     tabControl1.SelectedTab = tabPage2;
                 }
             }
@@ -204,14 +209,15 @@ namespace Deneme1
             tamamlama_proje_adi.Text = model.PROJE_ADI.ToString();
             tamamlama_santral_adi.Text = model.SANTRAL_ADI.ToString();
         }
-        public void writeDatatoBaslatma(Ilerleme model)
+        public void writeDatatoBaslatma(Aksiyonlar model)
         {
-            textBoxCBS_ID.Text = model.ID.ToString();
-            textBoxCIZIM_ADI.Text = model.CIZIM_ADI.ToString();
-            textBoxTelekom_Mudurlugu.Text = model.TELEKOM_MUDURLUGU.ToString();
-            textBoxpProjeOzelligi.Text = model.PROJE_OZELLIGI.ToString();
-            textBoxProjeAdi.Text = model.PROJE_ADI.ToString();
-            textBoxSantral_Adi.Text = model.SANTRAL_ADI.ToString();
+            textBoxCBS_ID.Text = model.CBS_ID.ToString();
+            textBoxCIZIM_ADI.Text = model.Cizim_Adi.ToString();
+            textBoxTelekom_Mudurlugu.Text = model.Telekom_Mud.ToString();
+            textBoxpProjeOzelligi.Text = model.Proje_Turu.ToString();
+            textBoxProjeAdi.Text = model.Proje_Adi.ToString();
+            textBoxSantral_Adi.Text = model.Santral.ToString();
+            dateTimePickerBaslangic.Value = Convert.ToDateTime(model.Baslangic_Tarih);
         }
         public double sureHesapla()
         {

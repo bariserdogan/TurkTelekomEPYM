@@ -33,12 +33,14 @@
             this.btn_Arama = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btn_ProjeKapama = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_baslatma_print = new System.Windows.Forms.Button();
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn_ProjeTeslim = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dateTimePickerBaslangic = new System.Windows.Forms.DateTimePicker();
             this.btn_ProjeKaydet = new System.Windows.Forms.Button();
             this.btn_Hesapla = new System.Windows.Forms.Button();
             this.comboBox_varyok = new System.Windows.Forms.ComboBox();
@@ -96,8 +98,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btn_tamamlama_ = new System.Windows.Forms.Button();
             this.btn_tamamlama_print = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_Sure_Durdurma = new System.Windows.Forms.Button();
@@ -131,9 +131,7 @@
             this.tamamlama_cbs_id = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dateTimePickerBaslangic = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btn_ProjeTeslim = new System.Windows.Forms.Button();
+            this.btn_projeyikapat = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -187,7 +185,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.btn_ProjeKapama);
             this.groupBox2.Location = new System.Drawing.Point(422, 155);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(263, 199);
@@ -205,17 +202,6 @@
             this.label6.Size = new System.Drawing.Size(182, 17);
             this.label6.TabIndex = 3;
             this.label6.Text = "Proje Tamamlama Tutanağı";
-            // 
-            // btn_ProjeKapama
-            // 
-            this.btn_ProjeKapama.BackColor = System.Drawing.Color.Aqua;
-            this.btn_ProjeKapama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_ProjeKapama.Location = new System.Drawing.Point(48, 87);
-            this.btn_ProjeKapama.Name = "btn_ProjeKapama";
-            this.btn_ProjeKapama.Size = new System.Drawing.Size(179, 47);
-            this.btn_ProjeKapama.TabIndex = 5;
-            this.btn_ProjeKapama.Text = "Proje Kapama";
-            this.btn_ProjeKapama.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
@@ -329,6 +315,36 @@
             this.tabPage2.Text = "Proje Başlatma Tutanağı";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // btn_ProjeTeslim
+            // 
+            this.btn_ProjeTeslim.BackColor = System.Drawing.Color.Aqua;
+            this.btn_ProjeTeslim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_ProjeTeslim.Location = new System.Drawing.Point(620, 2);
+            this.btn_ProjeTeslim.Name = "btn_ProjeTeslim";
+            this.btn_ProjeTeslim.Size = new System.Drawing.Size(163, 47);
+            this.btn_ProjeTeslim.TabIndex = 61;
+            this.btn_ProjeTeslim.Text = "Projeyi Teslim Et";
+            this.btn_ProjeTeslim.UseVisualStyleBackColor = false;
+            this.btn_ProjeTeslim.Click += new System.EventHandler(this.btn_ProjeTeslim_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(74, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(146, 17);
+            this.label8.TabIndex = 60;
+            this.label8.Text = "Proje Başlangıç Tarihi";
+            // 
+            // dateTimePickerBaslangic
+            // 
+            this.dateTimePickerBaslangic.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerBaslangic.Location = new System.Drawing.Point(77, 23);
+            this.dateTimePickerBaslangic.Name = "dateTimePickerBaslangic";
+            this.dateTimePickerBaslangic.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerBaslangic.TabIndex = 59;
             // 
             // btn_ProjeKaydet
             // 
@@ -932,10 +948,9 @@
             // tabPage3
             // 
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage3.Controls.Add(this.btn_projeyikapat);
             this.tabPage3.Controls.Add(this.btn_tamamlama_);
             this.tabPage3.Controls.Add(this.btn_tamamlama_print);
-            this.tabPage3.Controls.Add(this.dateTimePicker2);
-            this.tabPage3.Controls.Add(this.dateTimePicker1);
             this.tabPage3.Controls.Add(this.comboBox2);
             this.tabPage3.Controls.Add(this.comboBox1);
             this.tabPage3.Controls.Add(this.btn_Sure_Durdurma);
@@ -953,7 +968,7 @@
             // 
             this.btn_tamamlama_.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_tamamlama_.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_tamamlama_.Location = new System.Drawing.Point(720, 24);
+            this.btn_tamamlama_.Location = new System.Drawing.Point(550, 17);
             this.btn_tamamlama_.Name = "btn_tamamlama_";
             this.btn_tamamlama_.Size = new System.Drawing.Size(125, 38);
             this.btn_tamamlama_.TabIndex = 16;
@@ -964,27 +979,13 @@
             // 
             this.btn_tamamlama_print.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btn_tamamlama_print.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_tamamlama_print.Location = new System.Drawing.Point(720, 74);
+            this.btn_tamamlama_print.Location = new System.Drawing.Point(550, 66);
             this.btn_tamamlama_print.Name = "btn_tamamlama_print";
             this.btn_tamamlama_print.Size = new System.Drawing.Size(125, 38);
             this.btn_tamamlama_print.TabIndex = 15;
             this.btn_tamamlama_print.Text = "Tutanak Yazdır";
             this.btn_tamamlama_print.UseVisualStyleBackColor = false;
             this.btn_tamamlama_print.Click += new System.EventHandler(this.btn_tamamlama_print_Click);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(16, 81);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 14;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 24);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 13;
             // 
             // comboBox2
             // 
@@ -997,7 +998,7 @@
             "TT malzeme temin problemi...",
             "TT per şeması bekleniyor...",
             "TT sistem servise alınması bekleniyor..."});
-            this.comboBox2.Location = new System.Drawing.Point(390, 84);
+            this.comboBox2.Location = new System.Drawing.Point(166, 77);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(286, 21);
             this.comboBox2.TabIndex = 12;
@@ -1012,7 +1013,7 @@
             "Kazı Ruhsatı Alındı.",
             "Sistem Temini Yapıldı.Depodan alınabilir. ",
             "Per şeması Alındı."});
-            this.comboBox1.Location = new System.Drawing.Point(390, 25);
+            this.comboBox1.Location = new System.Drawing.Point(166, 25);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(286, 24);
             this.comboBox1.TabIndex = 11;
@@ -1021,7 +1022,7 @@
             // 
             this.btn_Sure_Durdurma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btn_Sure_Durdurma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_Sure_Durdurma.Location = new System.Drawing.Point(237, 74);
+            this.btn_Sure_Durdurma.Location = new System.Drawing.Point(16, 67);
             this.btn_Sure_Durdurma.Name = "btn_Sure_Durdurma";
             this.btn_Sure_Durdurma.Size = new System.Drawing.Size(128, 38);
             this.btn_Sure_Durdurma.TabIndex = 10;
@@ -1032,7 +1033,7 @@
             // 
             this.btn_sure_baslatma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_sure_baslatma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_sure_baslatma.Location = new System.Drawing.Point(237, 17);
+            this.btn_sure_baslatma.Location = new System.Drawing.Point(16, 17);
             this.btn_sure_baslatma.Name = "btn_sure_baslatma";
             this.btn_sure_baslatma.Size = new System.Drawing.Size(128, 38);
             this.btn_sure_baslatma.TabIndex = 9;
@@ -1326,35 +1327,17 @@
             this.tabPage4.Text = "İlerleme Raporu";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // dateTimePickerBaslangic
+            // btn_projeyikapat
             // 
-            this.dateTimePickerBaslangic.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerBaslangic.Location = new System.Drawing.Point(77, 23);
-            this.dateTimePickerBaslangic.Name = "dateTimePickerBaslangic";
-            this.dateTimePickerBaslangic.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerBaslangic.TabIndex = 59;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(74, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(146, 17);
-            this.label8.TabIndex = 60;
-            this.label8.Text = "Proje Başlangıç Tarihi";
-            // 
-            // btn_ProjeTeslim
-            // 
-            this.btn_ProjeTeslim.BackColor = System.Drawing.Color.Aqua;
-            this.btn_ProjeTeslim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_ProjeTeslim.Location = new System.Drawing.Point(620, 2);
-            this.btn_ProjeTeslim.Name = "btn_ProjeTeslim";
-            this.btn_ProjeTeslim.Size = new System.Drawing.Size(163, 47);
-            this.btn_ProjeTeslim.TabIndex = 61;
-            this.btn_ProjeTeslim.Text = "Projeyi Teslim Et";
-            this.btn_ProjeTeslim.UseVisualStyleBackColor = false;
-            this.btn_ProjeTeslim.Click += new System.EventHandler(this.btn_ProjeTeslim_Click);
+            this.btn_projeyikapat.BackColor = System.Drawing.Color.Brown;
+            this.btn_projeyikapat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_projeyikapat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_projeyikapat.Location = new System.Drawing.Point(751, 17);
+            this.btn_projeyikapat.Name = "btn_projeyikapat";
+            this.btn_projeyikapat.Size = new System.Drawing.Size(94, 88);
+            this.btn_projeyikapat.TabIndex = 17;
+            this.btn_projeyikapat.Text = "Projeyi Kapat";
+            this.btn_projeyikapat.UseVisualStyleBackColor = false;
             // 
             // ProjeIslemleri
             // 
@@ -1440,7 +1423,6 @@
         private System.Windows.Forms.TextBox textBox30;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btn_ProjeKapama;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Panel tamamlamapanel;
@@ -1483,8 +1465,6 @@
         private System.Windows.Forms.Button btn_ProjeKaydet;
         private System.Windows.Forms.Button btn_tamamlama_;
         private System.Windows.Forms.Button btn_tamamlama_print;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_Sure_Durdurma;
@@ -1492,5 +1472,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePickerBaslangic;
         private System.Windows.Forms.Button btn_ProjeTeslim;
+        private System.Windows.Forms.Button btn_projeyikapat;
     }
 }
