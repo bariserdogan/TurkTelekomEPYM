@@ -51,10 +51,12 @@ namespace Deneme1
             int sayı = gelenler.Count();
             var teslim = gelenler.First();
             DateTime tbt = DateTime.Parse(teslim.Baslangic_Tarih.ToString());
+            DateTime ttt = DateTime.Parse(teslim.Bitis_Tarih.ToString());
             if (teslim != null)
             {
-                teslim.Baslangic_Tarih = tbt.AddDays(7);   //dateTimePickerBaslangic.Value.AddDays((Convert.ToInt32(gelen.Proje_Sure) + 7));
-                // Bitiş tarihine  7 gün avans eklendi.
+                teslim.Baslangic_Tarih = tbt.AddDays(7);
+                teslim.Bitis_Tarih = ttt.AddDays(7);//dateTimePickerBaslangic.Value.AddDays((Convert.ToInt32(gelen.Proje_Sure) + 7));
+                // Başlangıç ve Bitiş tarihine  7 gün avans eklendi.
                 teslim.Islem = "Proje Teslim";
                 teslim.Gerekce = "Proje Teslim";
                 teslim.Islem_Tarih = DateTime.Now;
@@ -65,11 +67,15 @@ namespace Deneme1
                 List<Aksiyonlar> actions = db.Aksiyonlar.Where(x => x.CBS_ID == girilen2).ToList();
                 foreach (Aksiyonlar item in actions)
                 {
+                    // Aksiyonlar tablosundaki id ile ilgili satırların proje başlangıç ve bitiş tarihleri güncellendi.
                     item.Baslangic_Tarih = tbt.AddDays(7);
+                    item.Bitis_Tarih = ttt.AddDays(7);
                     db.SaveChanges();
                 }
                 btn_ProjeTeslim.Enabled = false;
                 MessageBox.Show("Yeni bir aksiyon eklendi : Proje müteahhite teslim edilmiştir", "Info", MessageBoxButtons.OK);
+                printTamamlama(teslim);
+                tabControl1.SelectedTab = tabPage3;
             }
             else
                 MessageBox.Show("Beklenmedik bir hata meydana geldi");
@@ -192,7 +198,7 @@ namespace Deneme1
                     writeDatatoTamamlama(cbs);
                     txt_baslangic_tarihi.Text = String.Format("{0:dd/MM/yyyy}", aksiyon.Baslangic_Tarih);// proje başlangıç tarihi
                     txt_bitis_tarihi.Text = String.Format("{0:dd/MM/yyyy}", aksiyon.Bitis_Tarih); // proje bitiş tarihi
-                    tabControl1.SelectedTab = tabPage3;
+                    
                 }
                 else
                     MessageBox.Show("Tarih seçimi yapınız");               
@@ -209,6 +215,17 @@ namespace Deneme1
             tamamlama_proje_adi.Text = model.PROJE_ADI.ToString();
             tamamlama_santral_adi.Text = model.SANTRAL_ADI.ToString();
         }
+        public void printTamamlama(Aksiyonlar model)
+        {
+            tamamlama_cbs_id.Text = model.CBS_ID.ToString();
+            tamamlama_cizim_adi.Text = model.Cizim_Adi.ToString();
+            tamamlama_telekom.Text = model.Telekom_Mud.ToString();
+            tamamlama_proje_ozelligi.Text = model.Proje_Turu.ToString();
+            tamamlama_proje_adi.Text = model.Proje_Adi.ToString();
+            tamamlama_santral_adi.Text = model.Santral.ToString();
+            txt_baslangic_tarihi.Text = model.Baslangic_Tarih.ToString();
+            txt_bitis_tarihi.Text = model.Bitis_Tarih.ToString();
+        }
         public void writeDatatoBaslatma(Aksiyonlar model)
         {
             textBoxCBS_ID.Text = model.CBS_ID.ToString();
@@ -219,6 +236,8 @@ namespace Deneme1
             textBoxSantral_Adi.Text = model.Santral.ToString();
             dateTimePickerBaslangic.Value = Convert.ToDateTime(model.Baslangic_Tarih);
         }
+
+
         public double sureHesapla()
         {
             //List<string> liste = new List<string>();
