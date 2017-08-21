@@ -120,7 +120,54 @@ namespace Deneme1
                 MessageBox.Show("İlerleme tablosunda girilen CBS ID'ye ait kayıt bulunamadı", "Info", MessageBoxButtons.OK);
                 textBox_ID.Clear();
             }
-        }     
+        }
+
+        private void btn_sure_baslatma_Click(object sender, EventArgs e)
+        {
+            string girilen2 = textBox_ID.Text;
+            var proje = db.Aksiyonlar.Where(x => x.CBS_ID == girilen2);
+            string date = DateTime.Now.ToString("dd-MM-yyyy");
+            string combo = "";
+            try
+            {
+                combo = ((string)comboBoxsure_baslatma.SelectedItem).ToString();
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show(hata.Message.ToString());
+            }
+            if (proje.Count() > 0)
+            {
+                if (combo != "")
+                {
+                    var newaction = proje.FirstOrDefault();
+                    newaction.Gerekce = combo.ToString();
+                    newaction.Islem_Tarih = Convert.ToDateTime(date);
+                    newaction.Islem = combo.ToString();
+                    Aksiyonlar aksiyon = new Aksiyonlar();
+                    aksiyon = newaction;
+                    db.Aksiyonlar.Add(aksiyon);
+                    db.SaveChanges();
+                    MessageBox.Show("Yeni bir işlem aksiyonlar tablosuna eklendi", "Süre Başlatma", MessageBoxButtons.OKCancel);
+                    var query = from a in db.Aksiyonlar
+                                where a.CBS_ID == girilen2
+                                select new
+                                {
+                                    cbs_id = a.CBS_ID,
+                                    islem = a.Islem,
+                                    gerekce = a.Gerekce,
+                                    islem_tarihi = a.Islem_Tarih,
+                                    kalan_sure = a.Kalan_Sure,
+                                    calisilan_sure = a.Kalan_Sure
+                                };
+                    dataGridView1.DataSource = query.ToList();
+                    MessageBox.Show("Aksiyon Bilgileri yenilenmiştir");
+                }
+                else
+                    MessageBox.Show("Lütfen süre başlatma için bir gerekçe seçiniz.");           
+            }
+        }
+
         private void btn_Hesapla_Click(object sender, EventArgs e)
         {
             DateTime aybasi = new DateTime(2017, 8, 1);

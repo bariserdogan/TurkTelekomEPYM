@@ -96,10 +96,11 @@
             this.txt_IsSure = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_projeyikapat = new System.Windows.Forms.Button();
             this.btn_tamamlama_ = new System.Windows.Forms.Button();
             this.btn_tamamlama_print = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxsure_durdurma = new System.Windows.Forms.ComboBox();
+            this.comboBoxsure_baslatma = new System.Windows.Forms.ComboBox();
             this.btn_Sure_Durdurma = new System.Windows.Forms.Button();
             this.btn_sure_baslatma = new System.Windows.Forms.Button();
             this.tamamlamapanel = new System.Windows.Forms.Panel();
@@ -131,7 +132,6 @@
             this.tamamlama_cbs_id = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btn_projeyikapat = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -951,8 +951,8 @@
             this.tabPage3.Controls.Add(this.btn_projeyikapat);
             this.tabPage3.Controls.Add(this.btn_tamamlama_);
             this.tabPage3.Controls.Add(this.btn_tamamlama_print);
-            this.tabPage3.Controls.Add(this.comboBox2);
-            this.tabPage3.Controls.Add(this.comboBox1);
+            this.tabPage3.Controls.Add(this.comboBoxsure_durdurma);
+            this.tabPage3.Controls.Add(this.comboBoxsure_baslatma);
             this.tabPage3.Controls.Add(this.btn_Sure_Durdurma);
             this.tabPage3.Controls.Add(this.btn_sure_baslatma);
             this.tabPage3.Controls.Add(this.tamamlamapanel);
@@ -963,6 +963,18 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Proje Tamamlama Tutanağı";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btn_projeyikapat
+            // 
+            this.btn_projeyikapat.BackColor = System.Drawing.Color.Brown;
+            this.btn_projeyikapat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_projeyikapat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_projeyikapat.Location = new System.Drawing.Point(751, 17);
+            this.btn_projeyikapat.Name = "btn_projeyikapat";
+            this.btn_projeyikapat.Size = new System.Drawing.Size(94, 88);
+            this.btn_projeyikapat.TabIndex = 17;
+            this.btn_projeyikapat.Text = "Projeyi Kapat";
+            this.btn_projeyikapat.UseVisualStyleBackColor = false;
             // 
             // btn_tamamlama_
             // 
@@ -987,10 +999,10 @@
             this.btn_tamamlama_print.UseVisualStyleBackColor = false;
             this.btn_tamamlama_print.Click += new System.EventHandler(this.btn_tamamlama_print_Click);
             // 
-            // comboBox2
+            // comboBoxsure_durdurma
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxsure_durdurma.FormattingEnabled = true;
+            this.comboBoxsure_durdurma.Items.AddRange(new object[] {
             "Binada imalat yapılamıyor....",
             "Enerji bağlantısı bekleniyor(Başvuru yapıldı)...",
             "Kazı izin  problemi...",
@@ -998,25 +1010,25 @@
             "TT malzeme temin problemi...",
             "TT per şeması bekleniyor...",
             "TT sistem servise alınması bekleniyor..."});
-            this.comboBox2.Location = new System.Drawing.Point(166, 77);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(286, 21);
-            this.comboBox2.TabIndex = 12;
+            this.comboBoxsure_durdurma.Location = new System.Drawing.Point(166, 77);
+            this.comboBoxsure_durdurma.Name = "comboBoxsure_durdurma";
+            this.comboBoxsure_durdurma.Size = new System.Drawing.Size(286, 21);
+            this.comboBoxsure_durdurma.TabIndex = 12;
             // 
-            // comboBox1
+            // comboBoxsure_baslatma
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxsure_baslatma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBoxsure_baslatma.FormattingEnabled = true;
+            this.comboBoxsure_baslatma.Items.AddRange(new object[] {
             "Binada İzin Alındı.",
             "Enerji Ruhsatı Alındı.",
             "Kazı Ruhsatı Alındı.",
             "Sistem Temini Yapıldı.Depodan alınabilir. ",
             "Per şeması Alındı."});
-            this.comboBox1.Location = new System.Drawing.Point(166, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(286, 24);
-            this.comboBox1.TabIndex = 11;
+            this.comboBoxsure_baslatma.Location = new System.Drawing.Point(166, 25);
+            this.comboBoxsure_baslatma.Name = "comboBoxsure_baslatma";
+            this.comboBoxsure_baslatma.Size = new System.Drawing.Size(286, 24);
+            this.comboBoxsure_baslatma.TabIndex = 11;
             // 
             // btn_Sure_Durdurma
             // 
@@ -1039,6 +1051,7 @@
             this.btn_sure_baslatma.TabIndex = 9;
             this.btn_sure_baslatma.Text = "Süre Başlatma";
             this.btn_sure_baslatma.UseVisualStyleBackColor = false;
+            this.btn_sure_baslatma.Click += new System.EventHandler(this.btn_sure_baslatma_Click);
             // 
             // tamamlamapanel
             // 
@@ -1327,18 +1340,6 @@
             this.tabPage4.Text = "İlerleme Raporu";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // btn_projeyikapat
-            // 
-            this.btn_projeyikapat.BackColor = System.Drawing.Color.Brown;
-            this.btn_projeyikapat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_projeyikapat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_projeyikapat.Location = new System.Drawing.Point(751, 17);
-            this.btn_projeyikapat.Name = "btn_projeyikapat";
-            this.btn_projeyikapat.Size = new System.Drawing.Size(94, 88);
-            this.btn_projeyikapat.TabIndex = 17;
-            this.btn_projeyikapat.Text = "Projeyi Kapat";
-            this.btn_projeyikapat.UseVisualStyleBackColor = false;
-            // 
             // ProjeIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1465,8 +1466,8 @@
         private System.Windows.Forms.Button btn_ProjeKaydet;
         private System.Windows.Forms.Button btn_tamamlama_;
         private System.Windows.Forms.Button btn_tamamlama_print;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxsure_durdurma;
+        private System.Windows.Forms.ComboBox comboBoxsure_baslatma;
         private System.Windows.Forms.Button btn_Sure_Durdurma;
         private System.Windows.Forms.Button btn_sure_baslatma;
         private System.Windows.Forms.Label label8;
