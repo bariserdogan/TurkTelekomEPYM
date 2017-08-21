@@ -32,21 +32,21 @@ namespace Deneme1
             btn_Hesapla.Text = "H" + "\n" + "E" + "\n" + "S" + "\n" + "A" + "\n" + "P" + "\n" + "L" + "\n" + "A";
             btn_ProjeKaydet.Text = "P" + "\n" + "R" + "\n" + "O" + "\n" + "J" + "\n" + "E" + "\n" + "K" + "\n" + "A" + "\n" + "Y" + "\n" + "D" + "\n" + "E" + "\n" + "T";
             btn_Hesapla.ForeColor = Color.White;
-            btn_ProjeKaydet.ForeColor = Color.Red;          
+            btn_ProjeKaydet.ForeColor = Color.Red;
         }
         ProjeTakipSistEntities entity;
         ProjeTakipSistEntities db
         {
             get
             {
-                if(entity==null)
+                if (entity == null)
                     entity = new ProjeTakipSistEntities();
                 return entity;
             }
         }
         private void btn_ProjeTeslim_Click(object sender, EventArgs e)
-        {         
-            string girilen2 = textBox_ID.Text;           
+        {
+            string girilen2 = textBox_ID.Text;
             List<Aksiyonlar> gelenler = db.Aksiyonlar.Where(x => x.CBS_ID == girilen2).ToList();
             int sayı = gelenler.Count();
             var teslim = gelenler.First();
@@ -60,9 +60,9 @@ namespace Deneme1
                 teslim.Islem = "Proje Teslim";
                 teslim.Gerekce = "Proje Teslim";
                 teslim.Islem_Tarih = DateTime.Now;
-                Aksiyonlar aksiyon = new Aksiyonlar(); 
-                aksiyon = teslim; 
-                db.Aksiyonlar.Add(aksiyon); 
+                Aksiyonlar aksiyon = new Aksiyonlar();
+                aksiyon = teslim;
+                db.Aksiyonlar.Add(aksiyon);
                 db.SaveChanges();
                 List<Aksiyonlar> actions = db.Aksiyonlar.Where(x => x.CBS_ID == girilen2).ToList();
                 foreach (Aksiyonlar item in actions)
@@ -111,7 +111,7 @@ namespace Deneme1
                 else
                 {
                     MessageBox.Show("Belirtilen ID ile ilgili işlem geçmişi bulunamadı", "Info", MessageBoxButtons.OK);
-                    writeDatatoBaslatma(cbs);                  
+                    writeDatatoBaslatma(cbs);
                     tabControl1.SelectedTab = tabPage2;
                 }
             }
@@ -130,7 +130,7 @@ namespace Deneme1
             try
             {
                 combo = ((string)comboBoxsure_baslatma.SelectedItem).ToString(); // combobox gerekçe     
-            }               
+            }
             catch (Exception hata)
             {
                 MessageBox.Show(hata.Message.ToString());
@@ -142,7 +142,7 @@ namespace Deneme1
                     var newaction = proje.FirstOrDefault();
                     newaction.Gerekce = combo.ToString();
                     newaction.Islem_Tarih = Convert.ToDateTime(date);
-                    newaction.Islem = combo.ToString();
+                    newaction.Islem = "Süre Başlatma";
                     Aksiyonlar aksiyon = new Aksiyonlar();
                     aksiyon = newaction;
                     db.Aksiyonlar.Add(aksiyon);
@@ -150,7 +150,7 @@ namespace Deneme1
                     MessageBox.Show("Yeni bir işlem aksiyonlar tablosuna eklendi", "Süre Başlatma", MessageBoxButtons.OKCancel);
                     var query = from a in db.Aksiyonlar // işlem sonrası datagridview'i yeniliyoruz.
                                 where a.CBS_ID == girilen2
-                                select new 
+                                select new
                                 {
                                     cbs_id = a.CBS_ID,
                                     islem = a.Islem,
@@ -167,7 +167,7 @@ namespace Deneme1
                 else
                     MessageBox.Show("Lütfen süre başlatma için bir gerekçe seçiniz.");
             }
-            else           
+            else
                 MessageBox.Show("Belirtilen Id numarası ile ilgili işlem kaydı bulunamadı");
         }
 
@@ -192,7 +192,7 @@ namespace Deneme1
                     var newaction = proje.FirstOrDefault();
                     newaction.Gerekce = combo.ToString();
                     newaction.Islem_Tarih = Convert.ToDateTime(date);
-                    newaction.Islem = combo.ToString();
+                    newaction.Islem = "Süre Durdurma";
                     Aksiyonlar aksiyon = new Aksiyonlar();
                     aksiyon = newaction;
                     db.Aksiyonlar.Add(aksiyon);
@@ -209,10 +209,11 @@ namespace Deneme1
                                     kalan_sure = a.Kalan_Sure,
                                     calisilan_sure = a.Kalan_Sure
                                 };
+                    //IQueryable query = RefreshDatagridView.Refresh(girilen2);
                     dataGridView1.DataSource = query.ToList();
                     MessageBox.Show("Aksiyon Bilgileri yenilenmiştir");
-                    btn_sure_baslatma.Enabled = false;
-                    btn_Sure_Durdurma.Enabled = true;
+                    btn_Sure_Durdurma.Enabled = false;
+                    btn_sure_baslatma.Enabled = true;
                 }
                 else
                     MessageBox.Show("Lütfen süre başlatma için bir gerekçe seçiniz.");
@@ -232,7 +233,7 @@ namespace Deneme1
             {
                 if (uygunmu < 7)
                 {
-                    jobtime = 7;              
+                    jobtime = 7;
                     txt_Sure.Text = jobtime.ToString();
                     MessageBox.Show("Uygunluk sağlanmıştır");
                     if (!btn_ProjeKaydet.Enabled)
@@ -240,7 +241,7 @@ namespace Deneme1
                 }
                 else
                 {
-                    jobtime = jobtime + 7;                  
+                    jobtime = jobtime + 7;
                     txt_Sure.Text = jobtime.ToString();
                     MessageBox.Show("Uygunluk sağlanmıştır");
                     if (!btn_ProjeKaydet.Enabled)
@@ -251,12 +252,12 @@ namespace Deneme1
             {
                 btn_ProjeKaydet.Enabled = false;
                 MessageBox.Show("Süreç uygun değil.Kayıt yapabilmek için lütfen bilgileri kontrol ediniz.", "Bilgi", MessageBoxButtons.OK);
-            }              
-        }       
+            }
+        }
         private void btn_ProjeKaydet_Click_1(object sender, EventArgs e)
         {
-           
-            var cbs = db.Ilerleme.Where(x => x.ID == girilen).FirstOrDefault();            
+
+            var cbs = db.Ilerleme.Where(x => x.ID == girilen).FirstOrDefault();
             if (comboBox_varyok.Text == varMi)
             {
                 if (dateTimePickerBaslangic.Value != null)
@@ -296,10 +297,10 @@ namespace Deneme1
                     writeDatatoTamamlama(cbs);
                     txt_baslangic_tarihi.Text = String.Format("{0:dd/MM/yyyy}", aksiyon.Baslangic_Tarih);// proje başlangıç tarihi
                     txt_bitis_tarihi.Text = String.Format("{0:dd/MM/yyyy}", aksiyon.Bitis_Tarih); // proje bitiş tarihi
-                    
+
                 }
                 else
-                    MessageBox.Show("Tarih seçimi yapınız");               
+                    MessageBox.Show("Tarih seçimi yapınız");
             }
             else
                 MessageBox.Show("Kayıt yapabilmek için yeraltısız imalat var mı seçeneğini 'Var' yapmanız gerekir.");
@@ -338,50 +339,30 @@ namespace Deneme1
 
         public double sureHesapla()
         {
-            List<string> liste = new List<string>();
-            liste.Add(txt_AcikKazi.Text);
-            liste.Add(txt_Fider.Text);
-            liste.Add(txt_Trencher.Text);
-            liste.Add(txt_KAZSER1.Text);
-            liste.Add(txt_yeralti.Text);
-            liste.Add(txt_yenihavai.Text);
-            liste.Add(txt_mevcuthavai.Text);
-            liste.Add(textbox_kazser2.Text);
-            liste.Add(txt_outdoorkabin.Text);
-            liste.Add(txt_indoor_kabin.Text);
-            liste.Add(txt_aktarma.Text);
-            liste.Add(txt_binaici.Text);
-
-            for (int i = 1; i < liste.Count(); i++)
-            {
-                if (string.IsNullOrEmpty(liste[i]))
-                    liste[i] = "0";
-            }
-
-            //if (String.IsNullOrEmpty(txt_AcikKazi.Text))
-            //    txt_AcikKazi.Text = "0";
-            //if (String.IsNullOrEmpty(txt_Fider.Text))
-            //    txt_Fider.Text = "0";
-            //if (String.IsNullOrEmpty(txt_Trencher.Text))
-            //    txt_Trencher.Text = "0";
-            //if (String.IsNullOrEmpty(txt_KAZSER1.Text))
-            //    txt_KAZSER1.Text = "0";
-            //if (String.IsNullOrEmpty(txt_yeralti.Text))
-            //    txt_yeralti.Text = "0";
-            //if (String.IsNullOrEmpty(txt_yenihavai.Text))
-            //    txt_yenihavai.Text = "0";
-            //if (String.IsNullOrEmpty(txt_mevcuthavai.Text))
-            //    txt_mevcuthavai.Text = "0";
-            //if (String.IsNullOrEmpty(textbox_kazser2.Text))
-            //    textbox_kazser2.Text = "0";
-            //if (String.IsNullOrEmpty(txt_outdoorkabin.Text))
-            //    txt_outdoorkabin.Text = "0";
-            //if (String.IsNullOrEmpty(txt_indoor_kabin.Text))
-            //    txt_indoor_kabin.Text = "0";
-            //if (String.IsNullOrEmpty(txt_aktarma.Text))
-            //    txt_aktarma.Text = "0";
-            //if (String.IsNullOrEmpty(txt_binaici.Text))
-            //    txt_binaici.Text = "0";
+            if (String.IsNullOrEmpty(txt_AcikKazi.Text))
+                txt_AcikKazi.Text = "0";
+            if (String.IsNullOrEmpty(txt_Fider.Text))
+                txt_Fider.Text = "0";
+            if (String.IsNullOrEmpty(txt_Trencher.Text))
+                txt_Trencher.Text = "0";
+            if (String.IsNullOrEmpty(txt_KAZSER1.Text))
+                txt_KAZSER1.Text = "0";
+            if (String.IsNullOrEmpty(txt_yeralti.Text))
+                txt_yeralti.Text = "0";
+            if (String.IsNullOrEmpty(txt_yenihavai.Text))
+                txt_yenihavai.Text = "0";
+            if (String.IsNullOrEmpty(txt_mevcuthavai.Text))
+                txt_mevcuthavai.Text = "0";
+            if (String.IsNullOrEmpty(textbox_kazser2.Text))
+                textbox_kazser2.Text = "0";
+            if (String.IsNullOrEmpty(txt_outdoorkabin.Text))
+                txt_outdoorkabin.Text = "0";
+            if (String.IsNullOrEmpty(txt_indoor_kabin.Text))
+                txt_indoor_kabin.Text = "0";
+            if (String.IsNullOrEmpty(txt_aktarma.Text))
+                txt_aktarma.Text = "0";
+            if (String.IsNullOrEmpty(txt_binaici.Text))
+                txt_binaici.Text = "0";
 
             acikkazi = Convert.ToDouble(txt_AcikKazi.Text);
             fider = Convert.ToDouble(txt_Fider.Text);
@@ -399,7 +380,6 @@ namespace Deneme1
             jobtime = Math.Ceiling(((acikkazi / 250) * 1) + ((fider / 100) * 1) + ((trencher / 900) * 1) + ((kazser / 300) * 1) + ((yeralti / 1000) * 4) + ((yenihavai / 1000) * 4) + ((mevcuthavai / 1000) * 2) + ((kazser2 / 1000) * 2) + (outdoor * 3) + (indoor * 1) + ((aktarma / 5) * 1) + ((binaici / 30) * 1));
             return jobtime;
         }
-
 
 
 
