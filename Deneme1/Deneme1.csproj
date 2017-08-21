@@ -65,6 +65,7 @@
     <Compile Include="Aksiyonlar.cs">
       <DependentUpon>ProjeDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Connector.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

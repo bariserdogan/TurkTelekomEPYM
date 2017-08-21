@@ -1040,6 +1040,7 @@
             this.btn_Sure_Durdurma.TabIndex = 10;
             this.btn_Sure_Durdurma.Text = "Süre Durdurma";
             this.btn_Sure_Durdurma.UseVisualStyleBackColor = false;
+            this.btn_Sure_Durdurma.Click += new System.EventHandler(this.btn_Sure_Durdurma_Click);
             // 
             // btn_sure_baslatma
             // 
