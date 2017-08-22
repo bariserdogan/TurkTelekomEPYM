@@ -1,3 +1,10 @@
+C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.csproj.ResolveComReference.cache
+C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.Form1.resources
+C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.Login.resources
+C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.ProjeIslemleri.resources
+C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.Properties.Resources.resources
+C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.UyeKayit.resources
+C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.csproj.GenerateResource.Cache
 C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\bin\Debug\Deneme1.exe.config
 C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\bin\Debug\Deneme1.exe
 C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\bin\Debug\Deneme1.pdb
@@ -5,11 +12,5 @@ C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\bin\Debug\E
 C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\bin\Debug\EntityFramework.xml
 C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.csproj.ResolveComReference.cache
-C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.Form1.resources
-C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.ProjeIslemleri.resources
-C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.Properties.Resources.resources
-C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.csproj.GenerateResource.Cache
 C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.exe
 C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.pdb
-C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.csprojResolveAssemblyReference.cache

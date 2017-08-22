@@ -13,8 +13,10 @@ namespace Deneme1
 {
     public partial class ProjeIslemleri : Form
     {
-        public ProjeIslemleri()
+        Kullanici user; 
+        public ProjeIslemleri(Kullanici k)
         {
+            this.user = k;
             InitializeComponent();
             if (string.IsNullOrEmpty(this.txt_Sure.Text))
                 btn_ProjeKaydet.Enabled = false;

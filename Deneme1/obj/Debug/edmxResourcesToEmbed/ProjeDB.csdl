@@ -146,5 +146,18 @@
   <EntityContainer Name="ProjeTakipSistEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Aksiyonlar" EntityType="Self.Aksiyonlar" />
     <EntitySet Name="Ilerleme" EntityType="Self.Ilerleme" />
+    <EntitySet Name="Kullanici" EntityType="ProjeTakipSistModel.Kullanici" />
   </EntityContainer>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

@@ -73,8 +73,8 @@ namespace Deneme1
 
         private void btn_ilerle_Click(object sender, EventArgs e)
         {
-            ProjeIslemleri open = new ProjeIslemleri();
-            open.ShowDialog();
+            //ProjeIslemleri open = new ProjeIslemleri();
+            //open.ShowDialog();
         }
     }
 }

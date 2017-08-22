@@ -7,6 +7,7 @@
       <Diagram DiagramId="5aaf60ee1a994613ab836ac8b1bab060" Name="Diagram1" ZoomLevel="49">
         <EntityTypeShape EntityType="ProjeTakipSistModel.Aksiyonlar" Width="1.5" PointX="3.75" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ProjeTakipSistModel.Ilerleme" Width="1.5" PointX="7.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjeTakipSistModel.Kullanici" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
