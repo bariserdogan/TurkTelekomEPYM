@@ -147,6 +147,11 @@
     <EntitySet Name="Aksiyonlar" EntityType="Self.Aksiyonlar" />
     <EntitySet Name="Ilerleme" EntityType="Self.Ilerleme" />
     <EntitySet Name="Kullanici" EntityType="ProjeTakipSistModel.Kullanici" />
+    <EntitySet Name="KullaniciHareket" EntityType="ProjeTakipSistModel.KullaniciHareket" />
+    <AssociationSet Name="FK_KullaniciHareket_Kullanici" Association="ProjeTakipSistModel.FK_KullaniciHareket_Kullanici">
+      <End Role="Kullanici" EntitySet="Kullanici" />
+      <End Role="KullaniciHareket" EntitySet="KullaniciHareket" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Kullanici">
     <Key>
@@ -159,5 +164,29 @@
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="KullaniciHareket" Relationship="ProjeTakipSistModel.FK_KullaniciHareket_Kullanici" FromRole="Kullanici" ToRole="KullaniciHareket" />
   </EntityType>
+  <EntityType Name="KullaniciHareket">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_id" Type="Int32" />
+    <Property Name="Islem" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Gerekce" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Islemtarih" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Kullanici" Relationship="ProjeTakipSistModel.FK_KullaniciHareket_Kullanici" FromRole="KullaniciHareket" ToRole="Kullanici" />
+  </EntityType>
+  <Association Name="FK_KullaniciHareket_Kullanici">
+    <End Type="ProjeTakipSistModel.Kullanici" Role="Kullanici" Multiplicity="0..1" />
+    <End Type="ProjeTakipSistModel.KullaniciHareket" Role="KullaniciHareket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanici">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KullaniciHareket">
+        <PropertyRef Name="User_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

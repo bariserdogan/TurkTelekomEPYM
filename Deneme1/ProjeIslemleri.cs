@@ -75,6 +75,7 @@ namespace Deneme1
                     db.SaveChanges();
                 }
                 btn_ProjeTeslim.Enabled = false;
+                KullaniciHareketleri(user, aksiyon);
                 MessageBox.Show("Yeni bir aksiyon eklendi : Proje müteahhite teslim edilmiştir", "Info", MessageBoxButtons.OK);
                 printTamamlama(teslim);
                 tabControl1.SelectedTab = tabPage3;
@@ -149,6 +150,7 @@ namespace Deneme1
                     aksiyon = newaction;
                     db.Aksiyonlar.Add(aksiyon);
                     db.SaveChanges();
+                    KullaniciHareketleri(user, aksiyon);
                     MessageBox.Show("Yeni bir işlem aksiyonlar tablosuna eklendi", "Süre Başlatma", MessageBoxButtons.OKCancel);
                     var query = from a in db.Aksiyonlar // işlem sonrası datagridview'i yeniliyoruz.
                                 where a.CBS_ID == girilen2
@@ -164,7 +166,7 @@ namespace Deneme1
                     dataGridView1.DataSource = query.ToList();
                     MessageBox.Show("Aksiyon Bilgileri yenilenmiştir");
                     btn_sure_baslatma.Enabled = false;
-                    btn_tamamlama_.Enabled = true;
+                    btn_Sure_Durdurma.Enabled = true;
                 }
                 else
                     MessageBox.Show("Lütfen süre başlatma için bir gerekçe seçiniz.");
@@ -199,7 +201,8 @@ namespace Deneme1
                     aksiyon = newaction;
                     db.Aksiyonlar.Add(aksiyon);
                     db.SaveChanges();
-                    MessageBox.Show("Yeni bir işlem aksiyonlar tablosuna eklendi", "Süre Başlatma", MessageBoxButtons.OKCancel);
+                    KullaniciHareketleri(user, aksiyon);
+                    MessageBox.Show("Yeni bir işlem aksiyonlar tablosuna eklendi", "Süre Durdurma", MessageBoxButtons.OKCancel);
                     var query = from a in db.Aksiyonlar // işlem sonrası datagridview'i yeniliyoruz.
                                 where a.CBS_ID == girilen2
                                 select new
@@ -256,6 +259,13 @@ namespace Deneme1
                 MessageBox.Show("Süreç uygun değil.Kayıt yapabilmek için lütfen bilgileri kontrol ediniz.", "Bilgi", MessageBoxButtons.OK);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HareketlerForm hareket = new HareketlerForm(user);
+            hareket.ShowDialog();
+        }
+
         private void btn_ProjeKaydet_Click_1(object sender, EventArgs e)
         {
 
@@ -295,7 +305,8 @@ namespace Deneme1
                     db.Aksiyonlar.Add(aksiyon);
                     db.SaveChanges();
                     btn_ProjeTeslim.Enabled = true;
-                    MessageBox.Show("Yeni bir kayıt aksiyonlar tablosuna eklendi", "Bilgi", MessageBoxButtons.OKCancel);
+                    KullaniciHareketleri(user, aksiyon);
+                    MessageBox.Show("Yeni bir kayıt aksiyonlar tablosuna eklendi", "Bilgi", MessageBoxButtons.OKCancel);                    
                     writeDatatoTamamlama(cbs);
                     txt_baslangic_tarihi.Text = String.Format("{0:dd/MM/yyyy}", aksiyon.Baslangic_Tarih);// proje başlangıç tarihi
                     txt_bitis_tarihi.Text = String.Format("{0:dd/MM/yyyy}", aksiyon.Bitis_Tarih); // proje bitiş tarihi
@@ -383,8 +394,21 @@ namespace Deneme1
             return jobtime;
         }
 
-
-
+        public void KullaniciHareketleri(Kullanici k, Aksiyonlar a)
+        {
+            if(k !=null && a != null)
+            {
+                var hareket = new KullaniciHareket
+                {
+                    User_id = k.ID,
+                    Islem = a.Islem,
+                    Gerekce = a.Gerekce,
+                    Islemtarih = a.Islem_Tarih
+                };
+                db.KullaniciHareket.Add(hareket);
+                db.SaveChanges();
+            }           
+        }
         private void btn_tamamlama_print_Click(object sender, EventArgs e)
         {
 

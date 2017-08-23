@@ -132,6 +132,7 @@
             this.tamamlama_cbs_id = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -159,6 +160,7 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DarkGray;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.btn_Arama);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -174,9 +176,9 @@
             // 
             this.btn_Arama.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.btn_Arama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_Arama.Location = new System.Drawing.Point(189, 62);
+            this.btn_Arama.Location = new System.Drawing.Point(443, 57);
             this.btn_Arama.Name = "btn_Arama";
-            this.btn_Arama.Size = new System.Drawing.Size(109, 38);
+            this.btn_Arama.Size = new System.Drawing.Size(109, 45);
             this.btn_Arama.TabIndex = 12;
             this.btn_Arama.Text = "Ara";
             this.btn_Arama.UseVisualStyleBackColor = false;
@@ -185,7 +187,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(422, 155);
+            this.groupBox2.Location = new System.Drawing.Point(498, 141);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(263, 199);
             this.groupBox2.TabIndex = 11;
@@ -207,7 +209,7 @@
             // 
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_baslatma_print);
-            this.groupBox1.Location = new System.Drawing.Point(48, 155);
+            this.groupBox1.Location = new System.Drawing.Point(124, 141);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(250, 199);
             this.groupBox1.TabIndex = 6;
@@ -240,7 +242,7 @@
             // 
             this.textBox_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox_ID.ForeColor = System.Drawing.Color.Red;
-            this.textBox_ID.Location = new System.Drawing.Point(48, 62);
+            this.textBox_ID.Location = new System.Drawing.Point(302, 65);
             this.textBox_ID.Multiline = true;
             this.textBox_ID.Name = "textBox_ID";
             this.textBox_ID.Size = new System.Drawing.Size(109, 32);
@@ -1341,6 +1343,19 @@
             this.tabPage4.Text = "İlerleme Raporu";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(270, 378);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(321, 46);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Kullanıcı Hareketlerini Gör";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ProjeIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1475,5 +1490,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerBaslangic;
         private System.Windows.Forms.Button btn_ProjeTeslim;
         private System.Windows.Forms.Button btn_projeyikapat;
+        private System.Windows.Forms.Button button1;
     }
 }

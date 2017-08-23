@@ -5,9 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="5aaf60ee1a994613ab836ac8b1bab060" Name="Diagram1" ZoomLevel="49">
-        <EntityTypeShape EntityType="ProjeTakipSistModel.Aksiyonlar" Width="1.5" PointX="3.75" PointY="0.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjeTakipSistModel.Ilerleme" Width="1.5" PointX="7.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjeTakipSistModel.Kullanici" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProjeTakipSistModel.Aksiyonlar" Width="1.5" PointX="8.5" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjeTakipSistModel.Ilerleme" Width="1.5" PointX="12.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjeTakipSistModel.Kullanici" Width="1.5" PointX="3.625" PointY="0.625" />
+        <EntityTypeShape EntityType="ProjeTakipSistModel.KullaniciHareket" Width="1.5" PointX="3.5" PointY="6.125" />
+        <AssociationConnector Association="ProjeTakipSistModel.FK_KullaniciHareket_Kullanici" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

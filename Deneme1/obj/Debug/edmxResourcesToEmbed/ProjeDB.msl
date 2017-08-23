@@ -159,5 +159,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="KullaniciHareket">
+      <EntityTypeMapping TypeName="ProjeTakipSistModel.KullaniciHareket">
+        <MappingFragment StoreEntitySet="KullaniciHareket">
+          <ScalarProperty Name="Islemtarih" ColumnName="Islemtarih" />
+          <ScalarProperty Name="Gerekce" ColumnName="Gerekce" />
+          <ScalarProperty Name="Islem" ColumnName="Islem" />
+          <ScalarProperty Name="User_id" ColumnName="User_id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

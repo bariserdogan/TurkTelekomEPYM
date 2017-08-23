@@ -28,5 +28,6 @@ namespace Deneme1
         public virtual DbSet<Aksiyonlar> Aksiyonlar { get; set; }
         public virtual DbSet<Ilerleme> Ilerleme { get; set; }
         public virtual DbSet<Kullanici> Kullanici { get; set; }
+        public virtual DbSet<KullaniciHareket> KullaniciHareket { get; set; }
     }
 }

@@ -72,10 +72,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HareketlerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HareketlerForm.Designer.cs">
+      <DependentUpon>HareketlerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ilerleme.cs">
       <DependentUpon>ProjeDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Kullanici.cs">
+      <DependentUpon>ProjeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciHareket.cs">
       <DependentUpon>ProjeDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -116,6 +125,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HareketlerForm.resx">
+      <DependentUpon>HareketlerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

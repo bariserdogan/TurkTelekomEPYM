@@ -155,9 +155,36 @@
     <Property Name="Email" Type="nvarchar" MaxLength="50" />
     <Property Name="Address" Type="nvarchar" MaxLength="250" />
   </EntityType>
+  <EntityType Name="KullaniciHareket">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_id" Type="int" />
+    <Property Name="Islem" Type="nvarchar" MaxLength="100" />
+    <Property Name="Gerekce" Type="nvarchar" MaxLength="100" />
+    <Property Name="Islemtarih" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_KullaniciHareket_Kullanici">
+    <End Role="Kullanici" Type="Self.Kullanici" Multiplicity="0..1" />
+    <End Role="KullaniciHareket" Type="Self.KullaniciHareket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanici">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KullaniciHareket">
+        <PropertyRef Name="User_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="ProjeTakipSistModelStoreContainer">
     <EntitySet Name="Aksiyonlar" EntityType="Self.Aksiyonlar" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ilerleme" EntityType="Self.Ilerleme" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Kullanici" EntityType="Self.Kullanici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KullaniciHareket" EntityType="Self.KullaniciHareket" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_KullaniciHareket_Kullanici" Association="Self.FK_KullaniciHareket_Kullanici">
+      <End Role="Kullanici" EntitySet="Kullanici" />
+      <End Role="KullaniciHareket" EntitySet="KullaniciHareket" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

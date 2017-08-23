@@ -160,10 +160,37 @@
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
           <Property Name="Address" Type="nvarchar" MaxLength="250" />
         </EntityType>
+        <EntityType Name="KullaniciHareket">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_id" Type="int" />
+          <Property Name="Islem" Type="nvarchar" MaxLength="100" />
+          <Property Name="Gerekce" Type="nvarchar" MaxLength="100" />
+          <Property Name="Islemtarih" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_KullaniciHareket_Kullanici">
+          <End Role="Kullanici" Type="Self.Kullanici" Multiplicity="0..1" />
+          <End Role="KullaniciHareket" Type="Self.KullaniciHareket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="KullaniciHareket">
+              <PropertyRef Name="User_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="ProjeTakipSistModelStoreContainer">
           <EntitySet Name="Aksiyonlar" EntityType="Self.Aksiyonlar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ilerleme" EntityType="Self.Ilerleme" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Kullanici" EntityType="Self.Kullanici" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KullaniciHareket" EntityType="Self.KullaniciHareket" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_KullaniciHareket_Kullanici" Association="Self.FK_KullaniciHareket_Kullanici">
+            <End Role="Kullanici" EntitySet="Kullanici" />
+            <End Role="KullaniciHareket" EntitySet="KullaniciHareket" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -316,6 +343,11 @@
           <EntitySet Name="Aksiyonlar" EntityType="Self.Aksiyonlar" />
           <EntitySet Name="Ilerleme" EntityType="Self.Ilerleme" />
           <EntitySet Name="Kullanici" EntityType="ProjeTakipSistModel.Kullanici" />
+          <EntitySet Name="KullaniciHareket" EntityType="ProjeTakipSistModel.KullaniciHareket" />
+          <AssociationSet Name="FK_KullaniciHareket_Kullanici" Association="ProjeTakipSistModel.FK_KullaniciHareket_Kullanici">
+            <End Role="Kullanici" EntitySet="Kullanici" />
+            <End Role="KullaniciHareket" EntitySet="KullaniciHareket" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Kullanici">
           <Key>
@@ -328,7 +360,31 @@
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="KullaniciHareket" Relationship="ProjeTakipSistModel.FK_KullaniciHareket_Kullanici" FromRole="Kullanici" ToRole="KullaniciHareket" />
         </EntityType>
+        <EntityType Name="KullaniciHareket">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_id" Type="Int32" />
+          <Property Name="Islem" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Gerekce" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Islemtarih" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Kullanici" Relationship="ProjeTakipSistModel.FK_KullaniciHareket_Kullanici" FromRole="KullaniciHareket" ToRole="Kullanici" />
+        </EntityType>
+        <Association Name="FK_KullaniciHareket_Kullanici">
+          <End Type="ProjeTakipSistModel.Kullanici" Role="Kullanici" Multiplicity="0..1" />
+          <End Type="ProjeTakipSistModel.KullaniciHareket" Role="KullaniciHareket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kullanici">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="KullaniciHareket">
+              <PropertyRef Name="User_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -489,6 +545,17 @@
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KullaniciHareket">
+            <EntityTypeMapping TypeName="ProjeTakipSistModel.KullaniciHareket">
+              <MappingFragment StoreEntitySet="KullaniciHareket">
+                <ScalarProperty Name="Islemtarih" ColumnName="Islemtarih" />
+                <ScalarProperty Name="Gerekce" ColumnName="Gerekce" />
+                <ScalarProperty Name="Islem" ColumnName="Islem" />
+                <ScalarProperty Name="User_id" ColumnName="User_id" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

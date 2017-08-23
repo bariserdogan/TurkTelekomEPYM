@@ -30,9 +30,7 @@ namespace Deneme1
         {
             Kullanici k1 = new Kullanici();
             if (db.Kullanici.Any(k=>k.Username == txt_username.Text))
-            {
                 MessageBox.Show("Böyle bir kullanıcı adı sistemde mevcut");
-            }
             else
             {
                 k1.FirstName = txt_firstname.Text;
@@ -43,7 +41,7 @@ namespace Deneme1
                 k1.Address = txt_adres.Text;
                 db.Kullanici.Add(k1);
                 db.SaveChanges();
-                MessageBox.Show("Kayıt Başarılı","Tebrikler !!! ",MessageBoxButtons.OK);
+                MessageBox.Show("Kayıt başarıyla gerçekleşti","Tebrikler !!! ",MessageBoxButtons.OK);
                 this.Close();
             }
         }
