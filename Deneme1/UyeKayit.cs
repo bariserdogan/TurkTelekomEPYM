@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,7 +38,7 @@ namespace Deneme1
                 k1.LastName = txt_lastname.Text;
                 k1.Email = txt_email.Text;
                 k1.Username = txt_username.Text;
-                k1.Password = txt_password.Text;
+                k1.Password = Crypto.MD5Sifrele(txt_password.Text);
                 k1.Address = txt_adres.Text;
                 db.Kullanici.Add(k1);
                 db.SaveChanges();
@@ -46,4 +47,6 @@ namespace Deneme1
             }
         }
     }
+
 }
+

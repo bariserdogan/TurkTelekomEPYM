@@ -14,3 +14,5 @@ C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\bin\Debug\E
 C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.exe
 C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.pdb
+C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.csprojResolveAssemblyReference.cache
+C:\Users\BARIS\Documents\Visual Studio 2015\Projects\Deneme1\Deneme1\obj\Debug\Deneme1.HareketlerForm.resources

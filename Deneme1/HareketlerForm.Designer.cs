@@ -37,6 +37,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::Deneme1.Properties.Resources.tt;
             this.pictureBox1.Location = new System.Drawing.Point(700, 52);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -68,6 +69,7 @@
             this.btn_Close.TabIndex = 2;
             this.btn_Close.Text = "Kapat";
             this.btn_Close.UseVisualStyleBackColor = false;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // HareketlerForm
             // 

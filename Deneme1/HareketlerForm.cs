@@ -28,13 +28,12 @@ namespace Deneme1
             InitializeComponent();
             this.user = k;
         }
-
         private void HareketlerForm_Load(object sender, EventArgs e)
         {
             MessageBox.Show("Kullanıcı Hareket dökümü güncellenmiştir");
             var query = (from u in db.Kullanici
                          join kh in db.KullaniciHareket on u.ID equals kh.User_id
-                         orderby u.ID descending
+                         orderby u.ID ascending
                          select new
                          {
                              u.FirstName,
@@ -46,6 +45,11 @@ namespace Deneme1
                              u.Address
                          });
             dataGridViewHareketler.DataSource = query.ToList();
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

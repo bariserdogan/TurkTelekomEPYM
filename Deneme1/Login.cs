@@ -33,7 +33,8 @@ namespace Deneme1
         }
         private void btn_girisYap_Click(object sender, EventArgs e)
         {
-            if(db.Kullanici.Any(x => x.Username == txt_username.Text && x.Password == txt_parola.Text))
+            string password = Crypto.MD5Sifrele(txt_parola.Text);
+            if(db.Kullanici.Any(x => x.Username == txt_username.Text && x.Password == password))
             {
                 Kullanici user = db.Kullanici.Where(x => x.Username == txt_username.Text).FirstOrDefault();
                 ProjeIslemleri proje = new ProjeIslemleri(user);
